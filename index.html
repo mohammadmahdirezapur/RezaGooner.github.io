@@ -917,6 +917,36 @@
             font-size: 0.9rem;
         }
 
+        /* دکمه Collapse */
+        .collapse-btn {
+            background: var(--primary-color);
+            color: var(--white);
+            border: none;
+            border-radius: 25px;
+            padding: 10px 20px;
+            margin: 20px auto;
+            display: block;
+            cursor: pointer;
+            transition: var(--transition);
+            font-weight: bold;
+        }
+
+        .collapse-btn:hover {
+            background: var(--accent-color);
+            color: #222;
+            transform: translateY(-3px);
+        }
+
+        .collapse-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease;
+        }
+
+        .collapse-content.expanded {
+            max-height: 2000px;
+        }
+
         /* چیدمان جدید برای نمونه‌کارها */
         .projects-grid {
             display: grid;
@@ -2178,6 +2208,33 @@
                             </div>
                         </div>
                     </div>
+                    <!-- دکمه Collapse برای جدول زمانی -->
+                    <button class="collapse-btn" id="timeline-collapse-btn">نمایش گواهی‌های بیشتر</button>
+                    <div class="collapse-content" id="timeline-collapse-content">
+                        <div class="timeline">
+                            <div class="timeline-item">
+                                <div class="timeline-content">
+                                    <div class="timeline-date">مهر 1402</div>
+                                    <div class="timeline-cert">بینایی کامپیوتر و پردازش تصویر</div>
+                                    <div class="timeline-org">فرادرس</div>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-content">
+                                    <div class="timeline-date">شهریور 1402</div>
+                                    <div class="timeline-cert">تکنیک‌های پیشرفته یادگیری تقویتی</div>
+                                    <div class="timeline-org">فرادرس</div>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-content">
+                                    <div class="timeline-date">مرداد 1402</div>
+                                    <div class="timeline-cert">Power BI - تجسم و تحلیل داده‌ها</div>
+                                    <div class="timeline-org">فرادرس</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -2736,6 +2793,22 @@
                     circle.style.setProperty('--percentage', percentage);
                 }, 500);
             });
+            
+            // مدیریت دکمه‌های Collapse
+            const timelineCollapseBtn = document.getElementById('timeline-collapse-btn');
+            const timelineCollapseContent = document.getElementById('timeline-collapse-content');
+            
+            if (timelineCollapseBtn && timelineCollapseContent) {
+                timelineCollapseBtn.addEventListener('click', function() {
+                    if (timelineCollapseContent.classList.contains('expanded')) {
+                        timelineCollapseContent.classList.remove('expanded');
+                        this.textContent = 'نمایش گواهی‌های بیشتر';
+                    } else {
+                        timelineCollapseContent.classList.add('expanded');
+                        this.textContent = 'نمایش کمتر';
+                    }
+                });
+            }
         });
     </script>
 </body>
