@@ -269,7 +269,6 @@
         .sidebar-nav a:nth-child(6) { animation-delay: 0.55s; }
         .sidebar-nav a:nth-child(7) { animation-delay: 0.6s; }
         .sidebar-nav a:nth-child(8) { animation-delay: 0.65s; }
-        .sidebar-nav a:nth-child(9) { animation-delay: 0.7s; }
         
         .sidebar-nav a::before {
             content: '';
@@ -420,7 +419,6 @@
         section:nth-child(5) { animation-delay: 0.6s; }
         section:nth-child(6) { animation-delay: 0.7s; }
         section:nth-child(7) { animation-delay: 0.8s; }
-        section:nth-child(8) { animation-delay: 0.9s; }
         
         section.visible {
             opacity: 1;
@@ -572,7 +570,7 @@
             transform: translateY(-3px);
         }
 
-        /* بخش گواهی‌ها با اسکرول افقی */
+        /* بخش گواهی‌ها با اسکرول افقی - بهبود یافته */
         .cert-category {
             margin-bottom: 50px;
             opacity: 0;
@@ -621,7 +619,7 @@
         }
         
         .cert-card {
-            flex: 0 0 260px;
+            flex: 0 0 280px;
             background: var(--white);
             border: 1px solid #e0e0e0;
             border-radius: 12px;
@@ -833,114 +831,6 @@
             color: #222;
             transform: translateY(-5px) scale(1.03);
             box-shadow: 0 10px 25px rgba(255, 215, 0, 0.5);
-        }
-
-        /* بخش اهداف و قدم‌های پیش رو */
-        .goals-container {
-            display: flex;
-            flex-direction: column;
-            gap: 30px;
-        }
-        
-        .goal-item {
-            background: linear-gradient(to right, #f8f9fa, var(--white));
-            border: 1px solid #e0e0e0;
-            border-radius: 15px;
-            padding: 30px;
-            transition: var(--transition);
-            opacity: 0;
-            transform: translateY(30px);
-            animation: goalItemReveal 0.7s ease forwards;
-        }
-        
-        .goal-item:nth-child(1) { animation-delay: 0.3s; }
-        .goal-item:nth-child(2) { animation-delay: 0.4s; }
-        .goal-item:nth-child(3) { animation-delay: 0.5s; }
-        .goal-item:nth-child(4) { animation-delay: 0.6s; }
-        .goal-item:nth-child(5) { animation-delay: 0.7s; }
-        
-        .goal-item:hover {
-            transform: translateY(-8px);
-            box-shadow: var(--shadow-hover);
-        }
-        
-        .goal-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 18px;
-        }
-        
-        .goal-title {
-            font-size: 1.35em;
-            font-weight: bold;
-            color: var(--primary-color);
-            transition: transform 0.3s;
-        }
-        
-        .goal-item:hover .goal-title {
-            transform: translateX(5px);
-        }
-        
-        .goal-percentage {
-            font-size: 1.25em;
-            font-weight: bold;
-            color: var(--primary-color);
-            background: var(--accent-color);
-            padding: 6px 14px;
-            border-radius: 25px;
-            transition: transform 0.3s;
-        }
-        
-        .goal-item:hover .goal-percentage {
-            transform: scale(1.1);
-        }
-        
-        .progress-container {
-            width: 100%;
-            background: #e9ecef;
-            border-radius: 12px;
-            overflow: hidden;
-            height: 22px;
-            margin-bottom: 12px;
-            box-shadow: inset 0 2px 5px rgba(0,0,0,0.1);
-        }
-        
-        .progress-bar {
-            height: 100%;
-            border-radius: 12px;
-            background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
-            transition: width 1.8s cubic-bezier(0.22, 0.61, 0.36, 1);
-            position: relative;
-            overflow: hidden;
-            width: 0;
-        }
-        
-        .progress-bar.animated {
-            width: var(--progress-width);
-        }
-        
-        .progress-bar::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            left: 0;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
-            animation: shimmer 2.5s infinite;
-        }
-        
-        .goal-description {
-            color: #555;
-            line-height: 1.6;
-            margin-top: 12px;
-            font-size: 0.97em;
-            transition: transform 0.3s;
-        }
-        
-        .goal-item:hover .goal-description {
-            transform: translateY(-3px);
         }
 
         /* دکمه شناور - بهبود یافته */
@@ -1433,17 +1323,6 @@
             }
         }
         
-        @keyframes goalItemReveal {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        
         @keyframes floatBtnReveal {
             from {
                 opacity: 0;
@@ -1540,6 +1419,57 @@
                 transform: translateX(100%);
             }
         }
+        
+        /* انیمیشن‌های جدید برای بهبود طراحی */
+        @keyframes glow {
+            0% {
+                box-shadow: 0 0 5px rgba(26, 42, 108, 0.5);
+            }
+            50% {
+                box-shadow: 0 0 20px rgba(26, 42, 108, 0.8);
+            }
+            100% {
+                box-shadow: 0 0 5px rgba(26, 42, 108, 0.5);
+            }
+        }
+        
+        @keyframes rotate {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+        
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(100px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes typing {
+            from {
+                width: 0;
+            }
+            to {
+                width: 100%;
+            }
+        }
+        
+        @keyframes blink {
+            0%, 100% {
+                border-color: transparent;
+            }
+            50% {
+                border-color: var(--accent-color);
+            }
+        }
 
         /* ریسپانسیو */
         @media (max-width: 768px) {
@@ -1584,12 +1514,6 @@
             
             .project-links {
                 flex-direction: column;
-            }
-            
-            .goal-header {
-                flex-direction: column;
-                align-items: flex-start;
-                gap: 12px;
             }
             
             .floating-btn {
@@ -1676,9 +1600,6 @@
             </div>
             <a href="#projects" data-translate="nav_projects">
                 <i>💻</i> <span>نمونه‌کارها</span>
-            </a>
-            <a href="#goals" data-translate="nav_goals">
-                <i>🎯</i> <span>اهداف پیش رو</span>
             </a>
             <a href="#contact" data-translate="nav_contact">
                 <i>📞</i> <span>ارتباط</span>
@@ -2057,77 +1978,6 @@
             </div>
         </section>
 
-        <!-- بخش جدید: اهداف و قدم‌های پیش رو -->
-        <section id="goals">
-            <h2 data-translate="goals_title">اهداف و قدم‌های پیش رو</h2>
-            <div class="goals-container">
-                <div class="goal-item">
-                    <div class="goal-header">
-                        <div class="goal-title" data-translate="goal1_title">آمادگی برای ICPC</div>
-                        <div class="goal-percentage">65%</div>
-                    </div>
-                    <div class="progress-container">
-                        <div class="progress-bar" data-progress="65"></div>
-                    </div>
-                    <div class="goal-description" data-translate="goal1_description">
-                        تمرین و آمادگی برای شرکت در مسابقات برنامه‌نویسی ICPC
-                    </div>
-                </div>
-                
-                <div class="goal-item">
-                    <div class="goal-header">
-                        <div class="goal-title" data-translate="goal2_title">پروژه 3: تحلیل ترافیک</div>
-                        <div class="goal-percentage">20%</div>
-                    </div>
-                    <div class="progress-container">
-                        <div class="progress-bar" data-progress="20"></div>
-                    </div>
-                    <div class="goal-description" data-translate="goal2_description">
-                        توسعه پروژه در حوزه بینایی ماشین برای تحلیل ترافیک
-                    </div>
-                </div>
-                
-                <div class="goal-item">
-                    <div class="goal-header">
-                        <div class="goal-title" data-translate="goal3_title">پروژه 2: کانون کنکوری</div>
-                        <div class="goal-percentage">10%</div>
-                    </div>
-                    <div class="progress-container">
-                        <div class="progress-bar" data-progress="10"></div>
-                    </div>
-                    <div class="goal-description" data-translate="goal3_description">
-                        توسعه پروژه در حوزه بینایی ماشین برای کانون کنکوری
-                    </div>
-                </div>
-                
-                <div class="goal-item">
-                    <div class="goal-header">
-                        <div class="goal-title" data-translate="goal4_title">پروژه 1: چندمنظوره</div>
-                        <div class="goal-percentage">5%</div>
-                    </div>
-                    <div class="progress-container">
-                        <div class="progress-bar" data-progress="5"></div>
-                    </div>
-                    <div class="goal-description" data-translate="goal4_description">
-                        توسعه پروژه چند منظوره و کلان
-                    </div>
-                </div>
-                
-                <div class="goal-item">
-                    <div class="goal-header">
-                        <div class="goal-title" data-translate="goal5_title">کنکور ارشد</div>
-                        <div class="goal-percentage">15%</div>
-                    </div>
-                    <div class="progress-container">
-                        <div class="progress-bar" data-progress="15"></div>
-                    </div>
-                    <div class="goal-description" data-translate="goal5_description">
-                        آمادگی برای کنکور کارشناسی ارشد مهندسی کامپیوتر
-                    </div>
-                </div>
-            </div>
-        </section>
-
         <section id="contact">
             <h2 data-translate="contact_title">راه‌های ارتباطی</h2>
             <p>📧 Gmail: <a href="mailto:RezaAsadiProgrammer@gmail.com">RezaAsadiProgrammer@gmail.com</a></p>
@@ -2224,7 +2074,6 @@
                 nav_reinforcement_learning: "یادگیری تقویتی",
                 nav_git: "Git",
                 nav_projects: "نمونه‌کارها",
-                nav_goals: "اهداف پیش رو",
                 nav_contact: "ارتباط",
                 about_title: "معرفی من",
                 about_text: "من رضا هستم، دانشجوی دوره کارشناسی رشته مهندسی کامپیوتر. بیش از یک سال است که به‌صورت جدی در حوزه هوش مصنوعی و یادگیری ماشین فعالیت و مطالعه می‌کنم و تجربه عملی خوبی در این زمینه به‌دست آورده‌ام. در شاخه‌های تخصصی مانند پردازش زبان طبیعی (NLP) و بینایی ماشین (Computer Vision) پروژه‌هایی انجام داده‌ام و توانسته‌ام مهارت‌های خود را گسترش دهم. هدف و مسیر بعدی من، تسلط بر یادگیری تقویتی (Reinforcement Learning) و به‌کارگیری آن در پروژه‌های واقعی است.",
@@ -2299,17 +2148,6 @@
                 github_link: "GitHub",
                 pypi_link: "PyPI",
                 test_persent: "تست کتابخانه",
-                goals_title: "اهداف و قدم‌های پیش رو",
-                goal1_title: "آمادگی برای ICPC",
-                goal1_description: "تمرین و آمادگی برای شرکت در مسابقات برنامه‌نویسی ICPC",
-                goal2_title: "پروژه 3: تحلیل ترافیک",
-                goal2_description: "توسعه پروژه در حوزه بینایی ماشین برای تحلیل ترافیک",
-                goal3_title: "پروژه 2: کانون کنکوری",
-                goal3_description: "توسعه پروژه در حوزه بینایی ماشین برای کانون کنکوری",
-                goal4_title: "پروژه 1: چندمنظوره",
-                goal4_description: "توسعه پروژه چند منظوره و کلان",
-                goal5_title: "کنکور ارشد",
-                goal5_description: "آمادگی برای کنکور کارشناسی ارشد مهندسی کامپیوتر",
                 contact_title: "راه‌های ارتباطی",
                 form_name: "نام",
                 form_email: "ایمیل",
@@ -2339,7 +2177,6 @@
                 nav_reinforcement_learning: "Reinforcement Learning",
                 nav_git: "Git",
                 nav_projects: "Projects",
-                nav_goals: "Future Goals",
                 nav_contact: "Contact",
                 about_title: "About Me",
                 about_text: "I'm Reza, a Computer Engineering student. I have been seriously studying and working in the field of Artificial Intelligence and Machine Learning for over a year and have gained good practical experience in this field. I have completed projects in specialized branches such as Natural Language Processing (NLP) and Computer Vision and have been able to expand my skills. My next goal and path is to master Reinforcement Learning and apply it in real projects.",
@@ -2414,17 +2251,6 @@
                 github_link: "GitHub",
                 pypi_link: "PyPI",
                 test_persent: "Test Library",
-                goals_title: "Goals and Next Steps",
-                goal1_title: "ICPC Preparation",
-                goal1_description: "Practice and preparation for participating in ICPC programming competitions",
-                goal2_title: "Project 3: Traffic Analysis",
-                goal2_description: "Developing a project in the field of computer vision for traffic analysis",
-                goal3_title: "Project 2: Konkur Center",
-                goal3_description: "Developing a project in the field of computer vision for Konkur center",
-                goal4_title: "Project 1: Multi-purpose",
-                goal4_description: "Developing a multi-purpose and large-scale project",
-                goal5_title: "Master's Exam",
-                goal5_description: "Preparation for the master's degree entrance exam in computer engineering",
                 contact_title: "Contact Methods",
                 form_name: "Name",
                 form_email: "Email",
@@ -2454,7 +2280,6 @@
                 nav_reinforcement_learning: "Обучение с подкреплением",
                 nav_git: "Git",
                 nav_projects: "Проекты",
-                nav_goals: "Будущие цели",
                 nav_contact: "Контакты",
                 about_title: "Обо мне",
                 about_text: "Я Реза, студент компьютерной инженерии. Более года я серьезно изучаю и работаю в области искусственного интеллекта и машинного обучения и приобрел хороший практический опыт в этой области. Я выполнил проекты в специализированных областях, таких как обработка естественного языка (NLP) и компьютерное зрение, и смог расширить свои навыки. Моя следующая цель и путь - освоить обучение с подкреплением и применять его в реальных проектах.",
@@ -2529,17 +2354,6 @@
                 github_link: "GitHub",
                 pypi_link: "PyPI",
                 test_persent: "Тест библиотеки",
-                goals_title: "Цели и следующие шаги",
-                goal1_title: "Подготовка к ICPC",
-                goal1_description: "Практика и подготовка к участию в соревнованиях по программированию ICPC",
-                goal2_title: "Проект 3: Анализ трафика",
-                goal2_description: "Разработка проекта в области компьютерного зрения для анализа трафика",
-                goal3_title: "Проект 2: Конкурсный центр",
-                goal3_description: "Разработка проекта в области компьютерного зрения для конкурсного центра",
-                goal4_title: "Проект 1: Многоцелевой",
-                goal4_description: "Разработка многоцелевого и крупномасштабного проекта",
-                goal5_title: "Экзамен в магистратуру",
-                goal5_description: "Подготовка к вступительному экзамену в магистратуру по компьютерной инженерии",
                 contact_title: "Способы связи",
                 form_name: "Имя",
                 form_email: "Email",
@@ -2597,17 +2411,6 @@
                     changeLanguage(this.dataset.lang);
                 });
             });
-            
-            // انیمیشن برای نوارهای پیشرفت
-            const progressBars = document.querySelectorAll('.progress-bar');
-            
-            setTimeout(() => {
-                progressBars.forEach(bar => {
-                    const progress = bar.getAttribute('data-progress');
-                    bar.style.setProperty('--progress-width', `${progress}%`);
-                    bar.classList.add('animated');
-                });
-            }, 800);
             
             // مدیریت فرم تماس
             const contactForm = document.querySelector('.contact-form');
