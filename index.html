@@ -1781,23 +1781,23 @@
                 </div>
                 <!-- دسته‌بندی‌ها -->
                 <div class="cert-categories">
-                    <button class="category-btn active">همه گواهی‌ها</button>
-                    <button class="category-btn">الگوریتم‌ها</button>
-                    <button class="category-btn">علم داده</button>
-                    <button class="category-btn">هوش مصنوعی</button>
-                    <button class="category-btn">پردازش زبان</button>
-                    <button class="category-btn">یادگیری عمیق</button>
-                    <button class="category-btn">بینایی کامپیوتر</button>
-                    <button class="category-btn">یادگیری تقویتی</button>
+                    <button class="category-btn active" data-category="all">همه گواهی‌ها</button>
+                    <button class="category-btn" data-category="algorithms">الگوریتم‌ها</button>
+                    <button class="category-btn" data-category="data-science">علم داده</button>
+                    <button class="category-btn" data-category="ai-ml">هوش مصنوعی</button>
+                    <button class="category-btn" data-category="nlp-llm">پردازش زبان</button>
+                    <button class="category-btn" data-category="deep-learning">یادگیری عمیق</button>
+                    <button class="category-btn" data-category="computer-vision">بینایی کامپیوتر</button>
+                    <button class="category-btn" data-category="reinforcement-learning">یادگیری تقویتی</button>
                 </div>
                 <!-- گواهی‌های الگوریتم‌ها -->
                 <div class="cert-category-content" id="algorithms-certificates-content">
                     <div class="certificate-cards">
-                        <div class="cert-card">
+                        <div class="cert-card" data-category="algorithms">
                             <div class="cert-image">
                                 <img src="images/icpc_2024_result.jpg" alt="ICPC 2024 Certificate">
                                 <div class="cert-overlay">
-                                    <button class="view-cert">مشاهده گواهی</button>
+                                    <button class="view-cert" data-cert="icpc2024">مشاهده گواهی</button>
                                 </div>
                             </div>
                             <div class="cert-content">
@@ -1806,15 +1806,15 @@
                                 <p class="cert-description">رتبه 35 در مسابقات برنامه‌نویسی ICPC سایت تهران</p>
                                 <div class="cert-meta">
                                     <span>ICPC</span>
-                                    <span>1402</span>
+                                    <span data-translate="date_nov_2024">20 نوامبر 2024</span>
                                 </div>
                             </div>
                         </div>
-                        <div class="cert-card">
+                        <div class="cert-card" data-category="algorithms">
                             <div class="cert-image">
                                 <img src="images/data_structures_design.jpg" alt="Data Structures Certificate">
                                 <div class="cert-overlay">
-                                    <button class="view-cert">مشاهده گواهی</button>
+                                    <button class="view-cert" data-cert="data_structures">مشاهده گواهی</button>
                                 </div>
                             </div>
                             <div class="cert-content">
@@ -1823,7 +1823,7 @@
                                 <p class="cert-description">گواهی طراحی ساختمان داده با نمره کامل</p>
                                 <div class="cert-meta">
                                     <span>Quera</span>
-                                    <span>1402</span>
+                                    <span data-translate="date_feb_2025">فوریه 2025</span>
                                 </div>
                             </div>
                         </div>
@@ -1832,11 +1832,11 @@
                 <!-- گواهی‌های علم داده -->
                 <div class="cert-category-content" id="data-science-certificates-content">
                     <div class="certificate-cards">
-                        <div class="cert-card">
+                        <div class="cert-card" data-category="data-science">
                             <div class="cert-image">
                                 <img src="images/data_analysis_python.jpg" alt="Data Analysis with Python Certificate">
                                 <div class="cert-overlay">
-                                    <button class="view-cert">مشاهده گواهی</button>
+                                    <button class="view-cert" data-cert="data_analysis">مشاهده گواهی</button>
                                 </div>
                             </div>
                             <div class="cert-content">
@@ -1845,15 +1845,15 @@
                                 <p class="cert-description">گواهی تحلیل داده با پایتون</p>
                                 <div class="cert-meta">
                                     <span>Quera</span>
-                                    <span>1402</span>
+                                    <span data-translate="date_mar_2025">مارس 2025</span>
                                 </div>
                             </div>
                         </div>
-                        <div class="cert-card">
+                        <div class="cert-card" data-category="data-science">
                             <div class="cert-image">
                                 <img src="images/data_visualization.png" alt="Data Visualization Certificate">
                                 <div class="cert-overlay">
-                                    <button class="view-cert">مشاهده گواهی</button>
+                                    <button class="view-cert" data-cert="data_viz">مشاهده گواهی</button>
                                 </div>
                             </div>
                             <div class="cert-content">
@@ -1862,15 +1862,15 @@
                                 <p class="cert-description">گواهی بصری سازی داده‌ها</p>
                                 <div class="cert-meta">
                                     <span>Kaggle</span>
-                                    <span>1402</span>
+                                    <span data-translate="date_sep_13_2025">13 سپتامبر 2025</span>
                                 </div>
                             </div>
                         </div>
-                        <div class="cert-card">
+                        <div class="cert-card" data-category="data-science">
                             <div class="cert-image">
                                 <img src="images/pandas.png" alt="Pandas Certificate">
                                 <div class="cert-overlay">
-                                    <button class="view-cert">مشاهده گواهی</button>
+                                    <button class="view-cert" data-cert="pandas">مشاهده گواهی</button>
                                 </div>
                             </div>
                             <div class="cert-content">
@@ -1879,15 +1879,15 @@
                                 <p class="cert-description">گواهی Pandas</p>
                                 <div class="cert-meta">
                                     <span>Kaggle</span>
-                                    <span>1402</span>
+                                    <span data-translate="date_sep_14_2025">14 سپتامبر 2025</span>
                                 </div>
                             </div>
                         </div>
-                        <div class="cert-card">
+                        <div class="cert-card" data-category="data-science">
                             <div class="cert-image">
                                 <img src="images/feature_engineering.png" alt="Feature Engineering Certificate">
                                 <div class="cert-overlay">
-                                    <button class="view-cert">مشاهده گواهی</button>
+                                    <button class="view-cert" data-cert="feature_eng">مشاهده گواهی</button>
                                 </div>
                             </div>
                             <div class="cert-content">
@@ -1896,15 +1896,15 @@
                                 <p class="cert-description">گواهی مهندسی ویژگی</p>
                                 <div class="cert-meta">
                                     <span>Kaggle</span>
-                                    <span>1402</span>
+                                    <span data-translate="date_sep_14_2025">14 سپتامبر 2025</span>
                                 </div>
                             </div>
                         </div>
-                        <div class="cert-card">
+                        <div class="cert-card" data-category="data-science">
                             <div class="cert-image">
                                 <img src="images/data_cleaning.png" alt="Data Cleaning Certificate">
                                 <div class="cert-overlay">
-                                    <button class="view-cert">مشاهده گواهی</button>
+                                    <button class="view-cert" data-cert="data_cleaning">مشاهده گواهی</button>
                                 </div>
                             </div>
                             <div class="cert-content">
@@ -1913,15 +1913,15 @@
                                 <p class="cert-description">گواهی پاکسازی داده</p>
                                 <div class="cert-meta">
                                     <span>Kaggle</span>
-                                    <span>1402</span>
+                                    <span data-translate="date_sep_15_2025">15 سپتامبر 2025</span>
                                 </div>
                             </div>
                         </div>
-                        <div class="cert-card">
+                        <div class="cert-card" data-category="data-science">
                             <div class="cert-image">
                                 <img src="images/time_series.png" alt="Time Series Certificate">
                                 <div class="cert-overlay">
-                                    <button class="view-cert">مشاهده گواهی</button>
+                                    <button class="view-cert" data-cert="time_series">مشاهده گواهی</button>
                                 </div>
                             </div>
                             <div class="cert-content">
@@ -1930,15 +1930,15 @@
                                 <p class="cert-description">گواهی سری زمانی</p>
                                 <div class="cert-meta">
                                     <span>Kaggle</span>
-                                    <span>1402</span>
+                                    <span data-translate="date_sep_15_2025">15 سپتامبر 2025</span>
                                 </div>
                             </div>
                         </div>
-                        <div class="cert-card">
+                        <div class="cert-card" data-category="data-science">
                             <div class="cert-image">
                                 <img src="https://github.com/RezaGooner/RezaGooner.github.io/blob/ecd66697dc5b786607f2ab11949c3fcbc00aa7e1/images/certificate_Power_BI.jpg?raw=true" alt="Power BI Certificate">
                                 <div class="cert-overlay">
-                                    <button class="view-cert">مشاهده گواهی</button>
+                                    <button class="view-cert" data-cert="power_bi">مشاهده گواهی</button>
                                 </div>
                             </div>
                             <div class="cert-content">
@@ -1947,7 +1947,7 @@
                                 <p class="cert-description">گواهی تسلط بر ابزار Power BI</p>
                                 <div class="cert-meta">
                                     <span>Faradars</span>
-                                    <span>1402</span>
+                                    <span data-translate="date_nov_6_2025">6 نوامبر 2025</span>
                                 </div>
                             </div>
                         </div>
@@ -1956,11 +1956,11 @@
                 <!-- گواهی‌های هوش مصنوعی و یادگیری ماشین -->
                 <div class="cert-category-content" id="ai-ml-certificates-content">
                     <div class="certificate-cards">
-                        <div class="cert-card">
+                        <div class="cert-card" data-category="ai-ml">
                             <div class="cert-image">
                                 <img src="images/generative_ai.jpg" alt="Generative AI Certificate">
                                 <div class="cert-overlay">
-                                    <button class="view-cert">مشاهده گواهی</button>
+                                    <button class="view-cert" data-cert="gen_ai">مشاهده گواهی</button>
                                 </div>
                             </div>
                             <div class="cert-content">
@@ -1969,15 +1969,15 @@
                                 <p class="cert-description">گواهی هوش مصنوعی مولد</p>
                                 <div class="cert-meta">
                                     <span>Faradars</span>
-                                    <span>1402</span>
+                                    <span data-translate="date_jun_30_2025">30 ژوئن 2025</span>
                                 </div>
                             </div>
                         </div>
-                        <div class="cert-card">
+                        <div class="cert-card" data-category="ai-ml">
                             <div class="cert-image">
                                 <img src="images/mastering_machine_learning.jpg" alt="Mastering ML Certificate">
                                 <div class="cert-overlay">
-                                    <button class="view-cert">مشاهده گواهی</button>
+                                    <button class="view-cert" data-cert="master_ml">مشاهده گواهی</button>
                                 </div>
                             </div>
                             <div class="cert-content">
@@ -1986,15 +1986,15 @@
                                 <p class="cert-description">گواهی تسلط بر یادگیری ماشین</p>
                                 <div class="cert-meta">
                                     <span>Faradars</span>
-                                    <span>1402</span>
+                                    <span data-translate="date_jun_28_2025">28 ژوئن 2025</span>
                                 </div>
                             </div>
                         </div>
-                        <div class="cert-card">
+                        <div class="cert-card" data-category="ai-ml">
                             <div class="cert-image">
                                 <img src="images/python_libraries_ml_dl.png" alt="Python Libraries Certificate">
                                 <div class="cert-overlay">
-                                    <button class="view-cert">مشاهده گواهی</button>
+                                    <button class="view-cert" data-cert="python_libs">مشاهده گواهی</button>
                                 </div>
                             </div>
                             <div class="cert-content">
@@ -2003,15 +2003,15 @@
                                 <p class="cert-description">گواهی کتابخانه‌های پایتون برای ML و DL</p>
                                 <div class="cert-meta">
                                     <span>Faradars</span>
-                                    <span>1402</span>
+                                    <span data-translate="date_jun_28_2025">28 ژوئن 2025</span>
                                 </div>
                             </div>
                         </div>
-                        <div class="cert-card">
+                        <div class="cert-card" data-category="ai-ml">
                             <div class="cert-image">
                                 <img src="images/intro_machine_learning.png" alt="Intro to ML Certificate">
                                 <div class="cert-overlay">
-                                    <button class="view-cert">مشاهده گواهی</button>
+                                    <button class="view-cert" data-cert="intro_ml">مشاهده گواهی</button>
                                 </div>
                             </div>
                             <div class="cert-content">
@@ -2020,49 +2020,49 @@
                                 <p class="cert-description">گواهی مقدمه‌ای بر یادگیری ماشین</p>
                                 <div class="cert-meta">
                                     <span>Kaggle</span>
-                                    <span>1402</span>
+                                    <span data-translate="date_sep_14_2025">14 سپتامبر 2025</span>
                                 </div>
                             </div>
                         </div>
-                        <div class="cert-card">
+                        <div class="cert-card" data-category="ai-ml">
                             <div class="cert-image">
                                 <img src="images/intermediate_machine_learning.png" alt="Intermediate ML Certificate">
                                 <div class="cert-overlay">
-                                    <button class="view-cert">مشاهده گواهی</button>
+                                    <button class="view-cert" data-cert="intermediate_ml">مشاهده گواهی</button>
                                 </div>
                             </div>
                             <div class="cert-content">
                                 <span class="cert-category">هوش مصنوعی</span>
-                                <h3 class="cert-title" data-translate="cert_ai_ml5">یادگیری ماشین متوسط</h3>
+                                <h3 class="cert-title" data-translate="cert_ai_ml5">Intermediate Machine Learning</h3>
                                 <p class="cert-description">گواهی یادگیری ماشین متوسط</p>
                                 <div class="cert-meta">
                                     <span>Kaggle</span>
-                                    <span>1402</span>
+                                    <span data-translate="date_sep_14_2025">14 سپتامبر 2025</span>
                                 </div>
                             </div>
                         </div>
-                        <div class="cert-card">
+                        <div class="cert-card" data-category="ai-ml">
                             <div class="cert-image">
                                 <img src="images/machine_learning_explainability.png" alt="ML Explainability Certificate">
                                 <div class="cert-overlay">
-                                    <button class="view-cert">مشاهده گواهی</button>
+                                    <button class="view-cert" data-cert="ml_explainability">مشاهده گواهی</button>
                                 </div>
                             </div>
                             <div class="cert-content">
                                 <span class="cert-category">هوش مصنوعی</span>
-                                <h3 class="cert-title" data-translate="cert_ai_ml6">قابل تفسیر بودن یادگیری ماشین</h3>
+                                <h3 class="cert-title" data-translate="cert_ai_ml6">Machine Learning Explainability</h3>
                                 <p class="cert-description">گواهی قابل تفسیر بودن یادگیری ماشین</p>
                                 <div class="cert-meta">
                                     <span>Kaggle</span>
-                                    <span>1402</span>
+                                    <span data-translate="date_sep_15_2025">15 سپتامبر 2025</span>
                                 </div>
                             </div>
                         </div>
-                        <div class="cert-card">
+                        <div class="cert-card" data-category="ai-ml">
                             <div class="cert-image">
                                 <img src="images/machine_learning_maktabkhooneh.png" alt="ML Maktabkhooneh Certificate">
                                 <div class="cert-overlay">
-                                    <button class="view-cert">مشاهده گواهی</button>
+                                    <button class="view-cert" data-cert="ml_maktab">مشاهده گواهی</button>
                                 </div>
                             </div>
                             <div class="cert-content">
@@ -2071,7 +2071,7 @@
                                 <p class="cert-description">گواهی یادگیری ماشین</p>
                                 <div class="cert-meta">
                                     <span>Maktabkhooneh</span>
-                                    <span>1402</span>
+                                    <span data-translate="date_mordad_23_1404">23 مرداد 1404</span>
                                 </div>
                             </div>
                         </div>
@@ -2080,11 +2080,11 @@
                 <!-- گواهی‌های پردازش زبان و مدل‌های بزرگ -->
                 <div class="cert-category-content" id="nlp-llm-certificates-content">
                     <div class="certificate-cards">
-                        <div class="cert-card">
+                        <div class="cert-card" data-category="nlp-llm">
                             <div class="cert-image">
                                 <img src="images/nlp_perfect.jpg" alt="NLP Certificate">
                                 <div class="cert-overlay">
-                                    <button class="view-cert">مشاهده گواهی</button>
+                                    <button class="view-cert" data-cert="nlp_perfect">مشاهده گواهی</button>
                                 </div>
                             </div>
                             <div class="cert-content">
@@ -2093,15 +2093,15 @@
                                 <p class="cert-description">گواهی پردازش زبان طبیعی با نمره کامل</p>
                                 <div class="cert-meta">
                                     <span>Quera</span>
-                                    <span>1402</span>
+                                    <span data-translate="date_mar_2025">مارس 2025</span>
                                 </div>
                             </div>
                         </div>
-                        <div class="cert-card">
+                        <div class="cert-card" data-category="nlp-llm">
                             <div class="cert-image">
                                 <img src="images/llm_perfect.jpg" alt="LLM Certificate">
                                 <div class="cert-overlay">
-                                    <button class="view-cert">مشاهده گواهی</button>
+                                    <button class="view-cert" data-cert="llm_perfect">مشاهده گواهی</button>
                                 </div>
                             </div>
                             <div class="cert-content">
@@ -2110,7 +2110,7 @@
                                 <p class="cert-description">گواهی مدل‌های زبان بزرگ با نمره کامل</p>
                                 <div class="cert-meta">
                                     <span>Quera</span>
-                                    <span>1402</span>
+                                    <span data-translate="date_apr_2025">آوریل 2025</span>
                                 </div>
                             </div>
                         </div>
@@ -2119,11 +2119,11 @@
                 <!-- گواهی‌های یادگیری عمیق -->
                 <div class="cert-category-content" id="deep-learning-certificates-content">
                     <div class="certificate-cards">
-                        <div class="cert-card">
+                        <div class="cert-card" data-category="deep-learning">
                             <div class="cert-image">
                                 <img src="images/deep_learning_very_good.jpg" alt="Deep Learning Certificate">
                                 <div class="cert-overlay">
-                                    <button class="view-cert">مشاهده گواهی</button>
+                                    <button class="view-cert" data-cert="deep_learning_vg">مشاهده گواهی</button>
                                 </div>
                             </div>
                             <div class="cert-content">
@@ -2132,15 +2132,15 @@
                                 <p class="cert-description">گواهی یادگیری عمیق با نمره عالی</p>
                                 <div class="cert-meta">
                                     <span>Quera</span>
-                                    <span>1402</span>
+                                    <span data-translate="date_apr_2025">آوریل 2025</span>
                                 </div>
                             </div>
                         </div>
-                        <div class="cert-card">
+                        <div class="cert-card" data-category="deep-learning">
                             <div class="cert-image">
                                 <img src="images/deep_learning_fundamentals.jpg" alt="Deep Learning Fundamentals Certificate">
                                 <div class="cert-overlay">
-                                    <button class="view-cert">مشاهده گواهی</button>
+                                    <button class="view-cert" data-cert="dl_fundamentals">مشاهده گواهی</button>
                                 </div>
                             </div>
                             <div class="cert-content">
@@ -2149,15 +2149,15 @@
                                 <p class="cert-description">گواهی مبانی یادگیری عمیق</p>
                                 <div class="cert-meta">
                                     <span>Faradars</span>
-                                    <span>1402</span>
+                                    <span data-translate="date_jul_6_2025">6 جولای 2025</span>
                                 </div>
                             </div>
                         </div>
-                        <div class="cert-card">
+                        <div class="cert-card" data-category="deep-learning">
                             <div class="cert-image">
                                 <img src="images/intro_deep_learning.png" alt="Intro to Deep Learning Certificate">
                                 <div class="cert-overlay">
-                                    <button class="view-cert">مشاهده گواهی</button>
+                                    <button class="view-cert" data-cert="intro_dl">مشاهده گواهی</button>
                                 </div>
                             </div>
                             <div class="cert-content">
@@ -2166,7 +2166,7 @@
                                 <p class="cert-description">گواهی مقدمه‌ای بر یادگیری عمیق</p>
                                 <div class="cert-meta">
                                     <span>Kaggle</span>
-                                    <span>1402</span>
+                                    <span data-translate="date_sep_15_2025">15 سپتامبر 2025</span>
                                 </div>
                             </div>
                         </div>
@@ -2175,11 +2175,11 @@
                 <!-- گواهی‌های بینایی کامپیوتر -->
                 <div class="cert-category-content" id="computer-vision-certificates-content">
                     <div class="certificate-cards">
-                        <div class="cert-card">
+                        <div class="cert-card" data-category="computer-vision">
                             <div class="cert-image">
                                 <img src="images/professional_image_processing.jpg" alt="Professional Image Processing Certificate">
                                 <div class="cert-overlay">
-                                    <button class="view-cert">مشاهده گواهی</button>
+                                    <button class="view-cert" data-cert="image_proc_vg">مشاهده گواهی</button>
                                 </div>
                             </div>
                             <div class="cert-content">
@@ -2188,15 +2188,15 @@
                                 <p class="cert-description">گواهی پردازش تصویر حرفه‌ای با نمره عالی</p>
                                 <div class="cert-meta">
                                     <span>Quera</span>
-                                    <span>1402</span>
+                                    <span data-translate="date_jul_2025">جولای 2025</span>
                                 </div>
                             </div>
                         </div>
-                        <div class="cert-card">
+                        <div class="cert-card" data-category="computer-vision">
                             <div class="cert-image">
                                 <img src="images/object_detection.jpg" alt="Object Detection Certificate">
                                 <div class="cert-overlay">
-                                    <button class="view-cert">مشاهده گواهی</button>
+                                    <button class="view-cert" data-cert="obj_detection">مشاهده گواهی</button>
                                 </div>
                             </div>
                             <div class="cert-content">
@@ -2205,15 +2205,15 @@
                                 <p class="cert-description">گواهی تشخیص اشیاء</p>
                                 <div class="cert-meta">
                                     <span>Faradars</span>
-                                    <span>1402</span>
+                                    <span data-translate="date_jul_1_2025">1 جولای 2025</span>
                                 </div>
                             </div>
                         </div>
-                        <div class="cert-card">
+                        <div class="cert-card" data-category="computer-vision">
                             <div class="cert-image">
                                 <img src="images/computer_vision.jpg" alt="Computer Vision Certificate">
                                 <div class="cert-overlay">
-                                    <button class="view-cert">مشاهده گواهی</button>
+                                    <button class="view-cert" data-cert="cv_basic">مشاهده گواهی</button>
                                 </div>
                             </div>
                             <div class="cert-content">
@@ -2222,15 +2222,15 @@
                                 <p class="cert-description">گواهی بینایی کامپیوتر</p>
                                 <div class="cert-meta">
                                     <span>Faradars</span>
-                                    <span>1402</span>
+                                    <span data-translate="date_jul_3_2025">3 جولای 2025</span>
                                 </div>
                             </div>
                         </div>
-                        <div class="cert-card">
+                        <div class="cert-card" data-category="computer-vision">
                             <div class="cert-image">
                                 <img src="images/computer_vision_kaggle.png" alt="Computer Vision Kaggle Certificate">
                                 <div class="cert-overlay">
-                                    <button class="view-cert">مشاهده گواهی</button>
+                                    <button class="view-cert" data-cert="cv_kaggle">مشاهده گواهی</button>
                                 </div>
                             </div>
                             <div class="cert-content">
@@ -2239,15 +2239,15 @@
                                 <p class="cert-description">گواهی بینایی کامپیوتر</p>
                                 <div class="cert-meta">
                                     <span>Kaggle</span>
-                                    <span>1402</span>
+                                    <span data-translate="date_sep_16_2025">16 سپتامبر 2025</span>
                                 </div>
                             </div>
                         </div>
-                        <div class="cert-card">
+                        <div class="cert-card" data-category="computer-vision">
                             <div class="cert-image">
                                 <img src="images/deep_learning_object_detection.png" alt="Deep Learning Object Detection Certificate">
                                 <div class="cert-overlay">
-                                    <button class="view-cert">مشاهده گواهی</button>
+                                    <button class="view-cert" data-cert="dl_obj_detection">مشاهده گواهی</button>
                                 </div>
                             </div>
                             <div class="cert-content">
@@ -2256,15 +2256,15 @@
                                 <p class="cert-description">گواهی یادگیری عمیق برای تشخیص و شناسایی اشیاء</p>
                                 <div class="cert-meta">
                                     <span>Maktabkhooneh</span>
-                                    <span>1402</span>
+                                    <span data-translate="date_jul_13_2025">7/13/2025</span>
                                 </div>
                             </div>
                         </div>
-                        <div class="cert-card">
+                        <div class="cert-card" data-category="computer-vision">
                             <div class="cert-image">
                                 <img src="images/machine_vision_opencv.png" alt="Machine Vision OpenCV Certificate">
                                 <div class="cert-overlay">
-                                    <button class="view-cert">مشاهده گواهی</button>
+                                    <button class="view-cert" data-cert="mv_opencv">مشاهده گواهی</button>
                                 </div>
                             </div>
                             <div class="cert-content">
@@ -2273,15 +2273,15 @@
                                 <p class="cert-description">گواهی بینایی ماشین و پردازش تصویر با OpenCV</p>
                                 <div class="cert-meta">
                                     <span>Maktabkhooneh</span>
-                                    <span>1402</span>
+                                    <span data-translate="date_aug_12_2025">12/8/2025</span>
                                 </div>
                             </div>
                         </div>
-                        <div class="cert-card">
+                        <div class="cert-card" data-category="computer-vision">
                             <div class="cert-image">
                                 <img src="images/opencv_bootcamp.png" alt="OpenCV Bootcamp Certificate">
                                 <div class="cert-overlay">
-                                    <button class="view-cert">مشاهده گواهی</button>
+                                    <button class="view-cert" data-cert="opencv_bootcamp">مشاهده گواهی</button>
                                 </div>
                             </div>
                             <div class="cert-content">
@@ -2290,24 +2290,24 @@
                                 <p class="cert-description">گواهی بوتکمپ OPENCV</p>
                                 <div class="cert-meta">
                                     <span>OpenCV</span>
-                                    <span>1402</span>
+                                    <span data-translate="date_oct_3_2025">3 اکتبر 2025</span>
                                 </div>
                             </div>
                         </div>
-                        <div class="cert-card">
+                        <div class="cert-card" data-category="computer-vision">
                             <div class="cert-image">
                                 <img src="images/f8062549da2241dd834d184ad64aeb96.png" alt="Olympic Tech Certificate">
                                 <div class="cert-overlay">
-                                    <button class="view-cert">مشاهده گواهی</button>
+                                    <button class="view-cert" data-cert="olympic_tech">مشاهده گواهی</button>
                                 </div>
                             </div>
                             <div class="cert-content">
                                 <span class="cert-category">بینایی کامپیوتر</span>
-                                <h3 class="cert-title" data-translate="cert_computer_vision8">رتبه ششم در دومین رقابت بین‌المللی فناوری المیپک</h3>
+                                <h3 class="cert-title" data-translate="cert_computer_vision8">رتبه ششم در دومین دوره رقابت های المپیک فناوری</h3>
                                 <p class="cert-description">رتبه ششم در دومین رقابت بین‌المللی فناوری المیپک</p>
                                 <div class="cert-meta">
                                     <span>Olympic Tech</span>
-                                    <span>1402</span>
+                                    <span data-translate="date_oct_2025">اکتبر 2025</span>
                                 </div>
                             </div>
                         </div>
@@ -2316,11 +2316,11 @@
                 <!-- گواهی‌های یادگیری تقویتی -->
                 <div class="cert-category-content" id="reinforcement-learning-certificates-content">
                     <div class="certificate-cards">
-                        <div class="cert-card">
+                        <div class="cert-card" data-category="reinforcement-learning">
                             <div class="cert-image">
                                 <img src="images/advanced_rl_techniques.jpg" alt="Advanced RL Techniques Certificate">
                                 <div class="cert-overlay">
-                                    <button class="view-cert">مشاهده گواهی</button>
+                                    <button class="view-cert" data-cert="adv_rl">مشاهده گواهی</button>
                                 </div>
                             </div>
                             <div class="cert-content">
@@ -2329,15 +2329,15 @@
                                 <p class="cert-description">گواهی تکنیک‌های پیشرفته یادگیری تقویتی</p>
                                 <div class="cert-meta">
                                     <span>Faradars</span>
-                                    <span>1402</span>
+                                    <span data-translate="date_aug_13_2025">13 آگوست 2025</span>
                                 </div>
                             </div>
                         </div>
-                        <div class="cert-card">
+                        <div class="cert-card" data-category="reinforcement-learning">
                             <div class="cert-image">
                                 <img src="images/deep_rl_dqn.jpg" alt="Deep RL DQN Certificate">
                                 <div class="cert-overlay">
-                                    <button class="view-cert">مشاهده گواهی</button>
+                                    <button class="view-cert" data-cert="deep_rl_dqn">مشاهده گواهی</button>
                                 </div>
                             </div>
                             <div class="cert-content">
@@ -2346,15 +2346,15 @@
                                 <p class="cert-description">گواهی یادگیری تقویتی عمیق با DQN</p>
                                 <div class="cert-meta">
                                     <span>Faradars</span>
-                                    <span>1402</span>
+                                    <span data-translate="date_aug_14_2025">14 آگوست 2025</span>
                                 </div>
                             </div>
                         </div>
-                        <div class="cert-card">
+                        <div class="cert-card" data-category="reinforcement-learning">
                             <div class="cert-image">
                                 <img src="images/intro_game_ai_rl.png" alt="Intro to Game AI and RL Certificate">
                                 <div class="cert-overlay">
-                                    <button class="view-cert">مشاهده گواهی</button>
+                                    <button class="view-cert" data-cert="intro_gairl">مشاهده گواهی</button>
                                 </div>
                             </div>
                             <div class="cert-content">
@@ -2363,7 +2363,7 @@
                                 <p class="cert-description">گواهی مقدمه‌ای بر هوش مصنوعی بازی‌ها و یادگیری تقویتی</p>
                                 <div class="cert-meta">
                                     <span>Kaggle</span>
-                                    <span>1402</span>
+                                    <span data-translate="date_sep_16_2025">16 سپتامبر 2025</span>
                                 </div>
                             </div>
                         </div>
@@ -2372,11 +2372,11 @@
                 <!-- گواهی‌های Git -->
                 <div class="cert-category-content" id="git-certificates-content">
                     <div class="certificate-cards">
-                        <div class="cert-card">
+                        <div class="cert-card" data-category="git">
                             <div class="cert-image">
                                 <img src="images/mastering_git.jpg" alt="Mastering Git Certificate">
                                 <div class="cert-overlay">
-                                    <button class="view-cert">مشاهده گواهی</button>
+                                    <button class="view-cert" data-cert="master_git">مشاهده گواهی</button>
                                 </div>
                             </div>
                             <div class="cert-content">
@@ -2385,7 +2385,7 @@
                                 <p class="cert-description">گواهی تسلط بر Git، GitHub و GitLab</p>
                                 <div class="cert-meta">
                                     <span>Faradars</span>
-                                    <span>1402</span>
+                                    <span data-translate="date_jun_29_2025">29 ژوئن 2025</span>
                                 </div>
                             </div>
                         </div>
@@ -2394,63 +2394,61 @@
                 <!-- جدول زمانی گواهی‌ها -->
                 <div class="cert-timeline">
                     <h2 class="timeline-title">روند زمانی کسب گواهی‌ها</h2>
-                    <div class="cert-timeline-content" id="timeline-content">
-                        <div class="timeline">
-                            <div class="timeline-item">
-                                <div class="timeline-content">
-                                    <div class="timeline-date">اسفند 1402</div>
-                                    <div class="timeline-cert" data-translate="cert_computer_vision8">رتبه ششم المیپک</div>
-                                    <div class="timeline-org">رقابت بین‌المللی فناوری</div>
-                                </div>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-content">
+                                <div class="timeline-date" data-translate="date_oct_2025">اکتبر 2025</div>
+                                <div class="timeline-cert" data-translate="cert_computer_vision8">رتبه ششم در دومین دوره رقابت های المپیک فناوری</div>
+                                <div class="timeline-org">رقابت بین‌المللی فناوری</div>
                             </div>
-                            <div class="timeline-item">
-                                <div class="timeline-content">
-                                    <div class="timeline-date">بهمن 1402</div>
-                                    <div class="timeline-cert" data-translate="cert_algorithms1">ICPC 2024 - رتبه 35</div>
-                                    <div class="timeline-org">مسابقات برنامه‌نویسی ICPC</div>
-                                </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-content">
+                                <div class="timeline-date" data-translate="date_nov_2024">20 نوامبر 2024</div>
+                                <div class="timeline-cert" data-translate="cert_algorithms1">ICPC 2024 - رتبه 35</div>
+                                <div class="timeline-org">مسابقات برنامه‌نویسی ICPC</div>
                             </div>
-                            <div class="timeline-item">
-                                <div class="timeline-content">
-                                    <div class="timeline-date">دی 1402</div>
-                                    <div class="timeline-cert" data-translate="cert_nlp_llm1">پردازش زبان طبیعی - نمره کامل</div>
-                                    <div class="timeline-org">کوارا</div>
-                                </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-content">
+                                <div class="timeline-date" data-translate="date_apr_2025">آوریل 2025</div>
+                                <div class="timeline-cert" data-translate="cert_nlp_llm2">مدل‌های زبان بزرگ - نمره کامل</div>
+                                <div class="timeline-org">کوارا</div>
                             </div>
-                            <div class="timeline-item">
-                                <div class="timeline-content">
-                                    <div class="timeline-date">آذر 1402</div>
-                                    <div class="timeline-cert" data-translate="cert_nlp_llm2">مدل‌های زبان بزرگ - نمره کامل</div>
-                                    <div class="timeline-org">کوارا</div>
-                                </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-content">
+                                <div class="timeline-date" data-translate="date_apr_2025">آوریل 2025</div>
+                                <div class="timeline-cert" data-translate="cert_deep_learning1">یادگیری عمیق - نمره عالی</div>
+                                <div class="timeline-org">کوارا</div>
                             </div>
-                            <div class="timeline-item">
-                                <div class="timeline-content">
-                                    <div class="timeline-date">آبان 1402</div>
-                                    <div class="timeline-cert" data-translate="cert_deep_learning1">یادگیری عمیق - نمره عالی</div>
-                                    <div class="timeline-org">کوارا</div>
-                                </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-content">
+                                <div class="timeline-date" data-translate="date_mar_2025">مارس 2025</div>
+                                <div class="timeline-cert" data-translate="cert_nlp_llm1">پردازش زبان طبیعی - نمره کامل</div>
+                                <div class="timeline-org">کوارا</div>
                             </div>
-                            <div class="timeline-item">
-                                <div class="timeline-content">
-                                    <div class="timeline-date">مهر 1402</div>
-                                    <div class="timeline-cert" data-translate="cert_computer_vision1">پردازش تصویر حرفه‌ای - نمره عالی</div>
-                                    <div class="timeline-org">کوارا</div>
-                                </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-content">
+                                <div class="timeline-date" data-translate="date_feb_2025">فوریه 2025</div>
+                                <div class="timeline-cert" data-translate="cert_algorithms2">طراحی ساختمان های داده - نمره کامل</div>
+                                <div class="timeline-org">کوارا</div>
                             </div>
-                            <div class="timeline-item">
-                                <div class="timeline-content">
-                                    <div class="timeline-date">شهریور 1402</div>
-                                    <div class="timeline-cert" data-translate="cert_data_science1">تحلیل داده با پایتون - نمره عالی</div>
-                                    <div class="timeline-org">کوارا</div>
-                                </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-content">
+                                <div class="timeline-date" data-translate="date_jul_2025">جولای 2025</div>
+                                <div class="timeline-cert" data-translate="cert_computer_vision1">پردازش تصویر حرفه‌ای - نمره عالی</div>
+                                <div class="timeline-org">کوارا</div>
                             </div>
-                            <div class="timeline-item">
-                                <div class="timeline-content">
-                                    <div class="timeline-date">مرداد 1402</div>
-                                    <div class="timeline-cert" data-translate="cert_algorithms2">طراحی ساختمان داده - نمره کامل</div>
-                                    <div class="timeline-org">کوارا</div>
-                                </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-content">
+                                <div class="timeline-date" data-translate="date_mar_2025">مارس 2025</div>
+                                <div class="timeline-cert" data-translate="cert_data_science1">تحلیل داده با پایتون - نمره عالی</div>
+                                <div class="timeline-org">کوارا</div>
                             </div>
                         </div>
                     </div>
@@ -2617,8 +2615,8 @@
                 cert_ai_ml2: "تسلط بر یادگیری ماشین",
                 cert_ai_ml3: "کتابخانه‌های پایتون برای ML و DL",
                 cert_ai_ml4: "مقدمه‌ای بر یادگیری ماشین",
-                cert_ai_ml5: "یادگیری ماشین متوسط",
-                cert_ai_ml6: "قابل تفسیر بودن یادگیری ماشین",
+                cert_ai_ml5: "Intermediate Machine Learning",
+                cert_ai_ml6: "Machine Learning Explainability",
                 cert_ai_ml7: "یادگیری ماشین",
                 cert_nlp_llm1: "پردازش زبان طبیعی",
                 cert_nlp_llm2: "مدل‌های زبان بزرگ",
@@ -2632,7 +2630,7 @@
                 cert_computer_vision5: "یادگیری عمیق برای تشخیص و شناسایی اشیاء",
                 cert_computer_vision6: "بینایی ماشین و پردازش تصویر با OpenCV",
                 cert_computer_vision7: "بوتکمپ OPENCV",
-                cert_computer_vision8: "رتبه ششم در دومین رقابت بین‌المللی فناوری المیپک",
+                cert_computer_vision8: "رتبه ششم در دومین دوره رقابت های المپیک فناوری",
                 cert_reinforcement_learning1: "تکنیک‌های پیشرفته یادگیری تقویتی",
                 cert_reinforcement_learning2: "یادگیری تقویتی عمیق با DQN",
                 cert_reinforcement_learning3: "مقدمه‌ای بر هوش مصنوعی بازی‌ها و یادگیری تقویتی",
@@ -2658,10 +2656,28 @@
                 form_error: "خطا در ارسال پیام. لطفاً دوباره تلاش کنید.",
                 contact_btn: "ارتباط با من",
                 footer_text: "© 2025 ساخته شده توسط رضا – منتشر شده در",
-                show_more: "نمایش بیشتر",
-                show_less: "نمایش کمتر",
-                show_more_timeline: "نمایش جدول کامل",
-                show_less_timeline: "بستن جدول"
+                date_nov_2024: "20 نوامبر 2024",
+                date_feb_2025: "فوریه 2025",
+                date_mar_2025: "مارس 2025",
+                date_apr_2025: "آوریل 2025",
+                date_jun_30_2025: "30 ژوئن 2025",
+                date_jun_28_2025: "28 ژوئن 2025",
+                date_sep_14_2025: "14 سپتامبر 2025",
+                date_sep_15_2025: "15 سپتامبر 2025",
+                date_nov_6_2025: "6 نوامبر 2025",
+                date_jun_29_2025: "29 ژوئن 2025",
+                date_mordad_23_1404: "23 مرداد 1404",
+                date_jul_6_2025: "6 جولای 2025",
+                date_jul_1_2025: "1 جولای 2025",
+                date_jul_3_2025: "3 جولای 2025",
+                date_sep_16_2025: "16 سپتامبر 2025",
+                date_jul_13_2025: "7/13/2025",
+                date_aug_12_2025: "12/8/2025",
+                date_oct_3_2025: "3 اکتبر 2025",
+                date_oct_2025: "اکتبر 2025",
+                date_aug_13_2025: "13 آگوست 2025",
+                date_aug_14_2025: "14 آگوست 2025",
+                date_jul_2025: "جولای 2025"
             },
             en: {
                 menu_title: "Menu",
@@ -2739,7 +2755,7 @@
                 cert_computer_vision5: "Deep Learning for Object Detection and Recognition",
                 cert_computer_vision6: "Machine Vision and Image Processing with OpenCV",
                 cert_computer_vision7: "OPENCV BOOTCAMP",
-                cert_computer_vision8: "6th Place in the 2nd International Olympic Tech Competition",
+                cert_computer_vision8: "6th Place in the 2nd Olympic Tech Competition",
                 cert_reinforcement_learning1: "Advanced Techniques for Reinforcement Learning",
                 cert_reinforcement_learning2: "Deep Reinforcement Learning with DQN",
                 cert_reinforcement_learning3: "Intro to Game AI and Reinforcement Learning",
@@ -2765,10 +2781,28 @@
                 form_error: "Error sending message. Please try again.",
                 contact_btn: "Contact Me",
                 footer_text: "© 2025 Made by Reza – Published on",
-                show_more: "Show More",
-                show_less: "Show Less",
-                show_more_timeline: "Show Full Timeline",
-                show_less_timeline: "Close Timeline"
+                date_nov_2024: "Nov 20, 2024",
+                date_feb_2025: "Feb 2025",
+                date_mar_2025: "Mar 2025",
+                date_apr_2025: "Apr 2025",
+                date_jun_30_2025: "Jun 30, 2025",
+                date_jun_28_2025: "Jun 28, 2025",
+                date_sep_14_2025: "Sep 14, 2025",
+                date_sep_15_2025: "Sep 15, 2025",
+                date_nov_6_2025: "Nov 6, 2025",
+                date_jun_29_2025: "Jun 29, 2025",
+                date_mordad_23_1404: "Aug 14, 2025",
+                date_jul_6_2025: "Jul 6, 2025",
+                date_jul_1_2025: "Jul 1, 2025",
+                date_jul_3_2025: "Jul 3, 2025",
+                date_sep_16_2025: "Sep 16, 2025",
+                date_jul_13_2025: "Jul 13, 2025",
+                date_aug_12_2025: "Aug 12, 2025",
+                date_oct_3_2025: "Oct 3, 2025",
+                date_oct_2025: "Oct 2025",
+                date_aug_13_2025: "Aug 13, 2025",
+                date_aug_14_2025: "Aug 14, 2025",
+                date_jul_2025: "Jul 2025"
             },
             ru: {
                 menu_title: "Меню",
@@ -2872,10 +2906,28 @@
                 form_error: "Ошибка отправки сообщения. Пожалуйста, попробуйте еще раз.",
                 contact_btn: "Связаться со мной",
                 footer_text: "© 2025 Сделано Резой – Опубликовано на",
-                show_more: "Показать больше",
-                show_less: "Показать меньше",
-                show_more_timeline: "Показать полную шкалу",
-                show_less_timeline: "Закрыть шкалу"
+                date_nov_2024: "20 ноя 2024",
+                date_feb_2025: "фев 2025",
+                date_mar_2025: "мар 2025",
+                date_apr_2025: "апр 2025",
+                date_jun_30_2025: "30 июн 2025",
+                date_jun_28_2025: "28 июн 2025",
+                date_sep_14_2025: "14 сен 2025",
+                date_sep_15_2025: "15 сен 2025",
+                date_nov_6_2025: "6 ноя 2025",
+                date_jun_29_2025: "29 июн 2025",
+                date_mordad_23_1404: "14 авг 2025",
+                date_jul_6_2025: "6 июл 2025",
+                date_jul_1_2025: "1 июл 2025",
+                date_jul_3_2025: "3 июл 2025",
+                date_sep_16_2025: "16 сен 2025",
+                date_jul_13_2025: "13 июл 2025",
+                date_aug_12_2025: "12 авг 2025",
+                date_oct_3_2025: "3 окт 2025",
+                date_oct_2025: "окт 2025",
+                date_aug_13_2025: "13 авг 2025",
+                date_aug_14_2025: "14 авг 2025",
+                date_jul_2025: "июль 2025"
             }
         };
         // تابع تغییر زبان
@@ -2954,13 +3006,34 @@
             sections.forEach(section => {
                 observer.observe(section);
             });
+            // مدیریت دکمه‌های دسته‌بندی گواهی‌ها
+            document.querySelectorAll('.category-btn').forEach(button => {
+                button.addEventListener('click', function() {
+                    const category = this.getAttribute('data-category');
+                    // حذف کلاس active از همه دکمه‌ها
+                    document.querySelectorAll('.category-btn').forEach(btn => {
+                        btn.classList.remove('active');
+                    });
+                    // اضافه کردن کلاس active به دکمه کلیک شده
+                    this.classList.add('active');
+                    // فیلتر کردن کارت‌ها
+                    document.querySelectorAll('.cert-card').forEach(card => {
+                        if (category === 'all' || card.getAttribute('data-category') === category) {
+                            card.style.display = 'block';
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+                });
+            });
             // مشاهده گواهی در حالت تمام صفحه
             document.querySelectorAll('.view-cert').forEach(button => {
                 button.addEventListener('click', function(e) {
                     e.stopPropagation();
-                    const certImage = this.closest('.cert-card').querySelector('img').src;
-                    // کد نمایش گواهی در حالت تمام صفحه
-                    alert('نمایش گواهی در حالت تمام صفحه - آدرس تصویر: ' + certImage);
+                    const certId = this.getAttribute('data-cert');
+                    // می‌توانید یک پنجره جدید یا یک modal ایجاد کنید
+                    // برای نمایش جزئیات گواهی
+                    alert('نمایش گواهی: ' + certId);
                 });
             });
             // انیمیشن برای نمودارهای دایره‌ای
