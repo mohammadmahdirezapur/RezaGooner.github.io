@@ -799,38 +799,6 @@
             color: #666;
             font-size: 0.9rem;
         }
-        /* دکمه Collapse */
-        .collapse-btn {
-            display: block;
-            width: 100%;
-            padding: 15px;
-            margin: 20px 0;
-            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-            color: var(--white);
-            border: none;
-            border-radius: 10px;
-            font-size: 1.1em;
-            font-weight: bold;
-            cursor: pointer;
-            transition: var(--transition);
-            text-align: center;
-        }
-        .collapse-btn:hover {
-            background: linear-gradient(135deg, var(--accent-color), #ffed4e);
-            color: #222;
-        }
-        .cert-category-content {
-            display: none;
-        }
-        .cert-category-content.active {
-            display: block;
-        }
-        .cert-timeline-content {
-            display: none;
-        }
-        .cert-timeline-content.active {
-            display: block;
-        }
         /* چیدمان جدید برای نمونه‌کارها */
         .projects-grid {
             display: grid;
@@ -1984,7 +1952,6 @@
                             </div>
                         </div>
                     </div>
-                    <button class="collapse-btn" data-target="data-science-certificates-content" data-translate="show_more">نمایش بیشتر</button>
                 </div>
                 <!-- گواهی‌های هوش مصنوعی و یادگیری ماشین -->
                 <div class="cert-category-content" id="ai-ml-certificates-content">
@@ -2109,7 +2076,6 @@
                             </div>
                         </div>
                     </div>
-                    <button class="collapse-btn" data-target="ai-ml-certificates-content" data-translate="show_more">نمایش بیشتر</button>
                 </div>
                 <!-- گواهی‌های پردازش زبان و مدل‌های بزرگ -->
                 <div class="cert-category-content" id="nlp-llm-certificates-content">
@@ -2346,7 +2312,6 @@
                             </div>
                         </div>
                     </div>
-                    <button class="collapse-btn" data-target="computer-vision-certificates-content" data-translate="show_more">نمایش بیشتر</button>
                 </div>
                 <!-- گواهی‌های یادگیری تقویتی -->
                 <div class="cert-category-content" id="reinforcement-learning-certificates-content">
@@ -2489,7 +2454,6 @@
                             </div>
                         </div>
                     </div>
-                    <button class="collapse-btn" data-target="timeline-content" data-translate="show_more_timeline">نمایش جدول کامل</button>
                 </div>
             </div>
         </section>
@@ -2989,36 +2953,6 @@
             }, { threshold: 0.1 });
             sections.forEach(section => {
                 observer.observe(section);
-            });
-            // مدیریت دکمه‌های Collapse برای دسته‌های گواهی
-            document.querySelectorAll('.collapse-btn').forEach(button => {
-                button.addEventListener('click', function() {
-                    const targetId = this.getAttribute('data-target');
-                    const targetElement = document.getElementById(targetId);
-                    const isExpanded = targetElement.classList.contains('active');
-                    if (isExpanded) {
-                        this.textContent = translations[savedLang].show_more;
-                        this.setAttribute('data-translate', 'show_more');
-                    } else {
-                        this.textContent = translations[savedLang].show_less;
-                        this.setAttribute('data-translate', 'show_less');
-                    }
-                    targetElement.classList.toggle('active');
-                });
-            });
-            // مدیریت دکمه Collapse برای جدول زمانی
-            const timelineCollapseBtn = document.querySelector('.cert-timeline .collapse-btn');
-            timelineCollapseBtn.addEventListener('click', function() {
-                const targetElement = document.getElementById(this.getAttribute('data-target'));
-                const isExpanded = targetElement.classList.contains('active');
-                if (isExpanded) {
-                    this.textContent = translations[savedLang].show_more_timeline;
-                    this.setAttribute('data-translate', 'show_more_timeline');
-                } else {
-                    this.textContent = translations[savedLang].show_less_timeline;
-                    this.setAttribute('data-translate', 'show_less_timeline');
-                }
-                targetElement.classList.toggle('active');
             });
             // مشاهده گواهی در حالت تمام صفحه
             document.querySelectorAll('.view-cert').forEach(button => {
