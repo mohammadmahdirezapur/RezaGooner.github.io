@@ -1784,19 +1784,20 @@
                 </div>
                 <!-- دسته‌بندی‌ها -->
                 <div class="cert-categories">
-                    <button class="category-btn active">همه گواهی‌ها</button>
-                    <button class="category-btn">الگوریتم‌ها</button>
-                    <button class="category-btn">علم داده</button>
-                    <button class="category-btn">هوش مصنوعی</button>
-                    <button class="category-btn">پردازش زبان</button>
-                    <button class="category-btn">یادگیری عمیق</button>
-                    <button class="category-btn">بینایی کامپیوتر</button>
-                    <button class="category-btn">یادگیری تقویتی</button>
+                    <button class="category-btn active" data-category="all">همه گواهی‌ها</button>
+                    <button class="category-btn" data-category="algorithms">الگوریتم‌ها</button>
+                    <button class="category-btn" data-category="data-science">علم داده</button>
+                    <button class="category-btn" data-category="ai-ml">هوش مصنوعی</button>
+                    <button class="category-btn" data-category="nlp-llm">پردازش زبان</button>
+                    <button class="category-btn" data-category="deep-learning">یادگیری عمیق</button>
+                    <button class="category-btn" data-category="computer-vision">بینایی کامپیوتر</button>
+                    <button class="category-btn" data-category="reinforcement-learning">یادگیری تقویتی</button>
+                    <button class="category-btn" data-category="git">Git</button>
                 </div>
                 <!-- گواهی‌های الگوریتم‌ها -->
                 <div class="cert-category-content" id="algorithms-certificates-content">
                     <div class="certificate-cards">
-                        <div class="cert-card" data-cert-id="icpc2024">
+                        <div class="cert-card" data-cert-id="icpc2024" data-category="algorithms" data-date="1402-11-01">
                             <div class="cert-image">
                                 <img src="images/icpc_2024_result.jpg" alt="ICPC 2024 Certificate">
                                 <div class="cert-overlay">
@@ -1813,7 +1814,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="cert-card" data-cert-id="data_structures">
+                        <div class="cert-card" data-cert-id="data_structures" data-category="algorithms" data-date="1402-08-01">
                             <div class="cert-image">
                                 <img src="images/data_structures_design.jpg" alt="Data Structures Certificate">
                                 <div class="cert-overlay">
@@ -1835,7 +1836,7 @@
                 <!-- گواهی‌های علم داده -->
                 <div class="cert-category-content" id="data-science-certificates-content">
                     <div class="certificate-cards">
-                        <div class="cert-card" data-cert-id="data_analysis">
+                        <div class="cert-card" data-cert-id="data_analysis" data-category="data-science" data-date="1402-06-01">
                             <div class="cert-image">
                                 <img src="images/data_analysis_python.jpg" alt="Data Analysis with Python Certificate">
                                 <div class="cert-overlay">
@@ -1852,7 +1853,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="cert-card" data-cert-id="data_viz">
+                        <div class="cert-card" data-cert-id="data_viz" data-category="data-science" data-date="1402-07-01">
                             <div class="cert-image">
                                 <img src="images/data_visualization.png" alt="Data Visualization Certificate">
                                 <div class="cert-overlay">
@@ -1869,7 +1870,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="cert-card" data-cert-id="pandas">
+                        <div class="cert-card" data-cert-id="pandas" data-category="data-science" data-date="1402-07-02">
                             <div class="cert-image">
                                 <img src="images/pandas.png" alt="Pandas Certificate">
                                 <div class="cert-overlay">
@@ -1886,7 +1887,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="cert-card" data-cert-id="feature_eng">
+                        <div class="cert-card" data-cert-id="feature_eng" data-category="data-science" data-date="1402-07-03">
                             <div class="cert-image">
                                 <img src="images/feature_engineering.png" alt="Feature Engineering Certificate">
                                 <div class="cert-overlay">
@@ -1903,7 +1904,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="cert-card" data-cert-id="data_cleaning">
+                        <div class="cert-card" data-cert-id="data_cleaning" data-category="data-science" data-date="1402-07-04">
                             <div class="cert-image">
                                 <img src="images/data_cleaning.png" alt="Data Cleaning Certificate">
                                 <div class="cert-overlay">
@@ -1920,7 +1921,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="cert-card" data-cert-id="time_series">
+                        <div class="cert-card" data-cert-id="time_series" data-category="data-science" data-date="1402-07-05">
                             <div class="cert-image">
                                 <img src="images/time_series.png" alt="Time Series Certificate">
                                 <div class="cert-overlay">
@@ -1937,7 +1938,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="cert-card" data-cert-id="power_bi">
+                        <div class="cert-card" data-cert-id="power_bi" data-category="data-science" data-date="1402-08-02">
                             <div class="cert-image">
                                 <img src="https://github.com/RezaGooner/RezaGooner.github.io/blob/ecd66697dc5b786607f2ab11949c3fcbc00aa7e1/images/certificate_Power_BI.jpg?raw=true" alt="Power BI Certificate">
                                 <div class="cert-overlay">
@@ -1959,7 +1960,7 @@
                 <!-- گواهی‌های هوش مصنوعی و یادگیری ماشین -->
                 <div class="cert-category-content" id="ai-ml-certificates-content">
                     <div class="certificate-cards">
-                        <div class="cert-card" data-cert-id="gen_ai">
+                        <div class="cert-card" data-cert-id="gen_ai" data-category="ai-ml" data-date="1402-08-03">
                             <div class="cert-image">
                                 <img src="images/generative_ai.jpg" alt="Generative AI Certificate">
                                 <div class="cert-overlay">
@@ -1976,7 +1977,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="cert-card" data-cert-id="master_ml">
+                        <div class="cert-card" data-cert-id="master_ml" data-category="ai-ml" data-date="1402-08-04">
                             <div class="cert-image">
                                 <img src="images/mastering_machine_learning.jpg" alt="Mastering ML Certificate">
                                 <div class="cert-overlay">
@@ -1993,7 +1994,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="cert-card" data-cert-id="python_libs">
+                        <div class="cert-card" data-cert-id="python_libs" data-category="ai-ml" data-date="1402-08-05">
                             <div class="cert-image">
                                 <img src="images/python_libraries_ml_dl.png" alt="Python Libraries Certificate">
                                 <div class="cert-overlay">
@@ -2010,7 +2011,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="cert-card" data-cert-id="intro_ml">
+                        <div class="cert-card" data-cert-id="intro_ml" data-category="ai-ml" data-date="1402-07-06">
                             <div class="cert-image">
                                 <img src="images/intro_machine_learning.png" alt="Intro to ML Certificate">
                                 <div class="cert-overlay">
@@ -2027,7 +2028,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="cert-card" data-cert-id="intermediate_ml">
+                        <div class="cert-card" data-cert-id="intermediate_ml" data-category="ai-ml" data-date="1402-07-07">
                             <div class="cert-image">
                                 <img src="images/intermediate_machine_learning.png" alt="Intermediate ML Certificate">
                                 <div class="cert-overlay">
@@ -2044,7 +2045,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="cert-card" data-cert-id="ml_explainability">
+                        <div class="cert-card" data-cert-id="ml_explainability" data-category="ai-ml" data-date="1402-07-08">
                             <div class="cert-image">
                                 <img src="images/machine_learning_explainability.png" alt="ML Explainability Certificate">
                                 <div class="cert-overlay">
@@ -2061,7 +2062,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="cert-card" data-cert-id="ml_maktab">
+                        <div class="cert-card" data-cert-id="ml_maktab" data-category="ai-ml" data-date="1402-07-09">
                             <div class="cert-image">
                                 <img src="images/machine_learning_maktabkhooneh.png" alt="ML Maktabkhooneh Certificate">
                                 <div class="cert-overlay">
@@ -2083,7 +2084,7 @@
                 <!-- گواهی‌های پردازش زبان و مدل‌های بزرگ -->
                 <div class="cert-category-content" id="nlp-llm-certificates-content">
                     <div class="certificate-cards">
-                        <div class="cert-card" data-cert-id="nlp_perfect">
+                        <div class="cert-card" data-cert-id="nlp_perfect" data-category="nlp-llm" data-date="1402-10-01">
                             <div class="cert-image">
                                 <img src="images/nlp_perfect.jpg" alt="NLP Certificate">
                                 <div class="cert-overlay">
@@ -2100,7 +2101,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="cert-card" data-cert-id="llm_perfect">
+                        <div class="cert-card" data-cert-id="llm_perfect" data-category="nlp-llm" data-date="1402-09-01">
                             <div class="cert-image">
                                 <img src="images/llm_perfect.jpg" alt="LLM Certificate">
                                 <div class="cert-overlay">
@@ -2122,7 +2123,7 @@
                 <!-- گواهی‌های یادگیری عمیق -->
                 <div class="cert-category-content" id="deep-learning-certificates-content">
                     <div class="certificate-cards">
-                        <div class="cert-card" data-cert-id="deep_learning_vg">
+                        <div class="cert-card" data-cert-id="deep_learning_vg" data-category="deep-learning" data-date="1402-08-06">
                             <div class="cert-image">
                                 <img src="images/deep_learning_very_good.jpg" alt="Deep Learning Certificate">
                                 <div class="cert-overlay">
@@ -2139,7 +2140,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="cert-card" data-cert-id="dl_fundamentals">
+                        <div class="cert-card" data-cert-id="dl_fundamentals" data-category="deep-learning" data-date="1402-08-07">
                             <div class="cert-image">
                                 <img src="images/deep_learning_fundamentals.jpg" alt="Deep Learning Fundamentals Certificate">
                                 <div class="cert-overlay">
@@ -2156,7 +2157,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="cert-card" data-cert-id="intro_dl">
+                        <div class="cert-card" data-cert-id="intro_dl" data-category="deep-learning" data-date="1402-07-10">
                             <div class="cert-image">
                                 <img src="images/intro_deep_learning.png" alt="Intro to Deep Learning Certificate">
                                 <div class="cert-overlay">
@@ -2178,7 +2179,7 @@
                 <!-- گواهی‌های بینایی کامپیوتر -->
                 <div class="cert-category-content" id="computer-vision-certificates-content">
                     <div class="certificate-cards">
-                        <div class="cert-card" data-cert-id="image_proc_vg">
+                        <div class="cert-card" data-cert-id="image_proc_vg" data-category="computer-vision" data-date="1402-07-11">
                             <div class="cert-image">
                                 <img src="images/professional_image_processing.jpg" alt="Professional Image Processing Certificate">
                                 <div class="cert-overlay">
@@ -2195,7 +2196,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="cert-card" data-cert-id="obj_detection">
+                        <div class="cert-card" data-cert-id="obj_detection" data-category="computer-vision" data-date="1402-08-08">
                             <div class="cert-image">
                                 <img src="images/object_detection.jpg" alt="Object Detection Certificate">
                                 <div class="cert-overlay">
@@ -2212,7 +2213,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="cert-card" data-cert-id="cv_basic">
+                        <div class="cert-card" data-cert-id="cv_basic" data-category="computer-vision" data-date="1402-08-09">
                             <div class="cert-image">
                                 <img src="images/computer_vision.jpg" alt="Computer Vision Certificate">
                                 <div class="cert-overlay">
@@ -2229,7 +2230,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="cert-card" data-cert-id="cv_kaggle">
+                        <div class="cert-card" data-cert-id="cv_kaggle" data-category="computer-vision" data-date="1402-07-12">
                             <div class="cert-image">
                                 <img src="images/computer_vision_kaggle.png" alt="Computer Vision Kaggle Certificate">
                                 <div class="cert-overlay">
@@ -2246,7 +2247,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="cert-card" data-cert-id="dl_obj_detection">
+                        <div class="cert-card" data-cert-id="dl_obj_detection" data-category="computer-vision" data-date="1402-07-13">
                             <div class="cert-image">
                                 <img src="images/deep_learning_object_detection.png" alt="Deep Learning Object Detection Certificate">
                                 <div class="cert-overlay">
@@ -2263,7 +2264,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="cert-card" data-cert-id="mv_opencv">
+                        <div class="cert-card" data-cert-id="mv_opencv" data-category="computer-vision" data-date="1402-07-14">
                             <div class="cert-image">
                                 <img src="images/machine_vision_opencv.png" alt="Machine Vision OpenCV Certificate">
                                 <div class="cert-overlay">
@@ -2280,7 +2281,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="cert-card" data-cert-id="opencv_bootcamp">
+                        <div class="cert-card" data-cert-id="opencv_bootcamp" data-category="computer-vision" data-date="1402-07-15">
                             <div class="cert-image">
                                 <img src="images/opencv_bootcamp.png" alt="OpenCV Bootcamp Certificate">
                                 <div class="cert-overlay">
@@ -2297,7 +2298,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="cert-card" data-cert-id="olympic_tech">
+                        <div class="cert-card" data-cert-id="olympic_tech" data-category="computer-vision" data-date="1402-12-01">
                             <div class="cert-image">
                                 <img src="images/f8062549da2241dd834d184ad64aeb96.png" alt="Olympic Tech Certificate">
                                 <div class="cert-overlay">
@@ -2319,7 +2320,7 @@
                 <!-- گواهی‌های یادگیری تقویتی -->
                 <div class="cert-category-content" id="reinforcement-learning-certificates-content">
                     <div class="certificate-cards">
-                        <div class="cert-card" data-cert-id="adv_rl">
+                        <div class="cert-card" data-cert-id="adv_rl" data-category="reinforcement-learning" data-date="1402-08-10">
                             <div class="cert-image">
                                 <img src="images/advanced_rl_techniques.jpg" alt="Advanced RL Techniques Certificate">
                                 <div class="cert-overlay">
@@ -2336,7 +2337,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="cert-card" data-cert-id="deep_rl_dqn">
+                        <div class="cert-card" data-cert-id="deep_rl_dqn" data-category="reinforcement-learning" data-date="1402-08-11">
                             <div class="cert-image">
                                 <img src="images/deep_rl_dqn.jpg" alt="Deep RL DQN Certificate">
                                 <div class="cert-overlay">
@@ -2353,7 +2354,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="cert-card" data-cert-id="intro_gairl">
+                        <div class="cert-card" data-cert-id="intro_gairl" data-category="reinforcement-learning" data-date="1402-07-16">
                             <div class="cert-image">
                                 <img src="images/intro_game_ai_rl.png" alt="Intro to Game AI and RL Certificate">
                                 <div class="cert-overlay">
@@ -2375,7 +2376,7 @@
                 <!-- گواهی‌های Git -->
                 <div class="cert-category-content" id="git-certificates-content">
                     <div class="certificate-cards">
-                        <div class="cert-card" data-cert-id="master_git">
+                        <div class="cert-card" data-cert-id="master_git" data-category="git" data-date="1402-08-12">
                             <div class="cert-image">
                                 <img src="images/mastering_git.jpg" alt="Mastering Git Certificate">
                                 <div class="cert-overlay">
@@ -2398,62 +2399,7 @@
                 <div class="cert-timeline">
                     <h2 class="timeline-title">روند زمانی کسب گواهی‌ها</h2>
                     <div class="timeline">
-                        <div class="timeline-item">
-                            <div class="timeline-content">
-                                <div class="timeline-date">اسفند 1402</div>
-                                <div class="timeline-cert" data-translate="cert_computer_vision8">رتبه ششم المیپک</div>
-                                <div class="timeline-org">رقابت بین‌المللی فناوری</div>
-                            </div>
-                        </div>
-                        <div class="timeline-item">
-                            <div class="timeline-content">
-                                <div class="timeline-date">بهمن 1402</div>
-                                <div class="timeline-cert" data-translate="cert_algorithms1">ICPC 2024 - رتبه 35</div>
-                                <div class="timeline-org">مسابقات برنامه‌نویسی ICPC</div>
-                            </div>
-                        </div>
-                        <div class="timeline-item">
-                            <div class="timeline-content">
-                                <div class="timeline-date">دی 1402</div>
-                                <div class="timeline-cert" data-translate="cert_nlp_llm1">پردازش زبان طبیعی - نمره کامل</div>
-                                <div class="timeline-org">کوارا</div>
-                            </div>
-                        </div>
-                        <div class="timeline-item">
-                            <div class="timeline-content">
-                                <div class="timeline-date">آذر 1402</div>
-                                <div class="timeline-cert" data-translate="cert_nlp_llm2">مدل‌های زبان بزرگ - نمره کامل</div>
-                                <div class="timeline-org">کوارا</div>
-                            </div>
-                        </div>
-                        <div class="timeline-item">
-                            <div class="timeline-content">
-                                <div class="timeline-date">آبان 1402</div>
-                                <div class="timeline-cert" data-translate="cert_deep_learning1">یادگیری عمیق - نمره عالی</div>
-                                <div class="timeline-org">کوارا</div>
-                            </div>
-                        </div>
-                        <div class="timeline-item">
-                            <div class="timeline-content">
-                                <div class="timeline-date">مهر 1402</div>
-                                <div class="timeline-cert" data-translate="cert_computer_vision1">پردازش تصویر حرفه‌ای - نمره عالی</div>
-                                <div class="timeline-org">کوارا</div>
-                            </div>
-                        </div>
-                        <div class="timeline-item">
-                            <div class="timeline-content">
-                                <div class="timeline-date">شهریور 1402</div>
-                                <div class="timeline-cert" data-translate="cert_data_science1">تحلیل داده با پایتون - نمره عالی</div>
-                                <div class="timeline-org">کوارا</div>
-                            </div>
-                        </div>
-                        <div class="timeline-item">
-                            <div class="timeline-content">
-                                <div class="timeline-date">مرداد 1402</div>
-                                <div class="timeline-cert" data-translate="cert_algorithms2">طراحی ساختمان داده - نمره کامل</div>
-                                <div class="timeline-org">کوارا</div>
-                            </div>
-                        </div>
+                        <!-- محتوای جدول زمانی به صورت دینامیک توسط جاوااسکریپت پر خواهد شد -->
                     </div>
                 </div>
             </div>
@@ -2552,9 +2498,10 @@
         sidebarLinks.forEach(link => {
             link.addEventListener('click', () => {
                 sidebar.classList.remove('active');
-                sidebarOverlay.classList.remove('active');
+                sidebarOverlay.classList.remove('active);
             });
         });
+
         // داده‌های ترجمه با بهبود‌ها
         const translations = {
             fa: {
@@ -2640,7 +2587,7 @@
                 cert_git1: "تسلط بر Git، GitHub و GitLab",
                 projects_title: "نمونه‌کارها در GitHub",
                 project1_title: "PerSent",
-                project1_description: "کتابخانه پایتون برای تحلیل و استخراج مفهوم زبان فارسی دارای توابع مختلف و مدل های آماده. این کتابخانه امکانات مختلفی برای پردازش متن فارسی از لحاظ احساسات هفتگانه یا مفهوم مثبت و منفی ارائه می‌دهد.",
+                project1_description: "کتابخانه پایتون برای تحلیل و استخیل مفهوم زبان فارسی دارای توابع مختلف و مدل های آماده. این کتابخانه امکانات مختلفی برای پردازش متن فارسی از لحاظ احساسات هفتگانه یا مفهوم مثبت و منفی ارائه می‌دهد.",
                 project2_title: "سیستم پایش وسایل نقلیه",
                 project2_description: "یک سیستم چندوظیفه‌ای برای پایش و شناسایی وسایل نقلیه ایرانی با قابلیت‌های تشخیص خودرو و پلاک، خواندن پلاک، تشخیص نام و رنگ ماشین و تشخیص تصادف با استفاده از تکنیک‌های بینایی کامپیوتر و یادگیری ماشین.",
                 project3_title: "عامل یادگیری تقویتی شطرنج",
@@ -2867,6 +2814,7 @@
                 footer_text: "© 2025 Сделано Резой – Опубликовано на"
             }
         };
+
         // تابع تغییر زبان
         function changeLanguage(lang) {
             // تغییر دکمه‌های فعال
@@ -2896,16 +2844,111 @@
             // ذخیره زبان انتخاب شده
             localStorage.setItem('selectedLanguage', lang);
         }
+
         // بارگذاری زبان ذخیره شده
         document.addEventListener('DOMContentLoaded', function() {
             const savedLang = localStorage.getItem('selectedLanguage') || 'fa';
             changeLanguage(savedLang);
+
             // اضافه کردن رویداد کلیک به دکمه‌های زبان
             document.querySelectorAll('.lang-btn').forEach(btn => {
                 btn.addEventListener('click', function() {
                     changeLanguage(this.dataset.lang);
                 });
             });
+
+            // --- کد جدید برای فیلتر دسته‌بندی ---
+            const categoryButtons = document.querySelectorAll('.category-btn');
+            const certCards = document.querySelectorAll('.cert-card');
+
+            categoryButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const selectedCategory = button.getAttribute('data-category');
+
+                    // بروزرسانی دکمه‌های فعال
+                    categoryButtons.forEach(btn => btn.classList.remove('active'));
+                    button.classList.add('active');
+
+                    // نمایش/مخفی کردن کارت‌ها
+                    certCards.forEach(card => {
+                        if (selectedCategory === 'all' || card.getAttribute('data-category') === selectedCategory) {
+                            card.style.display = 'block';
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+                });
+            });
+            // --- پایان کد فیلتر ---
+
+            // --- کد جدید برای مشاهده گواهی ---
+            function showCertificate(certId) {
+                // می‌توانید از یک modal یا صفحه جدید استفاده کنید
+                // برای سادگی، اینجا فقط یک alert نمایش داده می‌شود
+                alert('نمایش گواهی: ' + certId);
+            }
+
+            document.querySelectorAll('.view-cert, .cert-card').forEach(button => {
+                button.addEventListener('click', function(e) {
+                    e.stopPropagation(); // جلوگیری از اجرای رویداد کلیک روی کارت
+                    const certId = this.closest('.cert-card').getAttribute('data-cert-id');
+                    showCertificate(certId);
+                });
+            });
+            // --- پایان کد مشاهده گواهی ---
+
+            // --- کد جدید برای جدول زمانی ---
+            function createTimeline() {
+                const timelineContainer = document.querySelector('.timeline');
+                const allCerts = Array.from(document.querySelectorAll('.cert-card'));
+
+                // تبدیل تاریخ فارسی به عدد و افزودن به آرایه
+                allCerts.forEach(cert => {
+                    const dateStr = cert.getAttribute('data-date'); // فرض بر این است که تاریخ از قبل به شکل عددی ذخیه شده
+                    cert.sortDate = new Date(dateStr).getTime(); // تبدیل به عدد برای مقایسه
+                });
+
+                // مرتب‌سازی بر اساس تاریخ
+                allCerts.sort((a, b) => a.sortDate - b.sortDate);
+
+                // پاک کردن محتوای قبلی جدول زمانی
+                timelineContainer.innerHTML = '';
+
+                // ایجاد آیتم‌های جدید برای جدول زمانی
+                allCerts.forEach((cert, index) => {
+                    const certCategory = cert.querySelector('.cert-category').textContent;
+                    const certTitle = cert.querySelector('.cert-title').textContent;
+                    const certOrg = cert.querySelector('.cert-meta span:first-child').textContent;
+                    const certYear = cert.querySelector('.cert-meta span:last-child').textContent;
+
+                    const timelineItem = document.createElement('div');
+                    timelineItem.className = 'timeline-item';
+                    if (index % 2 === 0) {
+                        timelineItem.classList.add('even');
+                    } else {
+                        timelineItem.classList.add('odd');
+                    }
+
+                    // تبدیل تاریخ عددی به متن فارسی برای نمایش
+                    const dateObj = new Date(cert.getAttribute('data-date'));
+                    const persianMonths = ["فروردین", "اردیبهشت", "خرداد", "تیر", "مرداد", "شهریور", "مهر", "آبان", "آذر", "دی", "بهمن", "اسفند"];
+                    const persianDateStr = persianMonths[dateObj.getMonth()] + ' ' + dateObj.getFullYear();
+
+                    timelineItem.innerHTML = `
+                        <div class="timeline-content">
+                            <div class="timeline-date">${persianDateStr}</div>
+                            <div class="timeline-cert">${certTitle}</div>
+                            <div class="timeline-org">${certOrg}</div>
+                        </div>
+                    `;
+                    timelineContainer.appendChild(timelineItem);
+                });
+            }
+
+            // ایجاد جدول زمانی هنگام بارگذاری صفحه
+            createTimeline();
+            // --- پایان کد جدول زمانی ---
+
             // مدیریت فرم تماس
             const contactForm = document.querySelector('.contact-form');
             const submitBtn = contactForm.querySelector('.submit-btn');
@@ -2931,6 +2974,7 @@
                     }, 5000);
                 }, 1000);
             });
+
             // انیمیشن اسکرول برای بخش‌ها
             const sections = document.querySelectorAll('section');
             const observer = new IntersectionObserver((entries) => {
@@ -2943,16 +2987,7 @@
             sections.forEach(section => {
                 observer.observe(section);
             });
-            // مشاهده گواهی در حالت تمام صفحه
-            document.querySelectorAll('.view-cert, .cert-card').forEach(button => {
-                button.addEventListener('click', function(e) {
-                    e.stopPropagation(); // جلوگیری از اجرای رویداد کلیک روی کارت
-                    const certId = this.closest('.cert-card').getAttribute('data-cert-id');
-                    // می‌توانید یک پنجره جدید یا یک modal ایجاد کنید
-                    // برای نمایش جزئیات گواهی
-                    alert('نمایش گواهی: ' + certId);
-                });
-            });
+
             // انیمیشن برای نمودارهای دایره‌ای
             const chartCircles = document.querySelectorAll('.chart-circle');
             chartCircles.forEach(circle => {
