@@ -132,7 +132,35 @@
             background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
             transition: left 0.7s;
         }
-        
+        /* دکمه Collapse */
+.collapse-btn {
+    background: var(--primary-color);
+    color: var(--white);
+    border: none;
+    border-radius: 25px;
+    padding: 10px 20px;
+    margin: 20px auto;
+    display: block;
+    cursor: pointer;
+    transition: var(--transition);
+    font-weight: bold;
+}
+
+.collapse-btn:hover {
+    background: var(--accent-color);
+    color: #222;
+    transform: translateY(-3px);
+}
+
+.collapse-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease;
+}
+
+.collapse-content.expanded {
+    max-height: 2000px;
+}
         .lang-btn:hover::before {
             left: 100%;
         }
@@ -1762,266 +1790,802 @@
             </ul>
         </section>
 
-        <section id="certificates">
-            <h2 data-translate="certificates_title">گواهی‌ها و افتخارات</h2>
-
+       <!-- بخش گواهی‌ها با طراحی جدید -->
+<section id="certificates">
+    <h2 data-translate="certificates_title">گواهی‌ها و افتخارات</h2>
+    
+    <div class="certificates-container">
+        <!-- آمار کلی -->
+        <div class="cert-stats">
+            <div class="stat-card">
+                <div class="stat-icon">
+                    <i class="fas fa-trophy"></i>
+                </div>
+                <div class="stat-number">32</div>
+                <div class="stat-label">گواهی کسب شده</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">
+                    <i class="fas fa-medal"></i>
+                </div>
+                <div class="stat-number">8</div>
+                <div class="stat-label">دسته‌بندی‌ها</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">
+                    <i class="fas fa-star"></i>
+                </div>
+                <div class="stat-number">12</div>
+                <div class="stat-label">گواهی درجه یک</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">
+                    <i class="fas fa-award"></i>
+                </div>
+                <div class="stat-number">6</div>
+                <div class="stat-label">رتبه‌های برتر</div>
+            </div>
+        </div>
+        
+        <!-- نمودار مهارت‌ها -->
+        <div class="skills-chart">
+            <h2 class="chart-title">سطح مهارت در حوزه‌های مختلف</h2>
+            <div class="chart-container">
+                <div class="chart-item">
+                    <div class="chart-circle" style="--percentage: 85%">
+                        <div class="chart-value">85%</div>
+                    </div>
+                    <div class="chart-label">هوش مصنوعی</div>
+                </div>
+                <div class="chart-item">
+                    <div class="chart-circle" style="--percentage: 90%">
+                        <div class="chart-value">90%</div>
+                    </div>
+                    <div class="chart-label">یادگیری ماشین</div>
+                </div>
+                <div class="chart-item">
+                    <div class="chart-circle" style="--percentage: 80%">
+                        <div class="chart-value">80%</div>
+                    </div>
+                    <div class="chart-label">پردازش زبان</div>
+                </div>
+                <div class="chart-item">
+                    <div class="chart-circle" style="--percentage: 75%">
+                        <div class="chart-value">75%</div>
+                    </div>
+                    <div class="chart-label">بینایی کامپیوتر</div>
+                </div>
+                <div class="chart-item">
+                    <div class="chart-circle" style="--percentage: 70%">
+                        <div class="chart-value">70%</div>
+                    </div>
+                    <div class="chart-label">یادگیری تقویتی</div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- دسته‌بندی‌ها -->
+        <div class="cert-categories">
+            <button class="category-btn active">همه گواهی‌ها</button>
+            <button class="category-btn">الگوریتم‌ها</button>
+            <button class="category-btn">علم داده</button>
+            <button class="category-btn">هوش مصنوعی</button>
+            <button class="category-btn">پردازش زبان</button>
+            <button class="category-btn">یادگیری عمیق</button>
+            <button class="category-btn">بینایی کامپیوتر</button>
+            <button class="category-btn">یادگیری تقویتی</button>
+        </div>
+        
+        <!-- کارت‌های گواهی -->
+        <div class="certificate-cards">
             <!-- Algorithms -->
-            <div class="cert-category" id="algorithms-certificates">
-                <h3 data-translate="nav_algorithms">Algorithms</h3>
-                <div class="cert-scroll">
-                    <div class="cert-card">
-                        <a href="https://icpc.sharif.edu/2024/scoreboard/" target="_blank">
-                            <img src="images/icpc_2024_result.jpg" alt="ICPC 2024 Result">
-                            <p data-translate="cert_algorithms1">ICPC 2024 – Tehran Site, Rank 35</p>
-                        </a>
+            <div class="cert-card">
+                <div class="cert-image">
+                    <img src="images/icpc_2024_result.jpg" alt="ICPC 2024 Result">
+                    <div class="cert-overlay">
+                        <button class="view-cert">مشاهده گواهی</button>
                     </div>
-                    <div class="cert-card">
-                        <a href="https://quera.org/certificate/Flz0oEbP/" target="_blank">
-                            <img src="images/data_structures_design.jpg" alt="Data Structures Design">
-                            <p data-translate="cert_algorithms2">Data Structures Design – PERFECT Grade</p>
-                        </a>
+                </div>
+                <div class="cert-content">
+                    <span class="cert-category">الگوریتم‌ها</span>
+                    <h3 class="cert-title">ICPC 2024 - رتبه 35</h3>
+                    <p class="cert-description">رتبه 35 در مسابقات برنامه‌نویسی ICPC سایت تهران</p>
+                    <div class="cert-meta">
+                        <span>ICPC</span>
+                        <span>1402</span>
                     </div>
                 </div>
             </div>
-
+            
+            <div class="cert-card">
+                <div class="cert-image">
+                    <img src="images/data_structures_design.jpg" alt="Data Structures Design">
+                    <div class="cert-overlay">
+                        <button class="view-cert">مشاهده گواهی</button>
+                    </div>
+                </div>
+                <div class="cert-content">
+                    <span class="cert-category">الگوریتم‌ها</span>
+                    <h3 class="cert-title">طراحی ساختمان‌های داده</h3>
+                    <p class="cert-description">گواهی طراحی ساختمان‌های داده با نمره کامل</p>
+                    <div class="cert-meta">
+                        <span>کوارا</span>
+                        <span>1402</span>
+                    </div>
+                </div>
+            </div>
+            
             <!-- Data Science -->
-            <div class="cert-category" id="data-science-certificates">
-                <h3 data-translate="nav_data_science">Data Science</h3>
-                <div class="cert-scroll">
-                    <div class="cert-card">
-                        <a href="https://quera.org/certificate/QMcPIyhT/" target="_blank">
-                            <img src="images/data_analysis_python.jpg" alt="Data Analysis with Python">
-                            <p data-translate="cert_data_science1">Data Analysis with Python</p>
-                        </a>
+            <div class="cert-card">
+                <div class="cert-image">
+                    <img src="images/data_analysis_python.jpg" alt="Data Analysis with Python">
+                    <div class="cert-overlay">
+                        <button class="view-cert">مشاهده گواهی</button>
                     </div>
-                    <div class="cert-card">
-                        <a href="https://www.kaggle.com/learn/certification/rezagooner/data-visualization" target="_blank">
-                            <img src="images/data_visualization.png" alt="Data Visualization">
-                            <p data-translate="cert_data_science2">Data Visualization</p>
-                        </a>
-                    </div>
-                    <div class="cert-card">
-                        <a href="https://www.kaggle.com/learn/certification/rezagooner/pandas" target="_blank">
-                            <img src="images/pandas.png" alt="Pandas">
-                            <p data-translate="cert_data_science3">Pandas</p>
-                        </a>
-                    </div>
-                    <div class="cert-card">
-                        <a href="https://www.kaggle.com/learn/certification/rezagooner/feature-engineering" target="_blank">
-                            <img src="images/feature_engineering.png" alt="Feature Engineering">
-                            <p data-translate="cert_data_science4">Feature Engineering</p>
-                        </a>
-                    </div>
-                    <div class="cert-card">
-                        <a href="https://www.kaggle.com/learn/certification/rezagooner/data-cleaning" target="_blank">
-                            <img src="images/data_cleaning.png" alt="Data Cleaning">
-                            <p data-translate="cert_data_science5">Data Cleaning</p>
-                        </a>
-                    </div>
-                    <div class="cert-card">
-                        <a href="https://www.kaggle.com/learn/certification/rezagooner/time-series" target="_blank">
-                            <img src="images/time_series.png" alt="Time Series">
-                            <p data-translate="cert_data_science6">Time Series</p>
-                        </a>
-                    </div>
-                    <!-- گواهی جدید Power BI -->
-                    <div class="cert-card">
-                        <a href="https://faradars.org/verify/3E266C15" target="_blank">
-                            <img src="https://github.com/RezaGooner/RezaGooner.github.io/blob/ecd66697dc5b786607f2ab11949c3fcbc00aa7e1/images/certificate_Power_BI.jpg?raw=true" alt="Power BI">
-                            <p data-translate="cert_data_science7">Power BI</p>
-                        </a>
+                </div>
+                <div class="cert-content">
+                    <span class="cert-category">علم داده</span>
+                    <h3 class="cert-title">تحلیل داده با پایتون</h3>
+                    <p class="cert-description">گواهی تحلیل داده با پایتون با نمره عالی</p>
+                    <div class="cert-meta">
+                        <span>کوارا</span>
+                        <span>1402</span>
                     </div>
                 </div>
             </div>
-
+            
+            <div class="cert-card">
+                <div class="cert-image">
+                    <img src="images/data_visualization.png" alt="Data Visualization">
+                    <div class="cert-overlay">
+                        <button class="view-cert">مشاهده گواهی</button>
+                    </div>
+                </div>
+                <div class="cert-content">
+                    <span class="cert-category">علم داده</span>
+                    <h3 class="cert-title">بصری‌سازی داده‌ها</h3>
+                    <p class="cert-description">گواهی بصری‌سازی داده‌ها از کاگل</p>
+                    <div class="cert-meta">
+                        <span>Kaggle</span>
+                        <span>1402</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="cert-card">
+                <div class="cert-image">
+                    <img src="images/pandas.png" alt="Pandas">
+                    <div class="cert-overlay">
+                        <button class="view-cert">مشاهده گواهی</button>
+                    </div>
+                </div>
+                <div class="cert-content">
+                    <span class="cert-category">علم داده</span>
+                    <h3 class="cert-title">Pandas</h3>
+                    <p class="cert-description">گواهی تسلط بر کتابخانه Pandas</p>
+                    <div class="cert-meta">
+                        <span>Kaggle</span>
+                        <span>1402</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="cert-card">
+                <div class="cert-image">
+                    <img src="https://github.com/RezaGooner/RezaGooner.github.io/blob/ecd66697dc5b786607f2ab11949c3fcbc00aa7e1/images/certificate_Power_BI.jpg?raw=true" alt="Power BI">
+                    <div class="cert-overlay">
+                        <button class="view-cert">مشاهده گواهی</button>
+                    </div>
+                </div>
+                <div class="cert-content">
+                    <span class="cert-category">علم داده</span>
+                    <h3 class="cert-title">Power BI - تجسم و تحلیل داده‌ها</h3>
+                    <p class="cert-description">گواهی تسلط بر ابزار Power BI برای تجسم و تحلیل داده‌ها</p>
+                    <div class="cert-meta">
+                        <span>فرادرس</span>
+                        <span>1402</span>
+                    </div>
+                </div>
+            </div>
+            
             <!-- AI & Machine Learning -->
-            <div class="cert-category" id="ai-ml-certificates">
-                <h3 data-translate="nav_ai_ml">AI & Machine Learning</h3>
-                <div class="cert-scroll">
-                    <div class="cert-card">
-                        <a href="https://faradars.org/verify/D064A73E" target="_blank">
-                            <img src="images/generative_ai.jpg" alt="Generative AI">
-                            <p data-translate="cert_ai_ml1">Generative AI</p>
-                        </a>
+            <div class="cert-card">
+                <div class="cert-image">
+                    <img src="images/generative_ai.jpg" alt="Generative AI">
+                    <div class="cert-overlay">
+                        <button class="view-cert">مشاهده گواهی</button>
                     </div>
-                    <div class="cert-card">
-                        <a href="https://faradars.org/verify/0CC3B50C" target="_blank">
-                            <img src="images/mastering_machine_learning.jpg" alt="Mastering Machine Learning">
-                            <p data-translate="cert_ai_ml2">Mastering Machine Learning</p>
-                        </a>
-                    </div>
-                    <div class="cert-card">
-                        <a href="https://faradars.org/verify/9039C997" target="_blank">
-                            <img src="images/python_libraries_ml_dl.png" alt="Python Libraries for ML & DL">
-                            <p data-translate="cert_ai_ml3">Python Libraries for ML & DL</p>
-                        </a>
-                    </div>
-                    <div class="cert-card">
-                        <a href="https://www.kaggle.com/learn/certification/rezagooner/intro-to-machine-learning" target="_blank">
-                            <img src="images/intro_machine_learning.png" alt="Intro to Machine Learning">
-                            <p data-translate="cert_ai_ml4">Intro to Machine Learning</p>
-                        </a>
-                    </div>
-                    <div class="cert-card">
-                        <a href="https://www.kaggle.com/learn/certification/rezagooner/intermediate-machine-learning" target="_blank">
-                            <img src="images/intermediate_machine_learning.png" alt="Intermediate Machine Learning">
-                            <p data-translate="cert_ai_ml5">Intermediate Machine Learning</p>
-                        </a>
-                    </div>
-                    <div class="cert-card">
-                        <a href="https://www.kaggle.com/learn/certification/rezagooner/machine-learning-explainability" target="_blank">
-                            <img src="images/machine_learning_explainability.png" alt="Machine Learning Explainability">
-                            <p data-translate="cert_ai_ml6">Machine Learning Explainability</p>
-                        </a>
-                    </div>
-                    <div class="cert-card">
-                        <a href="https://maktabkhooneh.org/certificates/mk-d3grru/" target="_blank">
-                            <img src="images/machine_learning_maktabkhooneh.png" alt="Machine Learning">
-                            <p data-translate="cert_ai_ml7">Machine Learning</p>
-                        </a>
+                </div>
+                <div class="cert-content">
+                    <span class="cert-category">هوش مصنوعی</span>
+                    <h3 class="cert-title">هوش مصنوعی مولد</h3>
+                    <p class="cert-description">گواهی هوش مصنوعی مولد از فرادرس</p>
+                    <div class="cert-meta">
+                        <span>فرادرس</span>
+                        <span>1402</span>
                     </div>
                 </div>
             </div>
-
+            
+            <div class="cert-card">
+                <div class="cert-image">
+                    <img src="images/mastering_machine_learning.jpg" alt="Mastering Machine Learning">
+                    <div class="cert-overlay">
+                        <button class="view-cert">مشاهده گواهی</button>
+                    </div>
+                </div>
+                <div class="cert-content">
+                    <span class="cert-category">هوش مصنوعی</span>
+                    <h3 class="cert-title">تسلط بر یادگیری ماشین</h3>
+                    <p class="cert-description">گواهی تسلط بر یادگیری ماشین</p>
+                    <div class="cert-meta">
+                        <span>فرادرس</span>
+                        <span>1402</span>
+                    </div>
+                </div>
+            </div>
+            
             <!-- NLP & LLM -->
-            <div class="cert-category" id="nlp-llm-certificates">
-                <h3 data-translate="nav_nlp_llm">NLP & LLM</h3>
-                <div class="cert-scroll">
-                    <div class="cert-card">
-                        <a href="https://quera.org/certificate/4Ptal4Nw/" target="_blank">
-                            <img src="images/nlp_perfect.jpg" alt="Natural Language Processing">
-                            <p data-translate="cert_nlp_llm1">Natural Language Processing</p>
-                        </a>
+            <div class="cert-card">
+                <div class="cert-image">
+                    <img src="images/nlp_perfect.jpg" alt="Natural Language Processing">
+                    <div class="cert-overlay">
+                        <button class="view-cert">مشاهده گواهی</button>
                     </div>
-                    <div class="cert-card">
-                        <a href="https://quera.org/certificate/99DoHWjF/" target="_blank">
-                            <img src="images/llm_perfect.jpg" alt="Large Language Models">
-                            <p data-translate="cert_nlp_llm2">Large Language Models</p>
-                        </a>
+                </div>
+                <div class="cert-content">
+                    <span class="cert-category">پردازش زبان</span>
+                    <h3 class="cert-title">پردازش زبان طبیعی - نمره کامل</h3>
+                    <p class="cert-description">گواهی پردازش زبان طبیعی با نمره کامل از کوارا</p>
+                    <div class="cert-meta">
+                        <span>کوارا</span>
+                        <span>1402</span>
                     </div>
                 </div>
             </div>
-
+            
+            <div class="cert-card">
+                <div class="cert-image">
+                    <img src="images/llm_perfect.jpg" alt="Large Language Models">
+                    <div class="cert-overlay">
+                        <button class="view-cert">مشاهده گواهی</button>
+                    </div>
+                </div>
+                <div class="cert-content">
+                    <span class="cert-category">پردازش زبان</span>
+                    <h3 class="cert-title">مدل‌های زبان بزرگ - نمره کامل</h3>
+                    <p class="cert-description">گواهی مدل‌های زبان بزرگ با نمره کامل از کوارا</p>
+                    <div class="cert-meta">
+                        <span>کوارا</span>
+                        <span>1402</span>
+                    </div>
+                </div>
+            </div>
+            
             <!-- Deep Learning -->
-            <div class="cert-category" id="deep-learning-certificates">
-                <h3 data-translate="nav_deep_learning">Deep Learning</h3>
-                <div class="cert-scroll">
-                    <div class="cert-card">
-                        <a href="https://quera.org/certificate/A08MbVsz/" target="_blank">
-                            <img src="images/deep_learning_very_good.jpg" alt="Deep Learning">
-                            <p data-translate="cert_deep_learning1">Deep Learning</p>
-                        </a>
+            <div class="cert-card">
+                <div class="cert-image">
+                    <img src="images/deep_learning_very_good.jpg" alt="Deep Learning">
+                    <div class="cert-overlay">
+                        <button class="view-cert">مشاهده گواهی</button>
                     </div>
-                    <div class="cert-card">
-                        <a href="https://faradars.org/verify/575E6411" target="_blank">
-                            <img src="images/deep_learning_fundamentals.jpg" alt="Deep Learning Fundamentals">
-                            <p data-translate="cert_deep_learning2">Deep Learning Fundamentals</p>
-                        </a>
-                    </div>
-                    <div class="cert-card">
-                        <a href="https://www.kaggle.com/learn/certification/rezagooner/intro-to-deep-learning" target="_blank">
-                            <img src="images/intro_deep_learning.png" alt="Intro to Deep Learning">
-                            <p data-translate="cert_deep_learning3">Intro to Deep Learning</p>
-                        </a>
+                </div>
+                <div class="cert-content">
+                    <span class="cert-category">یادگیری عمیق</span>
+                    <h3 class="cert-title">یادگیری عمیق - نمره عالی</h3>
+                    <p class="cert-description">گواهی یادگیری عمیق با نمره عالی از کوارا</p>
+                    <div class="cert-meta">
+                        <span>کوارا</span>
+                        <span>1402</span>
                     </div>
                 </div>
             </div>
             
             <!-- Computer Vision -->
-            <div class="cert-category" id="computer-vision-certificates">
-                <h3 data-translate="nav_computer_vision">Computer Vision</h3>
-                <div class="cert-scroll">
-                    <div class="cert-card">
-                        <a href="https://quera.org/certificate/7yi1CcBA/" target="_blank">
-                            <img src="images/professional_image_processing.jpg" alt="Professional Image Processing">
-                            <p data-translate="cert_computer_vision1">Professional Image Processing</p>
-                        </a>
+            <div class="cert-card">
+                <div class="cert-image">
+                    <img src="images/computer_vision.jpg" alt="Computer Vision">
+                    <div class="cert-overlay">
+                        <button class="view-cert">مشاهده گواهی</button>
                     </div>
-                    <div class="cert-card">
-                        <a href="https://faradars.org/verify/4F4757FD" target="_blank">
-                            <img src="images/object_detection.jpg" alt="Object Detection">
-                            <p data-translate="cert_computer_vision2">Object Detection</p>
-                        </a>
-                    </div>
-                    <div class="cert-card">
-                        <a href="https://faradars.org/verify/86EE37B1" target="_blank">
-                            <img src="images/computer_vision.jpg" alt="Computer Vision">
-                            <p data-translate="cert_computer_vision3">Computer Vision</p>
-                        </a>
-                    </div>
-                    <div class="cert-card">
-                        <a href="https://www.kaggle.com/learn/certification/rezagooner/computer-vision" target="_blank">
-                            <img src="images/computer_vision_kaggle.png" alt="Computer Vision">
-                            <p data-translate="cert_computer_vision4">Computer Vision</p>
-                        </a>
-                    </div>
-                    <div class="cert-card">
-                        <a href="https://maktabkhooneh.org/certificates/MK-GLYD87" target="_blank">
-                            <img src="images/deep_learning_object_detection.png" alt="Deep Learning for Object Detection">
-                            <p data-translate="cert_computer_vision5">Deep Learning for Object Detection and Recognition</p>
-                        </a>
-                    </div>
-                    <div class="cert-card">
-                        <a href="https://maktabkhooneh.org/certificates/mk-3ap6cm/" target="_blank">
-                            <img src="images/machine_vision_opencv.png" alt="Machine Vision and Image Processing">
-                            <p data-translate="cert_computer_vision6">Machine Vision and Image Processing with OpenCV</p>
-                        </a>
-                    </div>
-                    <div class="cert-card">
-                        <a href="https://courses.opencv.org/certificates/f83fe0c6d1c043e5af23cc07e4763382" target="_blank">
-                            <img src="images/opencv_bootcamp.png" alt="OPENCV BOOTCAMP">
-                            <p data-translate="cert_computer_vision7">OPENCV BOOTCAMP</p>
-                        </a>
-                    </div>
-                    <!-- گواهی جدید المیپک -->
-                    <div class="cert-card">
-                        <a href="#" target="_blank">
-                            <img src="images/f8062549da2241dd834d184ad64aeb96.png" alt="Olympic Tech">
-                            <p data-translate="cert_computer_vision8">رتبه ششم در دومین رقابت بین‌المللی فناوری المیپک</p>
-                        </a>
+                </div>
+                <div class="cert-content">
+                    <span class="cert-category">بینایی کامپیوتر</span>
+                    <h3 class="cert-title">بینایی کامپیوتر و پردازش تصویر</h3>
+                    <p class="cert-description">گواهی بینایی کامپیوتر و تکنیک‌های پردازش تصویر</p>
+                    <div class="cert-meta">
+                        <span>فرادرس</span>
+                        <span>1402</span>
                     </div>
                 </div>
             </div>
-
+            
+            <div class="cert-card">
+                <div class="cert-image">
+                    <img src="images/professional_image_processing.jpg" alt="Professional Image Processing">
+                    <div class="cert-overlay">
+                        <button class="view-cert">مشاهده گواهی</button>
+                    </div>
+                </div>
+                <div class="cert-content">
+                    <span class="cert-category">بینایی کامپیوتر</span>
+                    <h3 class="cert-title">پردازش تصویر حرفه‌ای</h3>
+                    <p class="cert-description">گواهی پردازش تصویر حرفه‌ای با نمره عالی</p>
+                    <div class="cert-meta">
+                        <span>کوارا</span>
+                        <span>1402</span>
+                    </div>
+                </div>
+            </div>
+            
             <!-- Reinforcement Learning -->
-            <div class="cert-category" id="reinforcement-learning-certificates">
-                <h3 data-translate="nav_reinforcement_learning">Reinforcement Learning</h3>
-                <div class="cert-scroll">
-                    <div class="cert-card">
-                        <a href="https://faradars.org/verify/FEAA454F" target="_blank">
-                            <img src="images/advanced_rl_techniques.jpg" alt="Advanced Reinforcement Learning">
-                            <p data-translate="cert_reinforcement_learning1">Advanced Techniques for Reinforcement Learning</p>
-                        </a>
+            <div class="cert-card">
+                <div class="cert-image">
+                    <img src="images/advanced_rl_techniques.jpg" alt="Advanced Reinforcement Learning">
+                    <div class="cert-overlay">
+                        <button class="view-cert">مشاهده گواهی</button>
                     </div>
-                    <div class="cert-card">
-                        <a href="https://faradars.org/verify/2F9E19DC" target="_blank">
-                            <img src="images/deep_rl_dqn.jpg" alt="Deep Reinforcement Learning">
-                            <p data-translate="cert_reinforcement_learning2">Deep Reinforcement Learning with DQN</p>
-                        </a>
-                    </div>
-                    <div class="cert-card">
-                        <a href="https://www.kaggle.com/learn/certification/rezagooner/intro-to-game-ai-and-reinforcement-learning" target="_blank">
-                            <img src="images/intro_game_ai_rl.png" alt="Intro to Game AI and RL">
-                            <p data-translate="cert_reinforcement_learning3">Intro to Game AI and Reinforcement Learning</p>
-                        </a>
+                </div>
+                <div class="cert-content">
+                    <span class="cert-category">یادگیری تقویتی</span>
+                    <h3 class="cert-title">تکنیک‌های پیشرفته یادگیری تقویتی</h3>
+                    <p class="cert-description">گواهی تکنیک‌های پیشرفته در حوزه یادگیری تقویتی</p>
+                    <div class="cert-meta">
+                        <span>فرادرس</span>
+                        <span>1402</span>
                     </div>
                 </div>
             </div>
-
+            
             <!-- Git -->
-            <div class="cert-category" id="git-certificates">
-                <h3 data-translate="nav_git">Git</h3>
-                <div class="cert-scroll">
-                    <div class="cert-card">
-                        <a href="https://faradars.org/verify/7886CBA3" target="_blank">
-                            <img src="images/mastering_git.jpg" alt="Mastering Git">
-                            <p data-translate="cert_git1">Mastering Git, GitHub and GitLab</p>
-                        </a>
+            <div class="cert-card">
+                <div class="cert-image">
+                    <img src="images/mastering_git.jpg" alt="Mastering Git">
+                    <div class="cert-overlay">
+                        <button class="view-cert">مشاهده گواهی</button>
+                    </div>
+                </div>
+                <div class="cert-content">
+                    <span class="cert-category">Git</span>
+                    <h3 class="cert-title">تسلط بر Git، GitHub و GitLab</h3>
+                    <p class="cert-description">گواهی تسلط بر ابزارهای کنترل نسخه</p>
+                    <div class="cert-meta">
+                        <span>فرادرس</span>
+                        <span>1402</span>
                     </div>
                 </div>
             </div>
-        </section>
-
+        </div>
+        
+        <!-- دکمه Collapse برای کارت‌های بیشتر -->
+        <button class="collapse-btn" id="certificates-collapse-btn">نمایش گواهی‌های بیشتر</button>
+        <div class="collapse-content" id="certificates-collapse-content">
+            <div class="certificate-cards">
+                <!-- گواهی‌های اضافی -->
+                <div class="cert-card">
+                    <div class="cert-image">
+                        <img src="images/feature_engineering.png" alt="Feature Engineering">
+                        <div class="cert-overlay">
+                            <button class="view-cert">مشاهده گواهی</button>
+                        </div>
+                    </div>
+                    <div class="cert-content">
+                        <span class="cert-category">علم داده</span>
+                        <h3 class="cert-title">مهندسی ویژگی</h3>
+                        <p class="cert-description">گواهی مهندسی ویژگی از کاگل</p>
+                        <div class="cert-meta">
+                            <span>Kaggle</span>
+                            <span>1402</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="cert-card">
+                    <div class="cert-image">
+                        <img src="images/data_cleaning.png" alt="Data Cleaning">
+                        <div class="cert-overlay">
+                            <button class="view-cert">مشاهده گواهی</button>
+                        </div>
+                    </div>
+                    <div class="cert-content">
+                        <span class="cert-category">علم داده</span>
+                        <h3 class="cert-title">پاکسازی داده</h3>
+                        <p class="cert-description">گواهی پاکسازی داده از کاگل</p>
+                        <div class="cert-meta">
+                            <span>Kaggle</span>
+                            <span>1402</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="cert-card">
+                    <div class="cert-image">
+                        <img src="images/time_series.png" alt="Time Series">
+                        <div class="cert-overlay">
+                            <button class="view-cert">مشاهده گواهی</button>
+                        </div>
+                    </div>
+                    <div class="cert-content">
+                        <span class="cert-category">علم داده</span>
+                        <h3 class="cert-title">سری زمانی</h3>
+                        <p class="cert-description">گواهی تحلیل سری زمانی از کاگل</p>
+                        <div class="cert-meta">
+                            <span>Kaggle</span>
+                            <span>1402</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="cert-card">
+                    <div class="cert-image">
+                        <img src="images/python_libraries_ml_dl.png" alt="Python Libraries for ML & DL">
+                        <div class="cert-overlay">
+                            <button class="view-cert">مشاهده گواهی</button>
+                        </div>
+                    </div>
+                    <div class="cert-content">
+                        <span class="cert-category">هوش مصنوعی</span>
+                        <h3 class="cert-title">کتابخانه‌های پایتون برای ML و DL</h3>
+                        <p class="cert-description">گواهی کتابخانه‌های پایتون برای یادگیری ماشین و عمیق</p>
+                        <div class="cert-meta">
+                            <span>فرادرس</span>
+                            <span>1402</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="cert-card">
+                    <div class="cert-image">
+                        <img src="images/intro_machine_learning.png" alt="Intro to Machine Learning">
+                        <div class="cert-overlay">
+                            <button class="view-cert">مشاهده گواهی</button>
+                        </div>
+                    </div>
+                    <div class="cert-content">
+                        <span class="cert-category">هوش مصنوعی</span>
+                        <h3 class="cert-title">مقدمه‌ای بر یادگیری ماشین</h3>
+                        <p class="cert-description">گواهی مقدمه‌ای بر یادگیری ماشین از کاگل</p>
+                        <div class="cert-meta">
+                            <span>Kaggle</span>
+                            <span>1402</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="cert-card">
+                    <div class="cert-image">
+                        <img src="images/intermediate_machine_learning.png" alt="Intermediate Machine Learning">
+                        <div class="cert-overlay">
+                            <button class="view-cert">مشاهده گواهی</button>
+                        </div>
+                    </div>
+                    <div class="cert-content">
+                        <span class="cert-category">هوش مصنوعی</span>
+                        <h3 class="cert-title">یادگیری ماشین متوسط</h3>
+                        <p class="cert-description">گواهی یادگیری ماشین متوسط از کاگل</p>
+                        <div class="cert-meta">
+                            <span>Kaggle</span>
+                            <span>1402</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="cert-card">
+                    <div class="cert-image">
+                        <img src="images/machine_learning_explainability.png" alt="Machine Learning Explainability">
+                        <div class="cert-overlay">
+                            <button class="view-cert">مشاهده گواهی</button>
+                        </div>
+                    </div>
+                    <div class="cert-content">
+                        <span class="cert-category">هوش مصنوعی</span>
+                        <h3 class="cert-title">قابل تفسیر بودن یادگیری ماشین</h3>
+                        <p class="cert-description">گواهی قابل تفسیر بودن یادگیری ماشین از کاگل</p>
+                        <div class="cert-meta">
+                            <span>Kaggle</span>
+                            <span>1402</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="cert-card">
+                    <div class="cert-image">
+                        <img src="images/machine_learning_maktabkhooneh.png" alt="Machine Learning">
+                        <div class="cert-overlay">
+                            <button class="view-cert">مشاهده گواهی</button>
+                        </div>
+                    </div>
+                    <div class="cert-content">
+                        <span class="cert-category">هوش مصنوعی</span>
+                        <h3 class="cert-title">یادگیری ماشین</h3>
+                        <p class="cert-description">گواهی یادگیری ماشین از مکتب‌خونه</p>
+                        <div class="cert-meta">
+                            <span>مکتب‌خونه</span>
+                            <span>1402</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="cert-card">
+                    <div class="cert-image">
+                        <img src="images/deep_learning_fundamentals.jpg" alt="Deep Learning Fundamentals">
+                        <div class="cert-overlay">
+                            <button class="view-cert">مشاهده گواهی</button>
+                        </div>
+                    </div>
+                    <div class="cert-content">
+                        <span class="cert-category">یادگیری عمیق</span>
+                        <h3 class="cert-title">مبانی یادگیری عمیق</h3>
+                        <p class="cert-description">گواهی مبانی یادگیری عمیق از فرادرس</p>
+                        <div class="cert-meta">
+                            <span>فرادرس</span>
+                            <span>1402</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="cert-card">
+                    <div class="cert-image">
+                        <img src="images/intro_deep_learning.png" alt="Intro to Deep Learning">
+                        <div class="cert-overlay">
+                            <button class="view-cert">مشاهده گواهی</button>
+                        </div>
+                    </div>
+                    <div class="cert-content">
+                        <span class="cert-category">یادگیری عمیق</span>
+                        <h3 class="cert-title">مقدمه‌ای بر یادگیری عمیق</h3>
+                        <p class="cert-description">گواهی مقدمه‌ای بر یادگیری عمیق از کاگل</p>
+                        <div class="cert-meta">
+                            <span>Kaggle</span>
+                            <span>1402</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="cert-card">
+                    <div class="cert-image">
+                        <img src="images/object_detection.jpg" alt="Object Detection">
+                        <div class="cert-overlay">
+                            <button class="view-cert">مشاهده گواهی</button>
+                        </div>
+                    </div>
+                    <div class="cert-content">
+                        <span class="cert-category">بینایی کامپیوتر</span>
+                        <h3 class="cert-title">تشخیص اشیاء</h3>
+                        <p class="cert-description">گواهی تشخیص اشیاء از فرادرس</p>
+                        <div class="cert-meta">
+                            <span>فرادرس</span>
+                            <span>1402</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="cert-card">
+                    <div class="cert-image">
+                        <img src="images/computer_vision_kaggle.png" alt="Computer Vision">
+                        <div class="cert-overlay">
+                            <button class="view-cert">مشاهده گواهی</button>
+                        </div>
+                    </div>
+                    <div class="cert-content">
+                        <span class="cert-category">بینایی کامپیوتر</span>
+                        <h3 class="cert-title">بینایی کامپیوتر</h3>
+                        <p class="cert-description">گواهی بینایی کامپیوتر از کاگل</p>
+                        <div class="cert-meta">
+                            <span>Kaggle</span>
+                            <span>1402</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="cert-card">
+                    <div class="cert-image">
+                        <img src="images/deep_learning_object_detection.png" alt="Deep Learning for Object Detection">
+                        <div class="cert-overlay">
+                            <button class="view-cert">مشاهده گواهی</button>
+                        </div>
+                    </div>
+                    <div class="cert-content">
+                        <span class="cert-category">بینایی کامپیوتر</span>
+                        <h3 class="cert-title">یادگیری عمیق برای تشخیص اشیاء</h3>
+                        <p class="cert-description">گواهی یادگیری عمیق برای تشخیص و شناسایی اشیاء</p>
+                        <div class="cert-meta">
+                            <span>مکتب‌خونه</span>
+                            <span>1402</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="cert-card">
+                    <div class="cert-image">
+                        <img src="images/machine_vision_opencv.png" alt="Machine Vision and Image Processing">
+                        <div class="cert-overlay">
+                            <button class="view-cert">مشاهده گواهی</button>
+                        </div>
+                    </div>
+                    <div class="cert-content">
+                        <span class="cert-category">بینایی کامپیوتر</span>
+                        <h3 class="cert-title">بینایی ماشین با OpenCV</h3>
+                        <p class="cert-description">گواهی بینایی ماشین و پردازش تصویر با OpenCV</p>
+                        <div class="cert-meta">
+                            <span>مکتب‌خونه</span>
+                            <span>1402</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="cert-card">
+                    <div class="cert-image">
+                        <img src="images/opencv_bootcamp.png" alt="OPENCV BOOTCAMP">
+                        <div class="cert-overlay">
+                            <button class="view-cert">مشاهده گواهی</button>
+                        </div>
+                    </div>
+                    <div class="cert-content">
+                        <span class="cert-category">بینایی کامپیوتر</span>
+                        <h3 class="cert-title">بوتکمپ OPENCV</h3>
+                        <p class="cert-description">گواهی بوتکمپ OPENCV</p>
+                        <div class="cert-meta">
+                            <span>OpenCV</span>
+                            <span>1402</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="cert-card">
+                    <div class="cert-image">
+                        <img src="images/f8062549da2241dd834d184ad64aeb96.png" alt="Olympic Tech">
+                        <div class="cert-overlay">
+                            <button class="view-cert">مشاهده گواهی</button>
+                        </div>
+                    </div>
+                    <div class="cert-content">
+                        <span class="cert-category">بینایی کامپیوتر</span>
+                        <h3 class="cert-title">رتبه ششم المیپک</h3>
+                        <p class="cert-description">رتبه ششم در دومین رقابت بین‌المللی فناوری المیپک</p>
+                        <div class="cert-meta">
+                            <span>المیپک</span>
+                            <span>1402</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="cert-card">
+                    <div class="cert-image">
+                        <img src="images/deep_rl_dqn.jpg" alt="Deep Reinforcement Learning">
+                        <div class="cert-overlay">
+                            <button class="view-cert">مشاهده گواهی</button>
+                        </div>
+                    </div>
+                    <div class="cert-content">
+                        <span class="cert-category">یادگیری تقویتی</span>
+                        <h3 class="cert-title">یادگیری تقویتی عمیق با DQN</h3>
+                        <p class="cert-description">گواهی یادگیری تقویتی عمیق با DQN</p>
+                        <div class="cert-meta">
+                            <span>فرادرس</span>
+                            <span>1402</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="cert-card">
+                    <div class="cert-image">
+                        <img src="images/intro_game_ai_rl.png" alt="Intro to Game AI and RL">
+                        <div class="cert-overlay">
+                            <button class="view-cert">مشاهده گواهی</button>
+                        </div>
+                    </div>
+                    <div class="cert-content">
+                        <span class="cert-category">یادگیری تقویتی</span>
+                        <h3 class="cert-title">مقدمه‌ای بر هوش مصنوعی بازی‌ها</h3>
+                        <p class="cert-description">گواهی مقدمه‌ای بر هوش مصنوعی بازی‌ها و یادگیری تقویتی</p>
+                        <div class="cert-meta">
+                            <span>Kaggle</span>
+                            <span>1402</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- جدول زمانی -->
+        <div class="cert-timeline">
+            <h2 class="timeline-title">روند زمانی کسب گواهی‌ها</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-date">اسفند 1402</div>
+                        <div class="timeline-cert">رتبه ششم المیپک</div>
+                        <div class="timeline-org">رقابت بین‌المللی فناوری</div>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-date">بهمن 1402</div>
+                        <div class="timeline-cert">ICPC 2024 - رتبه 35</div>
+                        <div class="timeline-org">مسابقات برنامه‌نویسی ICPC</div>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-date">دی 1402</div>
+                        <div class="timeline-cert">پردازش زبان طبیعی - نمره کامل</div>
+                        <div class="timeline-org">کوارا</div>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-date">آذر 1402</div>
+                        <div class="timeline-cert">مدل‌های زبان بزرگ - نمره کامل</div>
+                        <div class="timeline-org">کوارا</div>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-date">آبان 1402</div>
+                        <div class="timeline-cert">یادگیری عمیق - نمره عالی</div>
+                        <div class="timeline-org">کوارا</div>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-date">مهر 1402</div>
+                        <div class="timeline-cert">بینایی کامپیوتر و پردازش تصویر</div>
+                        <div class="timeline-org">فرادرس</div>
+                    </div>
+                </div>
+            </div>
+            <!-- دکمه Collapse برای جدول زمانی -->
+            <button class="collapse-btn" id="timeline-collapse-btn">نمایش گواهی‌های بیشتر</button>
+            <div class="collapse-content" id="timeline-collapse-content">
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <div class="timeline-date">شهریور 1402</div>
+                            <div class="timeline-cert">تکنیک‌های پیشرفته یادگیری تقویتی</div>
+                            <div class="timeline-org">فرادرس</div>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <div class="timeline-date">مرداد 1402</div>
+                            <div class="timeline-cert">Power BI - تجسم و تحلیل داده‌ها</div>
+                            <div class="timeline-org">فرادرس</div>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <div class="timeline-date">تیر 1402</div>
+                            <div class="timeline-cert">تحلیل داده با پایتون</div>
+                            <div class="timeline-org">کوارا</div>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <div class="timeline-date">خرداد 1402</div>
+                            <div class="timeline-cert">طراحی ساختمان‌های داده</div>
+                            <div class="timeline-org">کوارا</div>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <div class="timeline-date">اردیبهشت 1402</div>
+                            <div class="timeline-cert">هوش مصنوعی مولد</div>
+                            <div class="timeline-org">فرادرس</div>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <div class="timeline-date">فروردین 1402</div>
+                            <div class="timeline-cert">تسلط بر یادگیری ماشین</div>
+                            <div class="timeline-org">فرادرس</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
         <section id="projects">
             <h2 data-translate="projects_title">نمونه‌کارها در GitHub</h2>
             <div class="projects-grid">
@@ -2657,6 +3221,36 @@
                 observer.observe(section);
             });
         });
+
+        // مدیریت دکمه‌های Collapse
+const certificatesCollapseBtn = document.getElementById('certificates-collapse-btn');
+const certificatesCollapseContent = document.getElementById('certificates-collapse-content');
+const timelineCollapseBtn = document.getElementById('timeline-collapse-btn');
+const timelineCollapseContent = document.getElementById('timeline-collapse-content');
+
+if (certificatesCollapseBtn && certificatesCollapseContent) {
+    certificatesCollapseBtn.addEventListener('click', function() {
+        if (certificatesCollapseContent.classList.contains('expanded')) {
+            certificatesCollapseContent.classList.remove('expanded');
+            this.textContent = 'نمایش گواهی‌های بیشتر';
+        } else {
+            certificatesCollapseContent.classList.add('expanded');
+            this.textContent = 'نمایش کمتر';
+        }
+    });
+}
+
+if (timelineCollapseBtn && timelineCollapseContent) {
+    timelineCollapseBtn.addEventListener('click', function() {
+        if (timelineCollapseContent.classList.contains('expanded')) {
+            timelineCollapseContent.classList.remove('expanded');
+            this.textContent = 'نمایش گواهی‌های بیشتر';
+        } else {
+            timelineCollapseContent.classList.add('expanded');
+            this.textContent = 'نمایش کمتر';
+        }
+    });
+}
     </script>
 </body>
 </html>
