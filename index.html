@@ -8,16 +8,11 @@
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
-    <!-- فونت‌های فارسی -->
     <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazir-font@v30.1.0/dist/font-face.css" rel="stylesheet" type="text/css" />
-    <!-- فونت‌های انگلیسی -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <!-- فونت‌های روسی -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-    <!-- آیکون‌های فونت آوسام -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        /* استایل‌های اصلی */
         :root {
             --primary-color: #1a2a6c;
             --secondary-color: #2a3a7c;
@@ -29,7 +24,6 @@
             --shadow: 0 5px 20px rgba(0,0,0,0.08);
             --shadow-hover: 0 15px 40px rgba(0,0,0,0.15);
         }
-        /* فونت‌های فارسی */
         .lang-fa {
             font-family: 'Vazir', 'IRANSansWeb(FaNum)', Tahoma, sans-serif !important;
         }
@@ -41,7 +35,6 @@
         .lang-fa h6 {
             font-family: 'Vazir', 'B Titr', 'IRANSansWeb(FaNum)', Tahoma, sans-serif !important;
         }
-        /* فونت‌های انگلیسی */
         .lang-en {
             font-family: 'Inter', 'Segoe UI', Tahoma, sans-serif !important;
         }
@@ -54,7 +47,6 @@
             font-family: 'Inter', 'Segoe UI', Tahoma, sans-serif !important;
             font-weight: 700;
         }
-        /* فونت‌های روسی */
         .lang-ru {
             font-family: 'Roboto', 'Inter', 'Segoe UI', Tahoma, sans-serif !important;
         }
@@ -67,7 +59,6 @@
             font-family: 'Roboto', 'Inter', 'Segoe UI', Tahoma, sans-serif !important;
             font-weight: 700;
         }
-        /* استایل کلی */
         body {
             background: linear-gradient(135deg, var(--light-bg) 0%, #e4e8ee 100%);
             margin: 0;
@@ -78,7 +69,6 @@
             overflow-x: hidden;
             animation: pageLoad 1.2s ease-out;
         }
-        /* دکمه تغییر زبان */
         .language-switcher {
             position: fixed;
             top: 20px;
@@ -132,7 +122,6 @@
             box-shadow: 0 6px 20px rgba(255, 215, 0, 0.5);
             animation: pulse 2s infinite;
         }
-        /* دکمه منو */
         .menu-toggle {
             position: fixed;
             top: 20px;
@@ -160,7 +149,6 @@
             transform: scale(1.15) rotate(180deg);
             box-shadow: 0 8px 25px rgba(255, 215, 0, 0.4);
         }
-        /* منوی کناری */
         .sidebar {
             position: fixed;
             top: 0;
@@ -302,7 +290,6 @@
         .sidebar-dropdown.active .sidebar-dropdown-toggle::after {
             transform: rotate(180deg);
         }
-        /* هدر */
         header {
             background: linear-gradient(135deg, var(--primary-color), var(--secondary-color), #3a4a8c);
             color: var(--white);
@@ -320,7 +307,7 @@
             right: 0;
             bottom: 0;
             left: 0;
-            background: url('image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M0,0 L100,0 L100,100 Z" fill="rgba(255,255,255,0.05)"/></svg>');
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M0,0 L100,0 L100,100 Z" fill="rgba(255,255,255,0.05)"/></svg>');
             background-size: cover;
             animation: shimmer 8s infinite linear;
         }
@@ -344,14 +331,12 @@
             animation: subtitleFadeIn 1.2s ease 0.6s both;
             text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
         }
-        /* بخش اصلی */
         main {
             max-width: 1200px;
             margin: auto;
             padding: 40px 20px;
             margin-top: 40px;
         }
-        /* بخش عمومی */
         section {
             background: var(--white);
             padding: 35px;
@@ -400,7 +385,6 @@
             background: linear-gradient(to right, var(--accent-color), transparent);
             animation: lineExtend 1s ease 0.8s forwards;
         }
-        /* لیست داخلی */
         ul {
             list-style: none;
             padding: 0;
@@ -441,7 +425,6 @@
         ul li:hover::before {
             transform: translateY(-50%) scale(1.3);
         }
-        /* بخش مهارت‌ها */
         .skills-container {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
@@ -502,7 +485,6 @@
         .skill-item:hover p {
             transform: translateY(-3px);
         }
-        /* بخش گواهی‌ها - طراحی جدید */
         .certificates-container {
             max-width: 1200px;
             margin: 0 auto;
@@ -541,63 +523,47 @@
             color: #666;
             font-size: 1rem;
         }
-        /* نمودار مهارت‌ها */
-        .skills-chart {
+        .category-summary {
             background: var(--white);
             border-radius: 15px;
             padding: 30px;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
             margin-bottom: 60px;
+            background: linear-gradient(135deg, #f9f9ff, #f0f4ff);
+            border: 1px solid #e0e8ff;
         }
-        .chart-title {
+        .summary-title {
             text-align: center;
             font-size: 1.8rem;
             color: var(--primary-color);
-            margin-bottom: 30px;
+            margin-bottom: 25px;
         }
-        .chart-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 30px;
+        .summary-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 20px;
         }
-        .chart-item {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            width: 150px;
+        .summary-item {
+            text-align: center;
+            padding: 15px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
         }
-        .chart-circle {
-            width: 120px;
-            height: 120px;
-            border-radius: 50%;
-            background: conic-gradient(var(--accent-color) 0% var(--percentage), #e0e0e0 var(--percentage) 100%);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-            margin-bottom: 15px;
+        .summary-item:hover {
+            transform: scale(1.05);
         }
-        .chart-circle::before {
-            content: '';
-            position: absolute;
-            width: 90px;
-            height: 90px;
-            background: var(--white);
-            border-radius: 50%;
+        .summary-item .summary-label {
+            font-weight: bold;
+            color: var(--primary-color);
         }
-        .chart-value {
-            position: relative;
+        .summary-item .summary-percent {
             font-size: 1.5rem;
             font-weight: bold;
-            color: var(--primary-color);
+            color: var(--accent-color);
+            margin-top: 8px;
         }
-        .chart-label {
-            font-weight: bold;
-            color: var(--primary-color);
-            text-align: center;
-        }
-        /* دسته‌بندی گواهی‌ها */
         .cert-categories {
             display: flex;
             justify-content: center;
@@ -619,7 +585,6 @@
             background: var(--primary-color);
             color: var(--white);
         }
-        /* طراحی جدید برای کارت‌های گواهی */
         .certificate-cards {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -721,7 +686,40 @@
             font-size: 0.85rem;
             color: #888;
         }
-        /* جدول زمانی گواهی‌ها */
+        .cert-more {
+            display: none;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 25px;
+            margin-top: 25px;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.4s ease, transform 0.4s ease;
+        }
+        .cert-more.show {
+            display: grid;
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .collapse-btn {
+            display: none;
+            background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 8px;
+            margin: 30px auto 0;
+            font-weight: bold;
+            cursor: pointer;
+            transition: var(--transition);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        .collapse-btn.show {
+            display: block;
+        }
+        .collapse-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+        }
         .cert-timeline {
             background: var(--white);
             border-radius: 15px;
@@ -730,6 +728,8 @@
             margin-bottom: 60px;
             max-height: 500px;
             overflow-y: auto;
+            background: linear-gradient(to bottom right, #f9fbfe, #f0f5ff);
+            border: 1px solid #e2eaf7;
         }
         .timeline-title {
             text-align: center;
@@ -749,8 +749,9 @@
             bottom: 0;
             right: 50%;
             width: 4px;
-            background: var(--primary-color);
+            background: linear-gradient(to bottom, var(--primary-color), var(--accent-color));
             transform: translateX(50%);
+            border-radius: 2px;
         }
         .timeline-item {
             padding: 20px 0;
@@ -775,6 +776,7 @@
             border-radius: 50%;
             background: var(--accent-color);
             border: 4px solid var(--primary-color);
+            box-shadow: 0 0 0 4px rgba(26, 42, 108, 0.2);
         }
         .timeline-item:nth-child(odd)::after {
             left: -10px;
@@ -783,26 +785,32 @@
             right: -10px;
         }
         .timeline-content {
-            background: var(--light-bg);
+            background: white;
             padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+            border-left: 4px solid var(--accent-color);
+        }
+        .timeline-item:nth-child(even) .timeline-content {
+            border-left: none;
+            border-right: 4px solid var(--accent-color);
         }
         .timeline-date {
             font-weight: bold;
             color: var(--primary-color);
             margin-bottom: 10px;
+            font-size: 1.05rem;
         }
         .timeline-cert {
             font-size: 1.1rem;
             font-weight: bold;
             margin-bottom: 5px;
+            color: var(--secondary-color);
         }
         .timeline-org {
             color: #666;
             font-size: 0.9rem;
         }
-        /* چیدمان جدید برای نمونه‌کارها */
         .projects-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
@@ -906,7 +914,6 @@
             transform: translateY(-5px) scale(1.05);
             box-shadow: 0 8px 20px rgba(255, 215, 0, 0.5);
         }
-        /* دکمه تست کتابخانه PerSent */
         .persent-test-btn {
             display: inline-block;
             padding: 14px 28px;
@@ -945,7 +952,6 @@
             transform: translateY(-5px) scale(1.03);
             box-shadow: 0 10px 25px rgba(255, 215, 0, 0.5);
         }
-        /* دکمه شناور - بهبود یافته */
         .floating-btn {
             position: fixed;
             bottom: 35px;
@@ -985,7 +991,6 @@
         .floating-btn:hover::before {
             transform: scale(1.3) rotate(10deg);
         }
-        /* فوتر */
         footer {
             background: linear-gradient(to right, #2c3e50, #34495e);
             color: #ccc;
@@ -1020,7 +1025,6 @@
         footer a:hover::after {
             width: 100%;
         }
-        /* استایل‌های جدید برای فرم تماس */
         .contact-form {
             display: grid;
             gap: 25px;
@@ -1130,7 +1134,6 @@
             border: 1px solid #f5c6cb;
             display: block;
         }
-        /* استایل‌های Modal */
         .modal {
             display: none;
             position: fixed;
@@ -1164,9 +1167,15 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            position: relative;
         }
         .modal-header h2 {
             margin: 0;
+            text-shadow: 0 2px 4px rgba(255,255,255,0.3);
+            padding: 5px 15px;
+            border: 2px solid rgba(255,255,255,0.4);
+            border-radius: 10px;
+            background: rgba(255,255,255,0.1);
         }
         .close {
             color: var(--white);
@@ -1191,6 +1200,7 @@
             object-fit: contain;
             border-radius: 8px;
             margin-bottom: 15px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
         }
         .modal-cert-details {
             text-align: right;
@@ -1216,7 +1226,6 @@
         .modal-cert-date {
             color: #666;
         }
-        /* انیمیشن‌های جدید و بهبود یافته */
         @keyframes pageLoad {
             0% {
                 opacity: 0;
@@ -1529,7 +1538,6 @@
                 transform: translateX(100%);
             }
         }
-        /* انیمیشن‌های جدید برای بهبود طراحی */
         @keyframes glow {
             0% {
                 box-shadow: 0 0 5px rgba(26, 42, 108, 0.5);
@@ -1585,7 +1593,6 @@
                 transform: translateY(0) scale(1);
             }
         }
-        /* ریسپانسیو */
         @media (max-width: 768px) {
             .language-switcher {
                 top: 15px;
@@ -1638,6 +1645,9 @@
             .certificate-cards {
                 grid-template-columns: 1fr;
             }
+            .cert-more {
+                grid-template-columns: 1fr;
+            }
             .timeline::before {
                 right: 30px;
             }
@@ -1656,20 +1666,6 @@
                 right: 20px !important;
                 left: auto !important;
             }
-            .chart-container {
-                gap: 15px;
-            }
-            .chart-item {
-                width: 120px;
-            }
-            .chart-circle {
-                width: 100px;
-                height: 100px;
-            }
-            .chart-circle::before {
-                width: 75px;
-                height: 75px;
-            }
         }
         @media (max-width: 480px) {
             .floating-btn {
@@ -1687,15 +1683,12 @@
     </style>
 </head>
 <body class="lang-fa">
-    <!-- دکمه‌های تغییر زبان -->
     <div class="language-switcher">
         <button class="lang-btn active" data-lang="fa">فارسی</button>
         <button class="lang-btn" data-lang="en">English</button>
         <button class="lang-btn" data-lang="ru">Русский</button>
     </div>
-    <!-- دکمه منو -->
     <button class="menu-toggle">☰</button>
-    <!-- منوی کناری -->
     <div class="sidebar">
         <div class="sidebar-header">
             <h2 data-translate="menu_title">منو</h2>
@@ -1739,7 +1732,6 @@
             </a>
         </div>
     </div>
-    <!-- overlay برای بستن منو -->
     <div class="sidebar-overlay"></div>
     <header>
         <h1 data-translate="name">Reza Asadi</h1>
@@ -1761,7 +1753,6 @@
                 <li data-translate="education_item2">دانشگاه دولتی یاسوج - رشته مهندسی کامپیوتر</li>
             </ul>
         </section>
-        <!-- بخش جدید: سوابق شغلی -->
         <section id="experience">
             <h2 data-translate="experience_title">سوابق شغلی</h2>
             <ul>
@@ -1771,7 +1762,6 @@
                 <li data-translate="experience_item4">تدریس کار و فناوری پایه نهم</li>
             </ul>
         </section>
-        <!-- بخش جدید: مهارت‌ها -->
         <section id="skills">
             <h2 data-translate="skills_title">مهارت‌ها</h2>
             <div class="skills-container">
@@ -1807,11 +1797,9 @@
                 <li data-translate="activity_item5">معاونت انجمن کامپیوتر یاسوج</li>
             </ul>
         </section>
-        <!-- بخش گواهی‌ها با طراحی جدید -->
         <section id="certificates">
             <h2 data-translate="certificates_title">گواهی‌ها و افتخارات</h2>
             <div class="certificates-container">
-                <!-- آمار کلی -->
                 <div class="cert-stats">
                     <div class="stat-card">
                         <div class="stat-icon">
@@ -1842,43 +1830,39 @@
                         <div class="stat-label">رتبه‌های برتر</div>
                     </div>
                 </div>
-                <!-- نمودار مهارت‌ها -->
-                <div class="skills-chart">
-                    <h2 class="chart-title">سطح مهارت در حوزه‌های مختلف</h2>
-                    <div class="chart-container">
-                        <div class="chart-item">
-                            <div class="chart-circle" style="--percentage: 85%">
-                                <div class="chart-value">85%</div>
-                            </div>
-                            <div class="chart-label">هوش مصنوعی</div>
+                <div class="category-summary">
+                    <h2 class="summary-title">توزیع آموزش‌ها بر اساس حوزه</h2>
+                    <div class="summary-grid">
+                        <div class="summary-item">
+                            <div class="summary-label">هوش مصنوعی</div>
+                            <div class="summary-percent">25%</div>
                         </div>
-                        <div class="chart-item">
-                            <div class="chart-circle" style="--percentage: 90%">
-                                <div class="chart-value">90%</div>
-                            </div>
-                            <div class="chart-label">یادگیری ماشین</div>
+                        <div class="summary-item">
+                            <div class="summary-label">یادگیری ماشین</div>
+                            <div class="summary-percent">22%</div>
                         </div>
-                        <div class="chart-item">
-                            <div class="chart-circle" style="--percentage: 80%">
-                                <div class="chart-value">80%</div>
-                            </div>
-                            <div class="chart-label">پردازش زبان</div>
+                        <div class="summary-item">
+                            <div class="summary-label">پردازش زبان</div>
+                            <div class="summary-percent">15%</div>
                         </div>
-                        <div class="chart-item">
-                            <div class="chart-circle" style="--percentage: 75%">
-                                <div class="chart-value">75%</div>
-                            </div>
-                            <div class="chart-label">بینایی کامپیوتر</div>
+                        <div class="summary-item">
+                            <div class="summary-label">بینایی کامپیوتر</div>
+                            <div class="summary-percent">18%</div>
                         </div>
-                        <div class="chart-item">
-                            <div class="chart-circle" style="--percentage: 70%">
-                                <div class="chart-value">70%</div>
-                            </div>
-                            <div class="chart-label">یادگیری تقویتی</div>
+                        <div class="summary-item">
+                            <div class="summary-label">یادگیری تقویتی</div>
+                            <div class="summary-percent">9%</div>
+                        </div>
+                        <div class="summary-item">
+                            <div class="summary-label">علم داده</div>
+                            <div class="summary-percent">9%</div>
+                        </div>
+                        <div class="summary-item">
+                            <div class="summary-label">الگوریتم‌ها</div>
+                            <div class="summary-percent">2%</div>
                         </div>
                     </div>
                 </div>
-                <!-- دسته‌بندی‌ها -->
                 <div class="cert-categories">
                     <button class="category-btn active" data-category="all">همه گواهی‌ها</button>
                     <button class="category-btn" data-category="algorithms">الگوریتم‌ها</button>
@@ -1890,9 +1874,7 @@
                     <button class="category-btn" data-category="reinforcement_learning">یادگیری تقویتی</button>
                     <button class="category-btn" data-category="git">Git</button>
                 </div>
-                <!-- گواهی‌ها -->
                 <div class="certificate-cards">
-                    <!-- الگوریتم‌ها -->
                     <div class="cert-card" data-category="algorithms" data-date="1402/11" data-title="ICPC 2024 - رتبه 35" data-org="ICPC" data-image="images/icpc_2024_result.jpg">
                         <div class="cert-image">
                             <img src="images/icpc_2024_result.jpg" alt="ICPC 2024 Certificate">
@@ -1927,7 +1909,6 @@
                             </div>
                         </div>
                     </div>
-                    <!-- علم داده -->
                     <div class="cert-card" data-category="data_science" data-date="1402/07" data-title="تحلیل داده با پایتون" data-org="Quera" data-image="images/data_analysis_python.jpg">
                         <div class="cert-image">
                             <img src="images/data_analysis_python.jpg" alt="Data Analysis with Python Certificate">
@@ -1996,6 +1977,8 @@
                             </div>
                         </div>
                     </div>
+                </div>
+                <div class="cert-more" id="certMore">
                     <div class="cert-card" data-category="data_science" data-date="1402/07" data-title="پاکسازی داده" data-org="Kaggle" data-image="images/data_cleaning.png">
                         <div class="cert-image">
                             <img src="images/data_cleaning.png" alt="Data Cleaning Certificate">
@@ -2047,7 +2030,6 @@
                             </div>
                         </div>
                     </div>
-                    <!-- هوش مصنوعی و یادگیری ماشین -->
                     <div class="cert-card" data-category="ai_ml" data-date="1402/07" data-title="هوش مصنوعی مولد" data-org="Faradars" data-image="images/generative_ai.jpg">
                         <div class="cert-image">
                             <img src="images/generative_ai.jpg" alt="Generative AI Certificate">
@@ -2167,7 +2149,6 @@
                             </div>
                         </div>
                     </div>
-                    <!-- پردازش زبان و مدل‌های بزرگ -->
                     <div class="cert-card" data-category="nlp_llm" data-date="1402/09" data-title="پردازش زبان طبیعی" data-org="Quera" data-image="images/nlp_perfect.jpg">
                         <div class="cert-image">
                             <img src="images/nlp_perfect.jpg" alt="NLP Certificate">
@@ -2202,7 +2183,6 @@
                             </div>
                         </div>
                     </div>
-                    <!-- یادگیری عمیق -->
                     <div class="cert-card" data-category="deep_learning" data-date="1402/08" data-title="یادگیری عمیق" data-org="Quera" data-image="images/deep_learning_very_good.jpg">
                         <div class="cert-image">
                             <img src="images/deep_learning_very_good.jpg" alt="Deep Learning Certificate">
@@ -2254,7 +2234,6 @@
                             </div>
                         </div>
                     </div>
-                    <!-- بینایی کامپیوتر -->
                     <div class="cert-card" data-category="computer_vision" data-date="1402/07" data-title="پردازش تصویر حرفه‌ای" data-org="Quera" data-image="images/professional_image_processing.jpg">
                         <div class="cert-image">
                             <img src="images/professional_image_processing.jpg" alt="Professional Image Processing Certificate">
@@ -2391,7 +2370,6 @@
                             </div>
                         </div>
                     </div>
-                    <!-- یادگیری تقویتی -->
                     <div class="cert-card" data-category="reinforcement_learning" data-date="1402/07" data-title="تکنیک‌های پیشرفته یادگیری تقویتی" data-org="Faradars" data-image="images/advanced_rl_techniques.jpg">
                         <div class="cert-image">
                             <img src="images/advanced_rl_techniques.jpg" alt="Advanced RL Techniques Certificate">
@@ -2443,7 +2421,6 @@
                             </div>
                         </div>
                     </div>
-                    <!-- Git -->
                     <div class="cert-card" data-category="git" data-date="1402/07" data-title="تسلط بر Git، GitHub و GitLab" data-org="Faradars" data-image="images/mastering_git.jpg">
                         <div class="cert-image">
                             <img src="images/mastering_git.jpg" alt="Mastering Git Certificate">
@@ -2462,11 +2439,10 @@
                         </div>
                     </div>
                 </div>
-                <!-- جدول زمانی گواهی‌ها -->
+                <button id="toggleMore" class="collapse-btn">مشاهده بیشتر</button>
                 <div class="cert-timeline">
                     <h2 class="timeline-title">روند زمانی کسب گواهی‌ها</h2>
                     <div class="timeline">
-                        <!-- تمام گواهی‌ها به ترتیب زمانی اضافه شده‌اند -->
                         <div class="timeline-item">
                             <div class="timeline-content">
                                 <div class="timeline-date">اسفند 1402</div>
@@ -2742,7 +2718,6 @@
             <p>📧 Gmail: <a href="mailto:RezaAsadiProgrammer@gmail.com">RezaAsadiProgrammer@gmail.com</a></p>
             <p>💻 GitHub: <a href="https://github.com/RezaGooner" target="_blank">RezaGooner</a></p>
             <p>📱 Telegram: <a href="https://t.me/rezagooner" target="_blank">T.me/rezagooner</a></p>
-            <!-- فرم تماس -->
             <form class="contact-form" action="https://formspree.io/f/xwprqapa" method="POST">
                 <div class="form-group">
                     <label for="name" data-translate="form_name">نام</label>
@@ -2761,7 +2736,6 @@
             </form>
         </section>
     </main>
-    <!-- Modal گواهی -->
     <div id="certificateModal" class="modal">
         <div class="modal-content">
             <div class="modal-header">
@@ -2778,7 +2752,6 @@
             </div>
         </div>
     </div>
-    <!-- دکمه شناور برای ایمیل - بهبود یافته -->
     <a href="mailto:RezaAsadiProgrammer@gmail.com" class="floating-btn" data-translate="contact_btn">
         ارتباط با من
     </a>
@@ -2786,7 +2759,6 @@
         <p data-translate="footer_text">© 2025 ساخته شده توسط رضا – منتشر شده در <a href="https://pages.github.com/">GitHub Pages</a></p>
     </footer>
     <script>
-        // مدیریت منوی کناری
         const menuToggle = document.querySelector('.menu-toggle');
         const sidebar = document.querySelector('.sidebar');
         const sidebarOverlay = document.querySelector('.sidebar-overlay');
@@ -2799,7 +2771,6 @@
             sidebar.classList.remove('active');
             sidebarOverlay.classList.remove('active');
         });
-        // مدیریت منوهای کشویی - رفع مشکل بسته شدن منو
         dropdowns.forEach(dropdown => {
             const toggle = dropdown.querySelector('.sidebar-dropdown-toggle');
             toggle.addEventListener('click', (e) => {
@@ -2808,7 +2779,6 @@
                 dropdown.classList.toggle('active');
             });
         });
-        // بستن منو هنگام کلیک روی لینک‌ها (به جز لینک‌های کشویی)
         const sidebarLinks = document.querySelectorAll('.sidebar-nav a:not(.sidebar-dropdown-toggle)');
         sidebarLinks.forEach(link => {
             link.addEventListener('click', () => {
@@ -2816,7 +2786,6 @@
                 sidebarOverlay.classList.remove('active');
             });
         });
-        // داده‌های ترجمه با بهبود‌ها
         const translations = {
             fa: {
                 menu_title: "منو",
@@ -3128,18 +3097,14 @@
                 footer_text: "© 2025 Сделано Резой – Опубликовано на"
             }
         };
-        // تابع تغییر زبان
         function changeLanguage(lang) {
-            // تغییر دکمه‌های فعال
             document.querySelectorAll('.lang-btn').forEach(btn => {
                 btn.classList.remove('active');
                 if (btn.dataset.lang === lang) {
                     btn.classList.add('active');
                 }
             });
-            // تغییر کلاس body برای فونت و جهت
             document.body.className = `lang-${lang}`;
-            // تغییر جهت متن برای زبان‌های مختلف
             if (lang === 'fa') {
                 document.documentElement.dir = 'rtl';
                 document.documentElement.lang = 'fa';
@@ -3147,37 +3112,38 @@
                 document.documentElement.dir = 'ltr';
                 document.documentElement.lang = lang;
             }
-            // تغییر متن‌ها
             document.querySelectorAll('[data-translate]').forEach(element => {
                 const key = element.getAttribute('data-translate');
                 if (translations[lang] && translations[lang][key]) {
                     element.textContent = translations[lang][key];
                 }
             });
-            // ذخیره زبان انتخاب شده
             localStorage.setItem('selectedLanguage', lang);
         }
-        // بارگذاری زبان ذخیره شده
         document.addEventListener('DOMContentLoaded', function() {
             const savedLang = localStorage.getItem('selectedLanguage') || 'fa';
             changeLanguage(savedLang);
-            // اضافه کردن رویداد کلیک به دکمه‌های زبان
             document.querySelectorAll('.lang-btn').forEach(btn => {
                 btn.addEventListener('click', function() {
                     changeLanguage(this.dataset.lang);
                 });
             });
-            // مدیریت فیلتر دسته‌بندی گواهی‌ها
             const categoryButtons = document.querySelectorAll('.category-btn');
             const certCards = document.querySelectorAll('.cert-card');
             categoryButtons.forEach(button => {
                 button.addEventListener('click', function() {
                     const selectedCategory = this.getAttribute('data-category');
-                    // به‌روزرسانی دکمه‌های فعال
                     categoryButtons.forEach(btn => btn.classList.remove('active'));
                     this.classList.add('active');
-                    // نمایش/پنهان کردن کارت‌ها
                     certCards.forEach(card => {
+                        if (selectedCategory === 'all' || card.getAttribute('data-category') === selectedCategory) {
+                            card.style.display = 'block';
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+                    const certMore = document.querySelectorAll('.cert-more .cert-card');
+                    certMore.forEach(card => {
                         if (selectedCategory === 'all' || card.getAttribute('data-category') === selectedCategory) {
                             card.style.display = 'block';
                         } else {
@@ -3186,7 +3152,6 @@
                     });
                 });
             });
-            // مدیریت Modal گواهی
             const modal = document.getElementById('certificateModal');
             const modalImage = document.getElementById('modal-cert-image');
             const modalTitle = document.getElementById('modal-cert-title');
@@ -3216,32 +3181,25 @@
                     modal.style.display = 'none';
                 }
             });
-            // مدیریت فرم تماس
             const contactForm = document.querySelector('.contact-form');
             const submitBtn = contactForm.querySelector('.submit-btn');
             const formMessage = document.getElementById('form-message');
             contactForm.addEventListener('submit', function(e) {
                 e.preventDefault();
-                // غیرفعال کردن دکمه ارسال
                 submitBtn.disabled = true;
                 submitBtn.textContent = translations[savedLang].form_submit + '...';
-                // نمایش پیام موفقیت (شبیه‌سازی)
                 setTimeout(() => {
                     formMessage.textContent = translations[savedLang].form_success;
                     formMessage.className = 'form-message success';
                     formMessage.style.display = 'block';
-                    // پاک کردن فرم
                     contactForm.reset();
-                    // فعال کردن دکمه ارسال
                     submitBtn.disabled = false;
                     submitBtn.textContent = translations[savedLang].form_submit;
-                    // پنهان کردن پیام پس از 5 ثانیه
                     setTimeout(() => {
                         formMessage.style.display = 'none';
                     }, 5000);
                 }, 1000);
             });
-            // انیمیشن اسکرول برای بخش‌ها
             const sections = document.querySelectorAll('section');
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
@@ -3253,15 +3211,17 @@
             sections.forEach(section => {
                 observer.observe(section);
             });
-            // انیمیشن برای نمودارهای دایره‌ای
-            const chartCircles = document.querySelectorAll('.chart-circle');
-            chartCircles.forEach(circle => {
-                const percentage = circle.style.getPropertyValue('--percentage');
-                circle.style.setProperty('--percentage', '0%');
-                setTimeout(() => {
-                    circle.style.setProperty('--percentage', percentage);
-                }, 500);
-            });
+            const toggleBtn = document.getElementById('toggleMore');
+            const certMore = document.getElementById('certMore');
+            const totalCerts = document.querySelectorAll('.certificate-cards .cert-card').length;
+            if (totalCerts > 6) {
+                toggleBtn.classList.add('show');
+                toggleBtn.textContent = 'مشاهده بیشتر';
+                toggleBtn.addEventListener('click', () => {
+                    certMore.classList.toggle('show');
+                    toggleBtn.textContent = certMore.classList.contains('show') ? 'مشاهده کمتر' : 'مشاهده بیشتر';
+                });
+            }
         });
     </script>
 </body>
