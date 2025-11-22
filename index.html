@@ -307,7 +307,7 @@
             right: 0;
             bottom: 0;
             left: 0;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M0,0 L100,0 L100,100 Z" fill="rgba(255,255,255,0.05)"/></svg>');
+            background: url('image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M0,0 L100,0 L100,100 Z" fill="rgba(255,255,255,0.05)"/></svg>');
             background-size: cover;
             animation: shimmer 8s infinite linear;
         }
@@ -750,6 +750,7 @@
             background: linear-gradient(to bottom, var(--primary-color), var(--accent-color));
             transform: translateX(50%);
             border-radius: 2px;
+            box-shadow: 0 0 10px rgba(26, 42, 108, 0.3);
         }
         .timeline-item {
             padding: 20px 0;
@@ -787,7 +788,6 @@
             padding: 20px;
             border-radius: 12px;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
-            border: 1px solid #e0e0e0;
             border-left: 4px solid var(--accent-color);
         }
         .timeline-item:nth-child(even) .timeline-content {
@@ -1175,6 +1175,7 @@
             border: 2px solid rgba(255,255,255,0.4);
             border-radius: 10px;
             background: rgba(255,255,255,0.1);
+            text-stroke: 1px white;
             -webkit-text-stroke: 1px white;
             color: white;
         }
@@ -1228,67 +1229,440 @@
             color: #666;
         }
         .modal-cert-link {
-            display: inline-block;
+            display: block;
             margin-top: 15px;
             color: var(--accent-color);
             text-decoration: none;
             font-weight: bold;
-            border-bottom: 1px dashed var(--accent-color);
+            text-align: center;
+            transition: var(--transition);
         }
         .modal-cert-link:hover {
             color: #ffed4e;
+            text-decoration: underline;
         }
         @keyframes pageLoad {
-            0% { opacity: 0; transform: scale(1.05); }
-            100% { opacity: 1; transform: scale(1); }
+            0% {
+                opacity: 0;
+                transform: scale(1.05);
+            }
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
         }
-        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
-        @keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
-        @keyframes fadeInDown { from { opacity: 0; transform: translateY(-30px); } to { opacity: 1; transform: translateY(0); } }
-        @keyframes fadeInLeft { from { opacity: 0; transform: translateX(-30px); } to { opacity: 1; transform: translateX(0); } }
-        @keyframes fadeInRight { from { opacity: 0; transform: translateX(30px); } to { opacity: 1; transform: translateX(0); } }
-        @keyframes slideInLeft { from { opacity: 0; transform: translateX(-50px); } to { opacity: 1; transform: translateX(0); } }
-        @keyframes slideInRight { from { opacity: 0; transform: translateX(50px) scale(0); } to { opacity: 1; transform: translateX(0) scale(1); } }
-        @keyframes slideInRightMenu { from { opacity: 0; transform: translateX(50px); } to { opacity: 1; transform: translateX(0); } }
-        @keyframes slideInRightItem { from { opacity: 0; transform: translateX(30px); } to { opacity: 1; transform: translateX(0); } }
-        @keyframes slideDown { from { opacity: 0; transform: translateY(-20px); } to { opacity: 1; transform: translateY(0); } }
-        @keyframes headerSlide { from { transform: translateY(-100%); } to { transform: translateY(0); } }
-        @keyframes titleFadeIn { from { opacity: 0; transform: translateY(40px) scale(0.9); } to { opacity: 1; transform: translateY(0) scale(1); } }
-        @keyframes subtitleFadeIn { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
-        @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
-        @keyframes sectionReveal { from { opacity: 0; transform: translateY(40px) scale(0.95); } to { opacity: 1; transform: translateY(0) scale(1); } }
-        @keyframes titleSlideIn { from { opacity: 0; transform: translateX(-30px); } to { opacity: 1; transform: translateX(0); } }
-        @keyframes lineExtend { from { width: 0; } to { width: 120px; } }
-        @keyframes listItemSlide { from { opacity: 0; transform: translateX(30px); } to { opacity: 1; transform: translateX(0); } }
-        @keyframes skillCardReveal { from { opacity: 0; transform: translateY(30px) rotateX(10deg); } to { opacity: 1; transform: translateY(0) rotateX(0); } }
-        @keyframes skillLine { from { transform: scaleX(0); } to { transform: scaleX(1); } }
-        @keyframes projectCardReveal { from { opacity: 0; transform: translateY(40px) perspective(1000px) rotateX(10deg); } to { opacity: 1; transform: translateY(0) perspective(1000px) rotateX(0); } }
-        @keyframes projectLine { from { transform: scaleX(0); } to { transform: scaleX(1); } }
-        @keyframes buttonReveal { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
-        @keyframes floatBtnReveal { from { opacity: 0; transform: translateY(50px) scale(0); } to { opacity: 1; transform: translateY(0) scale(1); } }
-        @keyframes floatBtn { 0%, 100% { transform: translateY(0) scale(1); } 50% { transform: translateY(-10px) scale(1.02); } }
-        @keyframes footerReveal { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
-        @keyframes formGroupReveal { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
-        @keyframes submitBtnReveal { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
-        @keyframes messageReveal { from { opacity: 0; transform: scale(0.9); } to { opacity: 1; transform: scale(1); } }
-        @keyframes bounceIn { 0% { transform: scale(0); } 50% { transform: scale(1.2); } 100% { transform: scale(1); } }
-        @keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(255, 215, 0, 0.5); } 70% { box-shadow: 0 0 0 12px rgba(255, 215, 0, 0); } 100% { box-shadow: 0 0 0 0 rgba(255, 215, 0, 0); } }
-        @keyframes shimmer { 0% { transform: translateX(-100%); } 100% { transform: translateX(100%); } }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes fadeInUp {
+            from { 
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to { 
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @keyframes fadeInDown {
+            from { 
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to { 
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @keyframes fadeInLeft {
+            from { 
+                opacity: 0;
+                transform: translateX(-30px);
+            }
+            to { 
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        @keyframes fadeInRight {
+            from { 
+                opacity: 0;
+                transform: translateX(30px);
+            }
+            to { 
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        @keyframes slideInRight {
+            from {
+                opacity: 0;
+                transform: translateX(50px) scale(0);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0) scale(1);
+            }
+        }
+        @keyframes slideInRightMenu {
+            from {
+                opacity: 0;
+                transform: translateX(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        @keyframes slideInRightItem {
+            from {
+                opacity: 0;
+                transform: translateX(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        @keyframes slideDown {
+            from { 
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to { 
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @keyframes headerSlide {
+            from {
+                transform: translateY(-100%);
+            }
+            to {
+                transform: translateY(0);
+            }
+        }
+        @keyframes titleFadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(40px) scale(0.9);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+        @keyframes subtitleFadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+        @keyframes sectionReveal {
+            from {
+                opacity: 0;
+                transform: translateY(40px) scale(0.95);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+        @keyframes titleSlideIn {
+            from {
+                opacity: 0;
+                transform: translateX(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        @keyframes lineExtend {
+            from {
+                width: 0;
+            }
+            to {
+                width: 120px;
+            }
+        }
+        @keyframes listItemSlide {
+            from {
+                opacity: 0;
+                transform: translateX(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        @keyframes skillCardReveal {
+            from {
+                opacity: 0;
+                transform: translateY(30px) rotateX(10deg);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0) rotateX(0);
+            }
+        }
+        @keyframes skillLine {
+            from {
+                transform: scaleX(0);
+            }
+            to {
+                transform: scaleX(1);
+            }
+        }
+        @keyframes projectCardReveal {
+            from {
+                opacity: 0;
+                transform: translateY(40px) perspective(1000px) rotateX(10deg);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0) perspective(1000px) rotateX(0);
+            }
+        }
+        @keyframes projectLine {
+            from {
+                transform: scaleX(0);
+            }
+            to {
+                transform: scaleX(1);
+            }
+        }
+        @keyframes buttonReveal {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @keyframes floatBtnReveal {
+            from {
+                opacity: 0;
+                transform: translateY(50px) scale(0);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+        @keyframes floatBtn {
+            0%, 100% {
+                transform: translateY(0) scale(1);
+            }
+            50% {
+                transform: translateY(-10px) scale(1.02);
+            }
+        }
+        @keyframes footerReveal {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @keyframes formGroupReveal {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @keyframes submitBtnReveal {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @keyframes messageReveal {
+            from {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+        @keyframes bounceIn {
+            0% {
+                transform: scale(0);
+            }
+            50% {
+                transform: scale(1.2);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(255, 215, 0, 0.5);
+            }
+            70% {
+                box-shadow: 0 0 0 12px rgba(255, 215, 0, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(255, 215, 0, 0);
+            }
+        }
+        @keyframes shimmer {
+            0% {
+                transform: translateX(-100%);
+            }
+            100% {
+                transform: translateX(100%);
+            }
+        }
+        @keyframes glow {
+            0% {
+                box-shadow: 0 0 5px rgba(26, 42, 108, 0.5);
+            }
+            50% {
+                box-shadow: 0 0 20px rgba(26, 42, 108, 0.8);
+            }
+            100% {
+                box-shadow: 0 0 5px rgba(26, 42, 108, 0.5);
+            }
+        }
+        @keyframes rotate {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(100px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @keyframes typing {
+            from {
+                width: 0;
+            }
+            to {
+                width: 100%;
+            }
+        }
+        @keyframes blink {
+            0%, 100% {
+                border-color: transparent;
+            }
+            50% {
+                border-color: var(--accent-color);
+            }
+        }
+        @keyframes modalSlideIn {
+            from {
+                opacity: 0;
+                transform: translateY(-50px) scale(0.9);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
         @media (max-width: 768px) {
-            .language-switcher { top: 15px; left: 15px; }
-            .lang-btn { padding: 8px 14px; font-size: 0.9em; }
-            .menu-toggle { top: 15px; right: 15px; width: 45px; height: 45px; font-size: 1.3em; }
-            .sidebar { width: 280px; right: -280px; }
-            header h1 { font-size: 2.4em; }
-            header p { font-size: 1.2em; }
-            .skills-container { grid-template-columns: 1fr; }
-            .projects-grid { grid-template-columns: 1fr; }
-            .project-links { flex-direction: column; }
-            .floating-btn { bottom: 20px; left: 20px; padding: 12px 22px; min-width: 140px; font-size: 15px; }
-            .floating-btn::before { font-size: 17px; margin-left: 8px; }
-            section { padding: 25px; }
-            .cert-cards-container { grid-template-columns: 1fr; }
-            .timeline::before { right: 30px; }
+            .language-switcher {
+                top: 15px;
+                left: 15px;
+            }
+            .lang-btn {
+                padding: 8px 14px;
+                font-size: 0.9em;
+            }
+            .menu-toggle {
+                top: 15px;
+                right: 15px;
+                width: 45px;
+                height: 45px;
+                font-size: 1.3em;
+            }
+            .sidebar {
+                width: 280px;
+                right: -280px;
+            }
+            header h1 {
+                font-size: 2.4em;
+            }
+            header p {
+                font-size: 1.2em;
+            }
+            .skills-container {
+                grid-template-columns: 1fr;
+            }
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+            .project-links {
+                flex-direction: column;
+            }
+            .floating-btn {
+                bottom: 20px;
+                left: 20px;
+                padding: 12px 22px;
+                min-width: 140px;
+                font-size: 15px;
+            }
+            .floating-btn::before {
+                font-size: 17px;
+                margin-left: 8px;
+            }
+            section {
+                padding: 25px;
+            }
+            .cert-cards-container {
+                grid-template-columns: 1fr;
+            }
+            .timeline::before {
+                right: 30px;
+            }
             .timeline-item {
                 width: 100%;
                 padding-right: 70px;
@@ -1304,12 +1678,15 @@
                 right: 20px !important;
                 left: auto !important;
             }
-            .cert-timeline {
-                padding: 20px;
-            }
+
             .timeline-content {
-                padding: 15px;
-                font-size: 0.95em;
+                padding: 16px;
+            }
+            .timeline-date {
+                font-size: 1rem;
+            }
+            .timeline-cert {
+                font-size: 1rem;
             }
         }
         @media (max-width: 480px) {
@@ -1324,16 +1701,15 @@
                 font-size: 16px;
                 margin-left: 6px;
             }
-            .cert-stats, .summary-grid {
-                grid-template-columns: 1fr;
+
+            .timeline::before {
+                right: 20px;
             }
-            .cert-categories {
-                flex-direction: column;
-                align-items: center;
+            .timeline-item {
+                padding-right: 60px;
             }
-            .cert-categories .category-btn {
-                width: 90%;
-                margin: 5px 0;
+            .timeline-item::after {
+                right: 10px !important;
             }
         }
     </style>
@@ -1350,11 +1726,21 @@
             <h2 data-translate="menu_title">منو</h2>
         </div>
         <div class="sidebar-nav">
-            <a href="#about" data-translate="nav_about"><i>👤</i> <span>معرفی</span></a>
-            <a href="#education" data-translate="nav_education"><i>🎓</i> <span>تحصیلات</span></a>
-            <a href="#experience" data-translate="nav_experience"><i>💼</i> <span>سوابق شغلی</span></a>
-            <a href="#skills" data-translate="nav_skills"><i>🛠️</i> <span>مهارت‌ها</span></a>
-            <a href="#activities" data-translate="nav_activities"><i>🌟</i> <span>فعالیت‌ها</span></a>
+            <a href="#about" data-translate="nav_about">
+                <i>👤</i> <span>معرفی</span>
+            </a>
+            <a href="#education" data-translate="nav_education">
+                <i>🎓</i> <span>تحصیلات</span>
+            </a>
+            <a href="#experience" data-translate="nav_experience">
+                <i>💼</i> <span>سوابق شغلی</span>
+            </a>
+            <a href="#skills" data-translate="nav_skills">
+                <i>🛠️</i> <span>مهارت‌ها</span>
+            </a>
+            <a href="#activities" data-translate="nav_activities">
+                <i>🌟</i> <span>فعالیت‌ها</span>
+            </a>
             <div class="sidebar-dropdown">
                 <a href="#certificates" class="sidebar-dropdown-toggle" data-translate="nav_certificates">
                     <span><i>🏆</i> <span>گواهی‌ها</span></span>
@@ -1370,8 +1756,12 @@
                     <a href="#git-certificates" data-translate="nav_git">Git</a>
                 </div>
             </div>
-            <a href="#projects" data-translate="nav_projects"><i>💻</i> <span>نمونه‌کارها</span></a>
-            <a href="#contact" data-translate="nav_contact"><i>📞</i> <span>ارتباط</span></a>
+            <a href="#projects" data-translate="nav_projects">
+                <i>💻</i> <span>نمونه‌کارها</span>
+            </a>
+            <a href="#contact" data-translate="nav_contact">
+                <i>📞</i> <span>ارتباط</span>
+            </a>
         </div>
     </div>
     <div class="sidebar-overlay"></div>
@@ -1382,7 +1772,11 @@
     <main>
         <section id="about">
             <h2 data-translate="about_title">معرفی من</h2>
-            <p data-translate="about_text">من رضا هستم، دانشجوی دوره کارشناسی رشته مهندسی کامپیوتر. بیش از یک سال است که به‌صورت جدی در حوزه هوش مصنوعی و یادگیری ماشین فعالیت و مطالعه می‌کنم و تجربه عملی خوبی در این زمینه به‌دست آورده‌ام. در شاخه‌های تخصصی مانند پردازش زبان طبیعی (NLP) و بینایی ماشین (Computer Vision) پروژه‌هایی انجام داده‌ام و توانسته‌ام مهارت‌های خود را گسترش دهم. هدف و مسیر بعدی من، تسلط بر یادگیری تقویتی (Reinforcement Learning) و به‌کارگیری آن در پروژه‌های واقعی است.</p>
+            <p data-translate="about_text">
+                من رضا هستم، دانشجوی دوره کارشناسی رشته مهندسی کامپیوتر. بیش از یک سال است که به‌صورت جدی در حوزه هوش مصنوعی و یادگیری ماشین فعالیت و مطالعه می‌کنم و تجربه عملی خوبی در این زمینه به‌دست آورده‌ام.
+                در شاخه‌های تخصصی مانند پردازش زبان طبیعی (NLP) و بینایی ماشین (Computer Vision) پروژه‌هایی انجام داده‌ام و توانسته‌ام مهارت‌های خود را گسترش دهم.
+                هدف و مسیر بعدی من، تسلط بر یادگیری تقویتی (Reinforcement Learning) و به‌کارگیری آن در پروژه‌های واقعی است.
+            </p>
         </section>
         <section id="education">
             <h2 data-translate="education_title">تحصیلات آکادمیک</h2>
@@ -1403,11 +1797,26 @@
         <section id="skills">
             <h2 data-translate="skills_title">مهارت‌ها</h2>
             <div class="skills-container">
-                <div class="skill-item"><h3 data-translate="skill1_title">پردازش زبان طبیعی</h3><p data-translate="skill1_description">توسعه مدل‌های NLP برای تحلیل و پردازش متن فارسی، توسعه کتابخانه PerSent</p></div>
-                <div class="skill-item"><h3 data-translate="skill2_title">پردازش تصویر و بینایی ماشین</h3><p data-translate="skill2_description">پیاده‌سازی سیستم‌های تشخیص و تحلیل تصویر با استفاده از OpenCV و مدل‌های عمیق</p></div>
-                <div class="skill-item"><h3 data-translate="skill3_title">یادگیری ماشین</h3><p data-translate="skill3_description">طراحی و پیاده‌سازی مدل‌های یادگیری ماشین برای مسائل مختلف طبقه‌بندی و رگرسیون</p></div>
-                <div class="skill-item"><h3 data-translate="skill4_title">یادگیری عمیق</h3><p data-translate="skill4_description">توسعه مدل‌های شبکه عصبی عمیق با استفاده از TensorFlow و PyTorch</p></div>
-                <div class="skill-item"><h3 data-translate="skill5_title">یادگیری تقویتی</h3><p data-translate="skill5_description">پیاده‌سازی عامل‌های هوشمند مبتنی بر یادگیری تقویتی برای محیط‌های مختلف</p></div>
+                <div class="skill-item">
+                    <h3 data-translate="skill1_title">پردازش زبان طبیعی</h3>
+                    <p data-translate="skill1_description">توسعه مدل‌های NLP برای تحلیل و پردازش متن فارسی، توسعه کتابخانه PerSent</p>
+                </div>
+                <div class="skill-item">
+                    <h3 data-translate="skill2_title">پردازش تصویر و بینایی ماشین</h3>
+                    <p data-translate="skill2_description">پیاده‌سازی سیستم‌های تشخیص و تحلیل تصویر با استفاده از OpenCV و مدل‌های عمیق</p>
+                </div>
+                <div class="skill-item">
+                    <h3 data-translate="skill3_title">یادگیری ماشین</h3>
+                    <p data-translate="skill3_description">طراحی و پیاده‌سازی مدل‌های یادگیری ماشین برای مسائل مختلف طبقه‌بندی و رگرسیون</p>
+                </div>
+                <div class="skill-item">
+                    <h3 data-translate="skill4_title">یادگیری عمیق</h3>
+                    <p data-translate="skill4_description">توسعه مدل‌های شبکه عصبی عمیق با استفاده از TensorFlow و PyTorch</p>
+                </div>
+                <div class="skill-item">
+                    <h3 data-translate="skill5_title">یادگیری تقویتی</h3>
+                    <p data-translate="skill5_description">پیاده‌سازی عامل‌های هوشمند مبتنی بر یادگیری تقویتی برای محیط‌های مختلف</p>
+                </div>
             </div>
         </section>
         <section id="activities">
@@ -1424,21 +1833,66 @@
             <h2 data-translate="certificates_title">گواهی‌ها و افتخارات</h2>
             <div class="certificates-container">
                 <div class="cert-stats">
-                    <div class="stat-card"><div class="stat-icon"><i class="fas fa-trophy"></i></div><div class="stat-number">32</div><div class="stat-label">گواهی کسب شده</div></div>
-                    <div class="stat-card"><div class="stat-icon"><i class="fas fa-medal"></i></div><div class="stat-number">8</div><div class="stat-label">دسته‌بندی‌ها</div></div>
-                    <div class="stat-card"><div class="stat-icon"><i class="fas fa-star"></i></div><div class="stat-number">12</div><div class="stat-label">گواهی درجه یک</div></div>
-                    <div class="stat-card"><div class="stat-icon"><i class="fas fa-award"></i></div><div class="stat-number">6</div><div class="stat-label">رتبه‌های برتر</div></div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-trophy"></i>
+                        </div>
+                        <div class="stat-number">32</div>
+                        <div class="stat-label">گواهی کسب شده</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-medal"></i>
+                        </div>
+                        <div class="stat-number">8</div>
+                        <div class="stat-label">دسته‌بندی‌ها</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="stat-number">12</div>
+                        <div class="stat-label">گواهی درجه یک</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-award"></i>
+                        </div>
+                        <div class="stat-number">6</div>
+                        <div class="stat-label">رتبه‌های برتر</div>
+                    </div>
                 </div>
                 <div class="category-summary">
                     <h2 class="summary-title">توزیع آموزش‌ها بر اساس حوزه</h2>
                     <div class="summary-grid">
-                        <div class="summary-item"><div class="summary-label">هوش مصنوعی</div><div class="summary-percent">25%</div></div>
-                        <div class="summary-item"><div class="summary-label">یادگیری ماشین</div><div class="summary-percent">22%</div></div>
-                        <div class="summary-item"><div class="summary-label">پردازش زبان</div><div class="summary-percent">15%</div></div>
-                        <div class="summary-item"><div class="summary-label">بینایی کامپیوتر</div><div class="summary-percent">18%</div></div>
-                        <div class="summary-item"><div class="summary-label">یادگیری تقویتی</div><div class="summary-percent">9%</div></div>
-                        <div class="summary-item"><div class="summary-label">علم داده</div><div class="summary-percent">9%</div></div>
-                        <div class="summary-item"><div class="summary-label">الگوریتم‌ها</div><div class="summary-percent">2%</div></div>
+                        <div class="summary-item">
+                            <div class="summary-label">هوش مصنوعی</div>
+                            <div class="summary-percent">25%</div>
+                        </div>
+                        <div class="summary-item">
+                            <div class="summary-label">یادگیری ماشین</div>
+                            <div class="summary-percent">22%</div>
+                        </div>
+                        <div class="summary-item">
+                            <div class="summary-label">پردازش زبان</div>
+                            <div class="summary-percent">15%</div>
+                        </div>
+                        <div class="summary-item">
+                            <div class="summary-label">بینایی کامپیوتر</div>
+                            <div class="summary-percent">18%</div>
+                        </div>
+                        <div class="summary-item">
+                            <div class="summary-label">یادگیری تقویتی</div>
+                            <div class="summary-percent">9%</div>
+                        </div>
+                        <div class="summary-item">
+                            <div class="summary-label">علم داده</div>
+                            <div class="summary-percent">9%</div>
+                        </div>
+                        <div class="summary-item">
+                            <div class="summary-label">الگوریتم‌ها</div>
+                            <div class="summary-percent">2%</div>
+                        </div>
                     </div>
                 </div>
                 <div class="cert-categories">
@@ -1459,231 +1913,231 @@
                         <div class="timeline-item">
                             <div class="timeline-content">
                                 <div class="timeline-date">اسفند 1402</div>
-                                <div class="timeline-cert">رتبه ششم المیپک</div>
+                                <div class="timeline-cert" data-translate="cert_computer_vision8">رتبه ششم المیپک</div>
                                 <div class="timeline-org">رقابت بین‌المللی فناوری</div>
                             </div>
                         </div>
                         <div class="timeline-item">
                             <div class="timeline-content">
                                 <div class="timeline-date">بهمن 1402</div>
-                                <div class="timeline-cert">ICPC 2024 - رتبه 35</div>
+                                <div class="timeline-cert" data-translate="cert_algorithms1">ICPC 2024 - رتبه 35</div>
                                 <div class="timeline-org">مسابقات برنامه‌نویسی ICPC</div>
                             </div>
                         </div>
                         <div class="timeline-item">
                             <div class="timeline-content">
                                 <div class="timeline-date">دی 1402</div>
-                                <div class="timeline-cert">پردازش زبان طبیعی - نمره کامل</div>
+                                <div class="timeline-cert" data-translate="cert_nlp_llm1">پردازش زبان طبیعی - نمره کامل</div>
                                 <div class="timeline-org">کوارا</div>
                             </div>
                         </div>
                         <div class="timeline-item">
                             <div class="timeline-content">
                                 <div class="timeline-date">آذر 1402</div>
-                                <div class="timeline-cert">مدل‌های زبان بزرگ - نمره کامل</div>
+                                <div class="timeline-cert" data-translate="cert_nlp_llm2">مدل‌های زبان بزرگ - نمره کامل</div>
                                 <div class="timeline-org">کوارا</div>
                             </div>
                         </div>
                         <div class="timeline-item">
                             <div class="timeline-content">
                                 <div class="timeline-date">آبان 1402</div>
-                                <div class="timeline-cert">یادگیری عمیق - نمره عالی</div>
+                                <div class="timeline-cert" data-translate="cert_deep_learning1">یادگیری عمیق - نمره عالی</div>
                                 <div class="timeline-org">کوارا</div>
                             </div>
                         </div>
                         <div class="timeline-item">
                             <div class="timeline-content">
                                 <div class="timeline-date">مهر 1402</div>
-                                <div class="timeline-cert">پردازش تصویر حرفه‌ای - نمره عالی</div>
+                                <div class="timeline-cert" data-translate="cert_computer_vision1">پردازش تصویر حرفه‌ای - نمره عالی</div>
                                 <div class="timeline-org">کوارا</div>
                             </div>
                         </div>
                         <div class="timeline-item">
                             <div class="timeline-content">
                                 <div class="timeline-date">شهریور 1402</div>
-                                <div class="timeline-cert">تحلیل داده با پایتون - نمره عالی</div>
+                                <div class="timeline-cert" data-translate="cert_data_science1">تحلیل داده با پایتون - نمره عالی</div>
                                 <div class="timeline-org">کوارا</div>
                             </div>
                         </div>
                         <div class="timeline-item">
                             <div class="timeline-content">
                                 <div class="timeline-date">مرداد 1402</div>
-                                <div class="timeline-cert">طراحی ساختمان داده - نمره کامل</div>
+                                <div class="timeline-cert" data-translate="cert_algorithms2">طراحی ساختمان داده - نمره کامل</div>
                                 <div class="timeline-org">کوارا</div>
                             </div>
                         </div>
                         <div class="timeline-item">
                             <div class="timeline-content">
                                 <div class="timeline-date">تیر 1402</div>
-                                <div class="timeline-cert">Power BI</div>
+                                <div class="timeline-cert" data-translate="cert_data_science7">Power BI</div>
                                 <div class="timeline-org">Faradars</div>
                             </div>
                         </div>
                         <div class="timeline-item">
                             <div class="timeline-content">
                                 <div class="timeline-date">تیر 1402</div>
-                                <div class="timeline-cert">تسلط بر Git، GitHub و GitLab</div>
+                                <div class="timeline-cert" data-translate="cert_git1">تسلط بر Git، GitHub و GitLab</div>
                                 <div class="timeline-org">Faradars</div>
                             </div>
                         </div>
                         <div class="timeline-item">
                             <div class="timeline-content">
                                 <div class="timeline-date">تیر 1402</div>
-                                <div class="timeline-cert">هوش مصنوعی مولد</div>
+                                <div class="timeline-cert" data-translate="cert_ai_ml1">هوش مصنوعی مولد</div>
                                 <div class="timeline-org">Faradars</div>
                             </div>
                         </div>
                         <div class="timeline-item">
                             <div class="timeline-content">
                                 <div class="timeline-date">تیر 1402</div>
-                                <div class="timeline-cert">تسلط بر یادگیری ماشین</div>
+                                <div class="timeline-cert" data-translate="cert_ai_ml2">تسلط بر یادگیری ماشین</div>
                                 <div class="timeline-org">Faradars</div>
                             </div>
                         </div>
                         <div class="timeline-item">
                             <div class="timeline-content">
                                 <div class="timeline-date">تیر 1402</div>
-                                <div class="timeline-cert">کتابخانه‌های پایتون برای ML و DL</div>
+                                <div class="timeline-cert" data-translate="cert_ai_ml3">کتابخانه‌های پایتون برای ML و DL</div>
                                 <div class="timeline-org">Faradars</div>
                             </div>
                         </div>
                         <div class="timeline-item">
                             <div class="timeline-content">
                                 <div class="timeline-date">تیر 1402</div>
-                                <div class="timeline-cert">بینایی کامپیوتر</div>
+                                <div class="timeline-cert" data-translate="cert_computer_vision3">بینایی کامپیوتر</div>
                                 <div class="timeline-org">Faradars</div>
                             </div>
                         </div>
                         <div class="timeline-item">
                             <div class="timeline-content">
                                 <div class="timeline-date">تیر 1402</div>
-                                <div class="timeline-cert">تشخیص اشیاء</div>
+                                <div class="timeline-cert" data-translate="cert_computer_vision2">تشخیص اشیاء</div>
                                 <div class="timeline-org">Faradars</div>
                             </div>
                         </div>
                         <div class="timeline-item">
                             <div class="timeline-content">
                                 <div class="timeline-date">تیر 1402</div>
-                                <div class="timeline-cert">مبانی یادگیری عمیق</div>
+                                <div class="timeline-cert" data-translate="cert_deep_learning2">مبانی یادگیری عمیق</div>
                                 <div class="timeline-org">Faradars</div>
                             </div>
                         </div>
                         <div class="timeline-item">
                             <div class="timeline-content">
                                 <div class="timeline-date">تیر 1402</div>
-                                <div class="timeline-cert">تکنیک‌های پیشرفته یادگیری تقویتی</div>
+                                <div class="timeline-cert" data-translate="cert_reinforcement_learning1">تکنیک‌های پیشرفته یادگیری تقویتی</div>
                                 <div class="timeline-org">Faradars</div>
                             </div>
                         </div>
                         <div class="timeline-item">
                             <div class="timeline-content">
                                 <div class="timeline-date">تیر 1402</div>
-                                <div class="timeline-cert">یادگیری تقویتی عمیق با DQN</div>
+                                <div class="timeline-cert" data-translate="cert_reinforcement_learning2">یادگیری تقویتی عمیق با DQN</div>
                                 <div class="timeline-org">Faradars</div>
                             </div>
                         </div>
                         <div class="timeline-item">
                             <div class="timeline-content">
                                 <div class="timeline-date">تیر 1402</div>
-                                <div class="timeline-cert">بصری سازی داده‌ها</div>
+                                <div class="timeline-cert" data-translate="cert_data_science2">بصری سازی داده‌ها</div>
                                 <div class="timeline-org">Kaggle</div>
                             </div>
                         </div>
                         <div class="timeline-item">
                             <div class="timeline-content">
                                 <div class="timeline-date">تیر 1402</div>
-                                <div class="timeline-cert">Pandas</div>
+                                <div class="timeline-cert" data-translate="cert_data_science3">Pandas</div>
                                 <div class="timeline-org">Kaggle</div>
                             </div>
                         </div>
                         <div class="timeline-item">
                             <div class="timeline-content">
                                 <div class="timeline-date">تیر 1402</div>
-                                <div class="timeline-cert">مهندسی ویژگی</div>
+                                <div class="timeline-cert" data-translate="cert_data_science4">مهندسی ویژگی</div>
                                 <div class="timeline-org">Kaggle</div>
                             </div>
                         </div>
                         <div class="timeline-item">
                             <div class="timeline-content">
                                 <div class="timeline-date">تیر 1402</div>
-                                <div class="timeline-cert">پاکسازی داده</div>
+                                <div class="timeline-cert" data-translate="cert_data_science5">پاکسازی داده</div>
                                 <div class="timeline-org">Kaggle</div>
                             </div>
                         </div>
                         <div class="timeline-item">
                             <div class="timeline-content">
                                 <div class="timeline-date">تیر 1402</div>
-                                <div class="timeline-cert">سری زمانی</div>
+                                <div class="timeline-cert" data-translate="cert_data_science6">سری زمانی</div>
                                 <div class="timeline-org">Kaggle</div>
                             </div>
                         </div>
                         <div class="timeline-item">
                             <div class="timeline-content">
                                 <div class="timeline-date">تیر 1402</div>
-                                <div class="timeline-cert">مقدمه‌ای بر یادگیری ماشین</div>
+                                <div class="timeline-cert" data-translate="cert_ai_ml4">مقدمه‌ای بر یادگیری ماشین</div>
                                 <div class="timeline-org">Kaggle</div>
                             </div>
                         </div>
                         <div class="timeline-item">
                             <div class="timeline-content">
                                 <div class="timeline-date">تیر 1402</div>
-                                <div class="timeline-cert">یادگیری ماشین متوسط</div>
+                                <div class="timeline-cert" data-translate="cert_ai_ml5">یادگیری ماشین متوسط</div>
                                 <div class="timeline-org">Kaggle</div>
                             </div>
                         </div>
                         <div class="timeline-item">
                             <div class="timeline-content">
                                 <div class="timeline-date">تیر 1402</div>
-                                <div class="timeline-cert">قابل تفسیر بودن یادگیری ماشین</div>
+                                <div class="timeline-cert" data-translate="cert_ai_ml6">قابل تفسیر بودن یادگیری ماشین</div>
                                 <div class="timeline-org">Kaggle</div>
                             </div>
                         </div>
                         <div class="timeline-item">
                             <div class="timeline-content">
                                 <div class="timeline-date">تیر 1402</div>
-                                <div class="timeline-cert">بینایی کامپیوتر</div>
+                                <div class="timeline-cert" data-translate="cert_computer_vision4">بینایی کامپیوتر</div>
                                 <div class="timeline-org">Kaggle</div>
                             </div>
                         </div>
                         <div class="timeline-item">
                             <div class="timeline-content">
                                 <div class="timeline-date">تیر 1402</div>
-                                <div class="timeline-cert">یادگیری عمیق برای تشخیص و شناسایی اشیاء</div>
+                                <div class="timeline-cert" data-translate="cert_computer_vision5">یادگیری عمیق برای تشخیص و شناسایی اشیاء</div>
                                 <div class="timeline-org">Maktabkhooneh</div>
                             </div>
                         </div>
                         <div class="timeline-item">
                             <div class="timeline-content">
                                 <div class="timeline-date">تیر 1402</div>
-                                <div class="timeline-cert">بینایی ماشین و پردازش تصویر با OpenCV</div>
+                                <div class="timeline-cert" data-translate="cert_computer_vision6">بینایی ماشین و پردازش تصویر با OpenCV</div>
                                 <div class="timeline-org">Maktabkhooneh</div>
                             </div>
                         </div>
                         <div class="timeline-item">
                             <div class="timeline-content">
                                 <div class="timeline-date">تیر 1402</div>
-                                <div class="timeline-cert">یادگیری ماشین</div>
+                                <div class="timeline-cert" data-translate="cert_ai_ml7">یادگیری ماشین</div>
                                 <div class="timeline-org">Maktabkhooneh</div>
                             </div>
                         </div>
                         <div class="timeline-item">
                             <div class="timeline-content">
                                 <div class="timeline-date">تیر 1402</div>
-                                <div class="timeline-cert">مقدمه‌ای بر یادگیری عمیق</div>
+                                <div class="timeline-cert" data-translate="cert_deep_learning3">مقدمه‌ای بر یادگیری عمیق</div>
                                 <div class="timeline-org">Kaggle</div>
                             </div>
                         </div>
                         <div class="timeline-item">
                             <div class="timeline-content">
                                 <div class="timeline-date">تیر 1402</div>
-                                <div class="timeline-cert">مقدمه‌ای بر هوش مصنوعی بازی‌ها و یادگیری تقویتی</div>
+                                <div class="timeline-cert" data-translate="cert_reinforcement_learning3">مقدمه‌ای بر هوش مصنوعی بازی‌ها و یادگیری تقویتی</div>
                                 <div class="timeline-org">Kaggle</div>
                             </div>
                         </div>
                         <div class="timeline-item">
                             <div class="timeline-content">
                                 <div class="timeline-date">تیر 1402</div>
-                                <div class="timeline-cert">بوتکمپ OPENCV</div>
+                                <div class="timeline-cert" data-translate="cert_computer_vision7">بوتکمپ OPENCV</div>
                                 <div class="timeline-org">OpenCV</div>
                             </div>
                         </div>
@@ -1761,12 +2215,14 @@
                     <p class="modal-cert-title" id="modal-cert-title"></p>
                     <p class="modal-cert-org" id="modal-cert-org"></p>
                     <p class="modal-cert-date" id="modal-cert-date"></p>
-                    <a id="modal-cert-link" class="modal-cert-link" target="_blank" rel="noopener">مشاهده گواهی</a>
+                    <a id="modal-cert-link" class="modal-cert-link" target="_blank">مشاهده گواهی اصلی</a>
                 </div>
             </div>
         </div>
     </div>
-    <a href="mailto:RezaAsadiProgrammer@gmail.com" class="floating-btn" data-translate="contact_btn">ارتباط با من</a>
+    <a href="mailto:RezaAsadiProgrammer@gmail.com" class="floating-btn" data-translate="contact_btn">
+        ارتباط با من
+    </a>
     <footer>
         <p data-translate="footer_text">© 2025 ساخته شده توسط رضا – منتشر شده در <a href="https://pages.github.com/">GitHub Pages</a></p>
     </footer>
@@ -1882,7 +2338,7 @@
                 cert_git1: "تسلط بر Git، GitHub و GitLab",
                 projects_title: "نمونه‌کارها در GitHub",
                 project1_title: "PerSent",
-                project1_description: "کتابخانه پایتون برای تحلیل و استخراج مفهوم زبان فارسی دارای توابع مختلف و مدل‌های آماده. این کتابخانه امکانات مختلفی برای پردازش متن فارسی از لحاظ احساسات هفتگانه یا مفهوم مثبت و منفی ارائه می‌دهد.",
+                project1_description: "کتابخانه پایتون برای تحلیل و استخیل مفهوم زبان فارسی دارای توابع مختلف و مدل های آماده. این کتابخانه امکانات مختلفی برای پردازش متن فارسی از لحاظ احساسات هفتگانه یا مفهوم مثبت و منفی ارائه می‌دهد.",
                 project2_title: "سیستم پایش وسایل نقلیه",
                 project2_description: "یک سیستم چندوظیفه‌ای برای پایش و شناسایی وسایل نقلیه ایرانی با قابلیت‌های تشخیص خودرو و پلاک، خواندن پلاک، تشخیص نام و رنگ ماشین و تشخیص تصادف با استفاده از تکنیک‌های بینایی کامپیوتر و یادگیری ماشین.",
                 project3_title: "عامل یادگیری تقویتی شطرنج",
@@ -1900,9 +2356,7 @@
                 form_success: "پیام شما با موفقیت ارسال شد. در اسرع وقت پاسخ خواهم داد.",
                 form_error: "خطا در ارسال پیام. لطفاً دوباره تلاش کنید.",
                 contact_btn: "ارتباط با من",
-                footer_text: "© 2025 ساخته شده توسط رضا – منتشر شده در",
-                collapse_more: "نمایش بیشتر",
-                collapse_less: "نمایش کمتر"
+                footer_text: "© 2025 ساخته شده توسط رضا – منتشر شده در"
             },
             en: {
                 menu_title: "Menu",
@@ -2005,9 +2459,7 @@
                 form_success: "Your message has been sent successfully. I will respond as soon as possible.",
                 form_error: "Error sending message. Please try again.",
                 contact_btn: "Contact Me",
-                footer_text: "© 2025 Made by Reza – Published on",
-                collapse_more: "Show More",
-                collapse_less: "Show Less"
+                footer_text: "© 2025 Made by Reza – Published on"
             },
             ru: {
                 menu_title: "Меню",
@@ -2110,45 +2562,43 @@
                 form_success: "Ваше сообщение успешно отправлено. Я отвечу как можно скорее.",
                 form_error: "Ошибка отправки сообщения. Пожалуйста, попробуйте еще раз.",
                 contact_btn: "Связаться со мной",
-                footer_text: "© 2025 Сделано Резой – Опубликовано на",
-                collapse_more: "Показать больше",
-                collapse_less: "Показать меньше"
+                footer_text: "© 2025 Сделано Резой – Опубликовано на"
             }
         };
         const certData = [
-            { category: "algorithms", date: "1402/11", title: "ICPC 2024 - رتبه 35", org: "ICPC", image: "images/icpc_2024_result.jpg", desc: "رتبه 35 در مسابقات برنامه‌نویسی ICPC سایت تهران" },
-            { category: "algorithms", date: "1402/07", title: "طراحی ساختمان های داده", org: "Quera", image: "images/data_structures_design.jpg", desc: "گواهی طراحی ساختمان داده با نمره کامل" },
-            { category: "data_science", date: "1402/07", title: "تحلیل داده با پایتون", org: "Quera", image: "images/data_analysis_python.jpg", desc: "گواهی تحلیل داده با پایتون" },
-            { category: "data_science", date: "1402/07", title: "بصری سازی داده‌ها", org: "Kaggle", image: "images/data_visualization.png", desc: "گواهی بصری سازی داده‌ها" },
-            { category: "data_science", date: "1402/07", title: "Pandas", org: "Kaggle", image: "images/pandas.png", desc: "گواهی Pandas" },
-            { category: "data_science", date: "1402/07", title: "مهندسی ویژگی", org: "Kaggle", image: "images/feature_engineering.png", desc: "گواهی مهندسی ویژگی" },
-            { category: "data_science", date: "1402/07", title: "پاکسازی داده", org: "Kaggle", image: "images/data_cleaning.png", desc: "گواهی پاکسازی داده" },
-            { category: "data_science", date: "1402/07", title: "سری زمانی", org: "Kaggle", image: "images/time_series.png", desc: "گواهی سری زمانی" },
-            { category: "data_science", date: "1402/07", title: "Power BI", org: "Faradars", image: "https://github.com/RezaGooner/RezaGooner.github.io/blob/ecd66697dc5b786607f2ab11949c3fcbc00aa7e1/images/certificate_Power_BI.jpg?raw=true", desc: "گواهی تسلط بر ابزار Power BI" },
-            { category: "ai_ml", date: "1402/07", title: "هوش مصنوعی مولد", org: "Faradars", image: "images/generative_ai.jpg", desc: "گواهی هوش مصنوعی مولد" },
-            { category: "ai_ml", date: "1402/07", title: "تسلط بر یادگیری ماشین", org: "Faradars", image: "images/mastering_machine_learning.jpg", desc: "گواهی تسلط بر یادگیری ماشین" },
-            { category: "ai_ml", date: "1402/07", title: "کتابخانه‌های پایتون برای ML و DL", org: "Faradars", image: "images/python_libraries_ml_dl.png", desc: "گواهی کتابخانه‌های پایتون برای ML و DL" },
-            { category: "ai_ml", date: "1402/07", title: "مقدمه‌ای بر یادگیری ماشین", org: "Kaggle", image: "images/intro_machine_learning.png", desc: "گواهی مقدمه‌ای بر یادگیری ماشین" },
-            { category: "ai_ml", date: "1402/07", title: "یادگیری ماشین متوسط", org: "Kaggle", image: "images/intermediate_machine_learning.png", desc: "گواهی یادگیری ماشین متوسط" },
-            { category: "ai_ml", date: "1402/07", title: "قابل تفسیر بودن یادگیری ماشین", org: "Kaggle", image: "images/machine_learning_explainability.png", desc: "گواهی قابل تفسیر بودن یادگیری ماشین" },
-            { category: "ai_ml", date: "1402/07", title: "یادگیری ماشین", org: "Maktabkhooneh", image: "images/machine_learning_maktabkhooneh.png", desc: "گواهی یادگیری ماشین" },
-            { category: "nlp_llm", date: "1402/09", title: "پردازش زبان طبیعی", org: "Quera", image: "images/nlp_perfect.jpg", desc: "گواهی پردازش زبان طبیعی با نمره کامل" },
-            { category: "nlp_llm", date: "1402/10", title: "مدل‌های زبان بزرگ", org: "Quera", image: "images/llm_perfect.jpg", desc: "گواهی مدل‌های زبان بزرگ با نمره کامل" },
-            { category: "deep_learning", date: "1402/08", title: "یادگیری عمیق", org: "Quera", image: "images/deep_learning_very_good.jpg", desc: "گواهی یادگیری عمیق با نمره عالی" },
-            { category: "deep_learning", date: "1402/07", title: "مبانی یادگیری عمیق", org: "Faradars", image: "images/deep_learning_fundamentals.jpg", desc: "گواهی مبانی یادگیری عمیق" },
-            { category: "deep_learning", date: "1402/07", title: "مقدمه‌ای بر یادگیری عمیق", org: "Kaggle", image: "images/intro_deep_learning.png", desc: "گواهی مقدمه‌ای بر یادگیری عمیق" },
-            { category: "computer_vision", date: "1402/07", title: "پردازش تصویر حرفه‌ای", org: "Quera", image: "images/professional_image_processing.jpg", desc: "گواهی پردازش تصویر حرفه‌ای با نمره عالی" },
-            { category: "computer_vision", date: "1402/07", title: "تشخیص اشیاء", org: "Faradars", image: "images/object_detection.jpg", desc: "گواهی تشخیص اشیاء" },
-            { category: "computer_vision", date: "1402/07", title: "بینایی کامپیوتر", org: "Faradars", image: "images/computer_vision.jpg", desc: "گواهی بینایی کامپیوتر" },
-            { category: "computer_vision", date: "1402/07", title: "بینایی کامپیوتر", org: "Kaggle", image: "images/computer_vision_kaggle.png", desc: "گواهی بینایی کامپیوتر" },
-            { category: "computer_vision", date: "1402/07", title: "یادگیری عمیق برای تشخیص و شناسایی اشیاء", org: "Maktabkhooneh", image: "images/deep_learning_object_detection.png", desc: "گواهی یادگیری عمیق برای تشخیص و شناسایی اشیاء" },
-            { category: "computer_vision", date: "1402/07", title: "بینایی ماشین و پردازش تصویر با OpenCV", org: "Maktabkhooneh", image: "images/machine_vision_opencv.png", desc: "گواهی بینایی ماشین و پردازش تصویر با OpenCV" },
-            { category: "computer_vision", date: "1402/07", title: "بوتکمپ OPENCV", org: "OpenCV", image: "images/opencv_bootcamp.png", desc: "گواهی بوتکمپ OPENCV" },
-            { category: "computer_vision", date: "1402/12", title: "رتبه ششم در دومین رقابت بین‌المللی فناوری المیپک", org: "Olympic Tech", image: "images/f8062549da2241dd834d184ad64aeb96.png", desc: "رتبه ششم در دومین رقابت بین‌المللی فناوری المیپک" },
-            { category: "reinforcement_learning", date: "1402/07", title: "تکنیک‌های پیشرفته یادگیری تقویتی", org: "Faradars", image: "images/advanced_rl_techniques.jpg", desc: "گواهی تکنیک‌های پیشرفته یادگیری تقویتی" },
-            { category: "reinforcement_learning", date: "1402/07", title: "یادگیری تقویتی عمیق با DQN", org: "Faradars", image: "images/deep_rl_dqn.jpg", desc: "گواهی یادگیری تقویتی عمیق با DQN" },
-            { category: "reinforcement_learning", date: "1402/07", title: "مقدمه‌ای بر هوش مصنوعی بازی‌ها و یادگیری تقویتی", org: "Kaggle", image: "images/intro_game_ai_rl.png", desc: "گواهی مقدمه‌ای بر هوش مصنوعی بازی‌ها و یادگیری تقویتی" },
-            { category: "git", date: "1402/07", title: "تسلط بر Git، GitHub و GitLab", org: "Faradars", image: "images/mastering_git.jpg", desc: "گواهی تسلط بر Git، GitHub و GitLab" }
+            { category: "algorithms", date: "1402/11", title: "ICPC 2024 - رتبه 35", org: "ICPC", image: "images/icpc_2024_result.jpg", desc: "رتبه 35 در مسابقات برنامه‌نویسی ICPC سایت تهران", url: "https://icpc.global/regionals/finder/Tehran2024" },
+            { category: "algorithms", date: "1402/07", title: "طراحی ساختمان های داده", org: "Quera", image: "images/data_structures_design.jpg", desc: "گواهی طراحی ساختمان داده با نمره کامل", url: "https://quera.org" },
+            { category: "data_science", date: "1402/07", title: "تحلیل داده با پایتون", org: "Quera", image: "images/data_analysis_python.jpg", desc: "گواهی تحلیل داده با پایتون", url: "https://quera.org" },
+            { category: "data_science", date: "1402/07", title: "بصری سازی داده‌ها", org: "Kaggle", image: "images/data_visualization.png", desc: "گواهی بصری سازی داده‌ها", url: "https://kaggle.com" },
+            { category: "data_science", date: "1402/07", title: "Pandas", org: "Kaggle", image: "images/pandas.png", desc: "گواهی Pandas", url: "https://kaggle.com" },
+            { category: "data_science", date: "1402/07", title: "مهندسی ویژگی", org: "Kaggle", image: "images/feature_engineering.png", desc: "گواهی مهندسی ویژگی", url: "https://kaggle.com" },
+            { category: "data_science", date: "1402/07", title: "پاکسازی داده", org: "Kaggle", image: "images/data_cleaning.png", desc: "گواهی پاکسازی داده", url: "https://kaggle.com" },
+            { category: "data_science", date: "1402/07", title: "سری زمانی", org: "Kaggle", image: "images/time_series.png", desc: "گواهی سری زمانی", url: "https://kaggle.com" },
+            { category: "data_science", date: "1402/07", title: "Power BI", org: "Faradars", image: "https://github.com/RezaGooner/RezaGooner.github.io/blob/ecd66697dc5b786607f2ab11949c3fcbc00aa7e1/images/certificate_Power_BI.jpg?raw=true", desc: "گواهی تسلط بر ابزار Power BI", url: "https://faradars.org" },
+            { category: "ai_ml", date: "1402/07", title: "هوش مصنوعی مولد", org: "Faradars", image: "images/generative_ai.jpg", desc: "گواهی هوش مصنوعی مولد", url: "https://faradars.org" },
+            { category: "ai_ml", date: "1402/07", title: "تسلط بر یادگیری ماشین", org: "Faradars", image: "images/mastering_machine_learning.jpg", desc: "گواهی تسلط بر یادگیری ماشین", url: "https://faradars.org" },
+            { category: "ai_ml", date: "1402/07", title: "کتابخانه‌های پایتون برای ML و DL", org: "Faradars", image: "images/python_libraries_ml_dl.png", desc: "گواهی کتابخانه‌های پایتون برای ML و DL", url: "https://faradars.org" },
+            { category: "ai_ml", date: "1402/07", title: "مقدمه‌ای بر یادگیری ماشین", org: "Kaggle", image: "images/intro_machine_learning.png", desc: "گواهی مقدمه‌ای بر یادگیری ماشین", url: "https://kaggle.com" },
+            { category: "ai_ml", date: "1402/07", title: "یادگیری ماشین متوسط", org: "Kaggle", image: "images/intermediate_machine_learning.png", desc: "گواهی یادگیری ماشین متوسط", url: "https://kaggle.com" },
+            { category: "ai_ml", date: "1402/07", title: "قابل تفسیر بودن یادگیری ماشین", org: "Kaggle", image: "images/machine_learning_explainability.png", desc: "گواهی قابل تفسیر بودن یادگیری ماشین", url: "https://kaggle.com" },
+            { category: "ai_ml", date: "1402/07", title: "یادگیری ماشین", org: "Maktabkhooneh", image: "images/machine_learning_maktabkhooneh.png", desc: "گواهی یادگیری ماشین", url: "https://maktabkhooneh.org" },
+            { category: "nlp_llm", date: "1402/09", title: "پردازش زبان طبیعی", org: "Quera", image: "images/nlp_perfect.jpg", desc: "گواهی پردازش زبان طبیعی با نمره کامل", url: "https://quera.org" },
+            { category: "nlp_llm", date: "1402/10", title: "مدل‌های زبان بزرگ", org: "Quera", image: "images/llm_perfect.jpg", desc: "گواهی مدل‌های زبان بزرگ با نمره کامل", url: "https://quera.org" },
+            { category: "deep_learning", date: "1402/08", title: "یادگیری عمیق", org: "Quera", image: "images/deep_learning_very_good.jpg", desc: "گواهی یادگیری عمیق با نمره عالی", url: "https://quera.org" },
+            { category: "deep_learning", date: "1402/07", title: "مبانی یادگیری عمیق", org: "Faradars", image: "images/deep_learning_fundamentals.jpg", desc: "گواهی مبانی یادگیری عمیق", url: "https://faradars.org" },
+            { category: "deep_learning", date: "1402/07", title: "مقدمه‌ای بر یادگیری عمیق", org: "Kaggle", image: "images/intro_deep_learning.png", desc: "گواهی مقدمه‌ای بر یادگیری عمیق", url: "https://kaggle.com" },
+            { category: "computer_vision", date: "1402/07", title: "پردازش تصویر حرفه‌ای", org: "Quera", image: "images/professional_image_processing.jpg", desc: "گواهی پردازش تصویر حرفه‌ای با نمره عالی", url: "https://quera.org" },
+            { category: "computer_vision", date: "1402/07", title: "تشخیص اشیاء", org: "Faradars", image: "images/object_detection.jpg", desc: "گواهی تشخیص اشیاء", url: "https://faradars.org" },
+            { category: "computer_vision", date: "1402/07", title: "بینایی کامپیوتر", org: "Faradars", image: "images/computer_vision.jpg", desc: "گواهی بینایی کامپیوتر", url: "https://faradars.org" },
+            { category: "computer_vision", date: "1402/07", title: "بینایی کامپیوتر", org: "Kaggle", image: "images/computer_vision_kaggle.png", desc: "گواهی بینایی کامپیوتر", url: "https://kaggle.com" },
+            { category: "computer_vision", date: "1402/07", title: "یادگیری عمیق برای تشخیص و شناسایی اشیاء", org: "Maktabkhooneh", image: "images/deep_learning_object_detection.png", desc: "گواهی یادگیری عمیق برای تشخیص و شناسایی اشیاء", url: "https://maktabkhooneh.org" },
+            { category: "computer_vision", date: "1402/07", title: "بینایی ماشین و پردازش تصویر با OpenCV", org: "Maktabkhooneh", image: "images/machine_vision_opencv.png", desc: "گواهی بینایی ماشین و پردازش تصویر با OpenCV", url: "https://maktabkhooneh.org" },
+            { category: "computer_vision", date: "1402/07", title: "بوتکمپ OPENCV", org: "OpenCV", image: "images/opencv_bootcamp.png", desc: "گواهی بوتکمپ OPENCV", url: "https://opencv.org" },
+            { category: "computer_vision", date: "1402/12", title: "رتبه ششم در دومین رقابت بین‌المللی فناوری المیپک", org: "Olympic Tech", image: "images/f8062549da2241dd834d184ad64aeb96.png", desc: "رتبه ششم در دومین رقابت بین‌المللی فناوری المیپک", url: "https://olympictch.ir" },
+            { category: "reinforcement_learning", date: "1402/07", title: "تکنیک‌های پیشرفته یادگیری تقویتی", org: "Faradars", image: "images/advanced_rl_techniques.jpg", desc: "گواهی تکنیک‌های پیشرفته یادگیری تقویتی", url: "https://faradars.org" },
+            { category: "reinforcement_learning", date: "1402/07", title: "یادگیری تقویتی عمیق با DQN", org: "Faradars", image: "images/deep_rl_dqn.jpg", desc: "گواهی یادگیری تقویتی عمیق با DQN", url: "https://faradars.org" },
+            { category: "reinforcement_learning", date: "1402/07", title: "مقدمه‌ای بر هوش مصنوعی بازی‌ها و یادگیری تقویتی", org: "Kaggle", image: "images/intro_game_ai_rl.png", desc: "گواهی مقدمه‌ای بر هوش مصنوعی بازی‌ها و یادگیری تقویتی", url: "https://kaggle.com" },
+            { category: "git", date: "1402/07", title: "تسلط بر Git، GitHub و GitLab", org: "Faradars", image: "images/mastering_git.jpg", desc: "گواهی تسلط بر Git، GitHub و GitLab", url: "https://faradars.org" }
         ];
         function renderCertificates(category = 'all') {
             const container = document.getElementById('certificatesContainer');
@@ -2191,17 +2641,19 @@
                     section.appendChild(moreContainer);
                     const btn = document.createElement('button');
                     btn.className = 'collapse-btn';
-                    btn.textContent = translations['fa'].collapse_more;
-                    btn.setAttribute('data-lang-key', 'collapse_more');
-                    btn.onclick = () => {
+                    btn.textContent = 'مشاهده بیشتر';
+                    btn.dataset.expanded = 'false';
+                    btn.addEventListener('click', () => {
                         if (moreContainer.style.display === 'none') {
                             moreContainer.style.display = 'grid';
-                            btn.textContent = translations[document.body.className.replace('lang-', '')].collapse_less;
+                            btn.textContent = 'مشاهده کمتر';
+                            btn.dataset.expanded = 'true';
                         } else {
                             moreContainer.style.display = 'none';
-                            btn.textContent = translations[document.body.className.replace('lang-', '')].collapse_more;
+                            btn.textContent = 'مشاهده بیشتر';
+                            btn.dataset.expanded = 'false';
                         }
-                    };
+                    });
                     section.appendChild(btn);
                 }
                 container.appendChild(section);
@@ -2247,7 +2699,12 @@
             modalDate.textContent = `تاریخ: ${cert.date}`;
             modalImage.src = cert.image;
             modalImage.alt = `تصویر گواهی ${cert.title}`;
-            modalLink.href = cert.image;
+            if (cert.url) {
+                modalLink.style.display = 'block';
+                modalLink.href = cert.url;
+            } else {
+                modalLink.style.display = 'none';
+            }
             modal.style.display = 'block';
         }
         function changeLanguage(lang) {
@@ -2270,14 +2727,6 @@
                 if (translations[lang] && translations[lang][key]) {
                     element.textContent = translations[lang][key];
                 }
-            });
-            const collapseBtns = document.querySelectorAll('.collapse-btn');
-            collapseBtns.forEach(btn => {
-                const currentText = btn.textContent.trim();
-                const isExpanded = currentText === translations['fa'].collapse_less ||
-                                   currentText === translations['en'].collapse_less ||
-                                   currentText === translations['ru'].collapse_less;
-                btn.textContent = isExpanded ? translations[lang].collapse_less : translations[lang].collapse_more;
             });
             localStorage.setItem('selectedLanguage', lang);
         }
